@@ -1,3 +1,5 @@
+[file name]: script.js
+[file content begin]
 document.addEventListener('DOMContentLoaded', function() {
     const serverTableBody = document.getElementById('serverTableBody');
     const categoryFilter = document.getElementById('categoryFilter');
@@ -57,21 +59,72 @@ document.addEventListener('DOMContentLoaded', function() {
         return new Date(currentYear, month - 1, day, hour, minute);
     }
 
+    // 获取当前半小时区间
+    function getCurrentHalfHourSlot() {
+        const now = new Date();
+        const currentHour = now.getHours();
+        const currentMinute = now.getMinutes();
+        
+        // 计算当前属于哪个半小时区间
+        let slotHour = currentHour;
+        let slotMinute = currentMinute >= 30 ? 30 : 0;
+        
+        return { hour: slotHour, minute: slotMinute };
+    }
+
+    // 检查服务器开放时间是否在当前半小时区间内
+    function isInCurrentHalfHourSlot(openTime) {
+        const currentSlot = getCurrentHalfHourSlot();
+        const serverTime = parseChineseDate(openTime);
+        if (!serverTime) return false;
+        
+        // 获取服务器的小时和分钟
+        const serverHour = serverTime.getHours();
+        const serverMinute = serverTime.getMinutes();
+        
+        // 检查服务器时间是否在当前半小时区间
+        const serverSlotMinute = serverMinute >= 30 ? 30 : 0;
+        
+        return serverHour === currentSlot.hour && serverSlotMinute === currentSlot.minute;
+    }
+
     function getPromotionWeight(server, isOvernight) {
         const promo = server.promotion;
-        if (!promo) return { weight: 0, order: 999 };
+        const inCurrentSlot = isInCurrentHalfHourSlot(server.openTime);
+        
+        if (!promo) {
+            // 没有推广信息的服务器，检查是否在当前半小时区间
+            if (inCurrentSlot) {
+                return { weight: 40, order: 999, type: 'current_slot' };
+            }
+            return { weight: 0, order: 999, type: 'none' };
+        }
 
         const type = promo.type;
         const isOvernightType = type.includes('通宵');
         const isAllDayType = type.includes('全天');
 
         if (isOvernight) {
-            if (!isOvernightType && !isAllDayType) return { weight: 0, order: 999 };
+            if (!isOvernightType && !isAllDayType) {
+                // 非通宵时段，但服务器是白天类型，检查是否在当前半小时区间
+                if (inCurrentSlot) {
+                    return { weight: 40, order: 999, type: 'current_slot' };
+                }
+                return { weight: 0, order: 999, type: 'none' };
+            }
         } else {
-            if (isOvernightType) return { weight: 0, order: 999 };
+            if (isOvernightType) {
+                // 白天时段，但服务器是通宵类型，检查是否在当前半小时区间
+                if (inCurrentSlot) {
+                    return { weight: 40, order: 999, type: 'current_slot' };
+                }
+                return { weight: 0, order: 999, type: 'none' };
+            }
         }
 
         let weight = 0;
+        let promoType = type;
+        
         if (isOvernight) {
             if (type.includes('通宵置顶推荐')) weight = 300;
             else if (type.includes('通宵套黄推荐')) weight = 200;
@@ -84,10 +137,18 @@ document.addEventListener('DOMContentLoaded', function() {
             else if (type.includes('全天套黄推荐')) weight = 80;
             else if (type.includes('全天推荐')) weight = 60;
         }
+        
+        // 如果在当前半小时区间内，增加权重（但不超过置顶推荐）
+        if (inCurrentSlot && weight < 100) {
+            // 确保权重不会超过套黄推荐
+            weight = Math.max(weight, 70);
+            promoType = '当前时段推荐';
+        }
 
         return {
             weight: weight,
-            order: promo.order || 999
+            order: promo.order || 999,
+            type: promoType
         };
     }
 
@@ -124,19 +185,23 @@ document.addEventListener('DOMContentLoaded', function() {
             const promoA = a._promotionData;
             const promoB = b._promotionData;
 
+            // 首先按权重排序
             if (promoB.weight !== promoA.weight) {
                 return promoB.weight - promoA.weight;
             }
 
+            // 如果权重相同，按推广顺序排序
             if (promoB.weight > 0 && promoA.weight === promoB.weight) {
                 return promoA.order - promoB.order;
             }
 
+            // 最后按开放时间排序
             const timeA = parseChineseDate(a.openTime);
             const timeB = parseChineseDate(b.openTime);
             return (timeB || 0) - (timeA || 0);
         });
 
+        // 只显示有推广权重或当前时段推荐的服务器
         processedServers = processedServers.filter(server => server._promotionData.weight > 0);
         renderTableRows(processedServers);
     }
@@ -168,11 +233,13 @@ document.addEventListener('DOMContentLoaded', function() {
             row.className = rowClass;
 
             let promotionBadge = '';
-            if (server.promotion) {
+            if (server._promotionData.type !== 'none') {
                 let badgeClass = 'promotion-badge';
-                if (promoType.includes('通宵')) badgeClass += ' badge-overnight';
-                if (promoType.includes('全天')) badgeClass += ' badge-allday';
-                promotionBadge = `<span class="${badgeClass}">${server.promotion.type}</span>`;
+                if (server._promotionData.type.includes('通宵')) badgeClass += ' badge-overnight';
+                else if (server._promotionData.type.includes('全天')) badgeClass += ' badge-allday';
+                else if (server._promotionData.type.includes('当前时段')) badgeClass += ' badge-allday';
+                
+                promotionBadge = `<span class="${badgeClass}">${server._promotionData.type}</span>`;
             }
 
             // 修改这里：将服务器名和服务器IP都改为可点击的链接
@@ -224,7 +291,9 @@ document.addEventListener('DOMContentLoaded', function() {
         renderTableRows(serversToSort);
     });
 
+    // 每30分钟重新检查时间区间
     setInterval(() => {
         filterAndRenderServers();
-    }, 10 * 60 * 1000);
+    }, 30 * 60 * 1000);
 });
+[file content end]
