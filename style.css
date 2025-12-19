@@ -1,3 +1,5 @@
+[file name]: style.css
+[file content begin]
 /* ===== 白色背景紧凑版本 ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
@@ -317,6 +319,12 @@ tr.row-yellow-bg {
     border-left: 2px solid #f1c40f !important;
 }
 
+/* 当前半小时区间高亮样式 */
+tr.current-interval-highlight {
+    background-color: rgba(52, 152, 219, 0.1) !important;
+    border-left: 2px solid #3498db !important;
+}
+
 .promotion-badge {
     display: inline-block;
     padding: 0 4px;
@@ -330,6 +338,16 @@ tr.row-yellow-bg {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.promotion-badge.current-interval {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
 }
 
 .badge-allday {
@@ -491,41 +509,4 @@ tr.row-yellow-bg {
         padding: 0 2px;
     }
 }
-
-/* 时间匹配高亮样式 */
-tr.time-match-highlight {
-    background-color: rgba(52, 152, 219, 0.1) !important;
-    border-left: 3px solid #3498db !important;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
-    }
-    70% {
-        box-shadow: 0 0 0 5px rgba(52, 152, 219, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
-    }
-}
-
-/* 增强时间匹配标志 */
-.promotion-badge.badge-allday.time-match {
-    background: linear-gradient(135deg, #3498db, #2980b9);
-    font-weight: bold;
-}
-
-/* 移动端响应式优化 - 时间匹配提示 */
-@media (max-width: 768px) {
-    tr.time-match-highlight {
-        border-left-width: 2px !important;
-    }
-    
-    .promotion-badge {
-        font-size: 0.55em;
-        padding: 0 2px;
-        margin-left: 1px;
-    }
-}
+[file content end]
