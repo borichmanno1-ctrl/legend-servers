@@ -2,11 +2,12 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: #ffffff; /* 改为白色背景 */
-    color: #333333; /* 文字改为深色 */
+    background: #ffffff;
+    color: #333333;
     line-height: 1.3;
     min-height: 100vh;
     font-size: 12px;
+    overflow-x: hidden; /* 防止页面出现横向滚动 */
 }
 
 /* 主容器 */
@@ -17,7 +18,7 @@ body {
     padding: 5px;
 }
 
-/* 头部logo区域 - 与表格容器同宽 */
+/* 头部logo区域 */
 .site-header { 
     text-align: center; 
     padding: 0;
@@ -32,7 +33,7 @@ body {
 }
 
 .site-logo {
-    width: 100%; /* 与表格同宽 */
+    width: 100%;
     height: auto;
     max-height: 50px;
     object-fit: cover;
@@ -40,7 +41,7 @@ body {
 }
 
 .site-title {
-    color: #d4af37; /* 调整为金色 */
+    color: #d4af37;
     font-size: 1.2rem;
     margin: 0;
     display: none;
@@ -57,8 +58,8 @@ body {
 
 .cat-btn {
     padding: 2px 8px;
-    background: #f0f0f0; /* 浅灰色背景 */
-    border: 1px solid #ddd; /* 添加边框 */
+    background: #f0f0f0;
+    border: 1px solid #ddd;
     color: #333;
     border-radius: 2px; 
     cursor: pointer; 
@@ -101,10 +102,10 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    background: #f5f5f5; /* 浅灰色背景 */
+    background: #f5f5f5;
     padding: 4px 8px;
     border-radius: 2px 2px 0 0; 
-    border: 1px solid #ddd; /* 浅色边框 */
+    border: 1px solid #ddd;
     font-size: 0.7rem;
 }
 
@@ -114,60 +115,67 @@ body {
 
 .sort-controls select { 
     padding: 2px 4px;
-    background: #fff; /* 白色背景 */
+    background: #fff;
     color: #333; 
     border: 1px solid #ccc; 
     border-radius: 2px; 
     font-size: 0.7rem;
 }
 
-/* 表格区域 - 与logo同宽 */
+/* 表格区域 - 修改为自适应宽度 */
 .table-wrapper {
-    overflow-x: auto; 
+    width: 100%;
+    overflow-x: auto; /* 只在必要时显示滚动条 */
     border: 1px solid #ddd; 
     border-top: none;
-    width: 100%;
 }
 
+/* 移除最小宽度限制，让表格自适应 */
 #serverTable {
     width: 100%; 
     border-collapse: collapse; 
-    min-width: 900px;
-    font-size: 0.75rem; /* 减小字体大小 */
+    min-width: 0; /* 移除固定最小宽度 */
+    font-size: 0.75rem;
+    table-layout: fixed; /* 使用固定布局，防止单元格宽度不一致 */
 }
 
 #serverTable thead { 
-    background: #f5f5f5; /* 浅灰色表头 */
+    background: #f5f5f5;
 }
 
 #serverTable th {
-    padding: 3px 4px; /* 减小内边距 */
+    padding: 3px 4px;
     text-align: left; 
-    color: #333; /* 深色文字 */
-    border-bottom: 2px solid #ddd; /* 浅色边框 */
+    color: #333;
+    border-bottom: 2px solid #ddd;
     font-weight: bold; 
     white-space: nowrap;
-    font-size: 0.75rem; /* 表头字体也减小 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 文本溢出显示省略号 */
+    font-size: 0.75rem;
 }
 
 #serverTable tbody tr {
-    border-bottom: 1px solid #eee; /* 更浅的边框 */
+    border-bottom: 1px solid #eee;
 }
 
 #serverTable tbody tr:nth-child(even) { 
-    background-color: #fafafa; /* 浅色交替行 */
+    background-color: #fafafa;
 }
 
 #serverTable td {
-    padding: 2px 4px; /* 减小内边距 */
+    padding: 2px 4px;
     vertical-align: middle;
-    font-size: 0.75rem; /* 表格内容字体减小 */
+    font-size: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis; /* 文本溢出显示省略号 */
+    white-space: nowrap;
 }
 
-/* 表格列宽度分配（6列） - 保持原有比例 */
+/* 表格列宽度分配 - 优化为更适合移动端的比例 */
 #serverTable th:nth-child(1),
 #serverTable td:nth-child(1) {
-    width: 20%;
+    width: 22%; /* 服务器名列稍微加宽 */
 }
 
 #serverTable th:nth-child(2),
@@ -177,12 +185,12 @@ body {
 
 #serverTable th:nth-child(3),
 #serverTable td:nth-child(3) {
-    width: 15%;
+    width: 14%;
 }
 
 #serverTable th:nth-child(4),
 #serverTable td:nth-child(4) {
-    width: 15%;
+    width: 14%;
 }
 
 #serverTable th:nth-child(5),
@@ -200,27 +208,35 @@ body {
     width: 10%;
 }
 
-/* 服务器名样式 - 改为可点击的链接样式 */
+/* 服务器名样式 */
 .server-name { 
-    color: #0066cc; /* 链接蓝色 */
+    color: #0066cc;
     font-weight: bold; 
     font-size: 0.8em;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .server-name:hover {
     text-decoration: underline;
 }
 
-/* 服务器IP样式 - 同样改为可点击链接样式 */
+/* 服务器IP样式 */
 .server-ip { 
-    color: #0066cc; /* 链接蓝色 */
+    color: #0066cc;
     cursor: pointer;
     font-size: 0.75em;
     text-decoration: none;
     display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .server-ip:hover {
@@ -252,9 +268,11 @@ body {
 
 /* 特色备注列 */
 .server-feature { 
-    color: #666; /* 深灰色 */
+    color: #666;
     line-height: 1.2;
-    font-size: 0.7em; /* 减小字体 */
+    font-size: 0.7em;
+    white-space: normal; /* 允许换行 */
+    word-break: break-word; /* 允许单词内断行 */
 }
 
 /* 按钮样式 */
@@ -269,6 +287,7 @@ body {
     border: none; 
     cursor: pointer;
     font-size: 0.7rem;
+    white-space: nowrap;
 }
 
 .btn-detail:hover { 
@@ -288,7 +307,7 @@ body {
     padding: 8px 0;
     margin-top: 10px;
     color: #777; 
-    border-top: 1px solid #ddd; /* 浅色边框 */
+    border-top: 1px solid #ddd;
     font-size: 0.7em;
 }
 
@@ -308,6 +327,9 @@ tr.row-yellow-bg {
     vertical-align: middle;
     white-space: nowrap;
     font-weight: bold;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .badge-allday {
@@ -322,6 +344,9 @@ tr.row-yellow-bg {
 @media (max-width: 768px) {
     .container {
         padding: 3px;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     
     .site-header { 
@@ -335,32 +360,48 @@ tr.row-yellow-bg {
     .category-filter { 
         gap: 2px; 
         margin-top: 3px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 3px;
     }
     
     .cat-btn { 
         padding: 1px 6px; 
         font-size: 0.65em; 
+        flex-shrink: 0; /* 防止按钮被压缩 */
     }
     
     .period-indicator {
         padding: 2px 4px;
         font-size: 0.65rem;
         margin-bottom: 4px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .table-controls { 
         padding: 3px 6px;
         font-size: 0.65rem;
+        flex-wrap: wrap;
     }
     
     .sort-controls select {
         padding: 1px 3px;
         font-size: 0.65em;
+        margin-top: 2px;
+    }
+    
+    /* 移动端表格优化 */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* 移动端滚动更流畅 */
     }
     
     #serverTable {
-        min-width: 700px;
-        font-size: 0.7rem; /* 移动端字体更小 */
+        width: 100%;
+        min-width: 0; /* 移除最小宽度限制 */
+        font-size: 0.7rem;
     }
     
     #serverTable th,
@@ -374,180 +415,65 @@ tr.row-yellow-bg {
         padding: 2px 2px;
     }
     
+    /* 移动端列宽调整 */
+    #serverTable th:nth-child(1),
+    #serverTable td:nth-child(1) {
+        width: 24%;
+    }
+    
+    #serverTable th:nth-child(2),
+    #serverTable td:nth-child(2) {
+        width: 14%;
+    }
+    
+    #serverTable th:nth-child(3),
+    #serverTable td:nth-child(3) {
+        width: 13%;
+    }
+    
+    #serverTable th:nth-child(4),
+    #serverTable td:nth-child(4) {
+        width: 13%;
+    }
+    
+    #serverTable th:nth-child(5),
+    #serverTable td:nth-child(5) {
+        width: 10%;
+    }
+    
+    #serverTable th:nth-child(6),
+    #serverTable td:nth-child(6) {
+        width: 16%;
+    }
+    
+    #serverTable th:nth-child(7),
+    #serverTable td:nth-child(7) {
+        width: 10%;
+    }
+    
     .btn-detail { 
         padding: 1px 4px; 
         font-size: 0.65em; 
     }
-}
-/* 在现有CSS末尾添加以下响应式代码 */
-
-/* 平板设备适配 */
-@media (max-width: 1024px) {
-    .container {
-        padding: 3px;
-    }
     
-    #serverTable {
-        min-width: 800px;
-        font-size: 0.7rem;
-    }
-    
-    #serverTable th,
-    #serverTable td {
-        padding: 2px 3px;
-    }
-    
+    /* 确保服务器名和IP在移动端可点击区域足够大 */
     .server-name,
     .server-ip {
-        font-size: 0.75em;
+        min-height: 16px;
+        line-height: 16px;
     }
 }
 
-/* 手机设备适配 - 关键修改：横着显示，无需横向滚动 */
-@media (max-width: 768px) {
-    body {
-        font-size: 11px;
-        -webkit-text-size-adjust: 100%; /* 防止字体自动调整 */
-        overflow-x: hidden; /* 防止水平滚动 */
-    }
-    
-    .container {
-        padding: 2px;
-        max-width: 100%;
-        width: 100%;
-        overflow-x: hidden; /* 关键：防止容器产生滚动 */
-    }
-    
-    .table-wrapper {
-        overflow-x: auto; /* 允许表格横向滚动 */
-        -webkit-overflow-scrolling: touch; /* 移动端平滑滚动 */
-        width: 100%;
-        max-width: 100%;
-        display: block;
-    }
-    
-    #serverTable {
-        min-width: 700px; /* 设置最小宽度确保内容完整 */
-        width: 100%;
-        table-layout: fixed; /* 固定表格布局，防止内容撑开 */
-        font-size: 0.7rem;
-    }
-    
-    /* 调整列宽度，让内容更紧凑 */
-    #serverTable th:nth-child(1),
-    #serverTable td:nth-child(1) { width: 22%; }
-    
-    #serverTable th:nth-child(2),
-    #serverTable td:nth-child(2) { width: 15%; }
-    
-    #serverTable th:nth-child(3),
-    #serverTable td:nth-child(3) { width: 15%; }
-    
-    #serverTable th:nth-child(4),
-    #serverTable td:nth-child(4) { width: 15%; }
-    
-    #serverTable th:nth-child(5),
-    #serverTable td:nth-child(5) { width: 10%; }
-    
-    #serverTable th:nth-child(6),
-    #serverTable td:nth-child(6) { width: 13%; }
-    
-    #serverTable th:nth-child(7),
-    #serverTable td:nth-child(7) { width: 10%; }
-    
-    /* 确保单元格内容不换行 */
-    #serverTable th,
-    #serverTable td {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        padding: 2px 3px;
-    }
-    
-    /* 调整特定列的内容显示 */
-    .server-feature {
-        max-width: 100px; /* 限制特色列宽度 */
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    /* 调整分类按钮 */
-    .category-filter {
-        flex-wrap: nowrap; /* 确保按钮不换行 */
-        overflow-x: auto; /* 允许分类按钮横向滚动 */
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 3px;
-        margin-bottom: 3px;
-    }
-    
-    .cat-btn {
-        flex-shrink: 0; /* 防止按钮被压缩 */
-        padding: 1px 6px;
-        font-size: 0.65em;
-    }
-    
-    /* 调整控制区域 */
-    .table-controls {
-        flex-wrap: wrap;
-        gap: 5px;
-        padding: 3px 5px;
-    }
-    
-    .stats, .sort-controls {
-        flex: 1;
-        min-width: 120px;
-    }
-    
-    /* 调整时段提示 */
-    .period-indicator {
-        font-size: 0.65rem;
-        padding: 2px 5px;
-        margin-bottom: 3px;
-    }
-    
-    /* 调整logo大小 */
-    .site-logo {
-        max-height: 40px;
-    }
-    
-    /* 调整按钮 */
-    .btn-detail {
-        padding: 1px 4px;
-        font-size: 0.65em;
-        white-space: nowrap;
-    }
-    
-    /* 调整标签 */
-    .tag {
-        font-size: 0.6em;
-        padding: 0 2px;
-    }
-    
-    /* 调整推广标签 */
-    .promotion-badge {
-        font-size: 0.55em;
-        padding: 0 3px;
-        margin-left: 1px;
-    }
-}
-
-/* 小屏手机优化 */
+/* 超小屏幕优化 */
 @media (max-width: 480px) {
     #serverTable {
-        min-width: 650px; /* 进一步减小最小宽度 */
+        font-size: 0.65rem;
     }
     
-    #serverTable th:nth-child(1),
-    #serverTable td:nth-child(1) { width: 20%; }
-    
-    #serverTable th:nth-child(2),
-    #serverTable td:nth-child(2) { width: 14%; }
-    
-    #serverTable th:nth-child(3),
-    #serverTable td:nth-child(3) { width: 14%; }
-    
+    #serverTable th,
     #serverTable td {
-        padding: 1px 2px;
+        font-size: 0.65em;
+        padding: 1px 1px;
     }
     
     .server-name,
@@ -555,12 +481,13 @@ tr.row-yellow-bg {
         font-size: 0.7em;
     }
     
-    /* 隐藏某些列的部分内容 */
-    .server-feature {
-        max-width: 80px;
+    .btn-detail {
+        font-size: 0.6em;
+        padding: 1px 3px;
     }
     
-    .period-indicator {
-        font-size: 0.6rem;
+    .promotion-badge {
+        font-size: 0.55em;
+        padding: 0 2px;
     }
 }
