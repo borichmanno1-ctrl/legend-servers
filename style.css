@@ -318,119 +318,6 @@ tr.row-yellow-bg {
     background: #9b59b6;
 }
 
-/* ===== 移动端卡片式布局 ===== */
-.mobile-servers {
-    display: none;
-}
-
-.mobile-server-card {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 8px;
-    padding: 8px;
-    background: #fff;
-}
-
-.mobile-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 6px;
-}
-
-.mobile-server-name {
-    color: #0066cc;
-    font-weight: bold;
-    font-size: 0.9em;
-    cursor: pointer;
-    flex: 1;
-}
-
-.mobile-server-name:hover {
-    text-decoration: underline;
-}
-
-.mobile-server-tags {
-    margin-top: 2px;
-}
-
-.mobile-tag {
-    display: inline-block;
-    padding: 1px 4px;
-    border-radius: 2px;
-    font-size: 0.6em;
-    margin-right: 2px;
-}
-
-.mobile-tag.new {
-    background: #ff4444;
-    color: white;
-}
-
-.mobile-tag.hot {
-    background: #ff9900;
-    color: black;
-}
-
-.mobile-card-info {
-    font-size: 0.8em;
-    line-height: 1.4;
-}
-
-.mobile-info-row {
-    display: flex;
-    margin-bottom: 3px;
-    border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 3px;
-}
-
-.mobile-info-label {
-    font-weight: bold;
-    color: #666;
-    width: 70px;
-    flex-shrink: 0;
-}
-
-.mobile-info-value {
-    flex: 1;
-    color: #333;
-}
-
-.mobile-ip-value {
-    color: #0066cc;
-    cursor: pointer;
-}
-
-.mobile-ip-value:hover {
-    text-decoration: underline;
-}
-
-.mobile-card-footer {
-    margin-top: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.mobile-promotion-badge {
-    display: inline-block;
-    padding: 1px 4px;
-    font-size: 0.6em;
-    border-radius: 3px;
-    color: white;
-    white-space: nowrap;
-}
-
-.mobile-btn-detail {
-    padding: 3px 8px;
-    background: #d4af37;
-    color: #fff;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    font-size: 0.7em;
-}
-
 /* 移动端响应式优化 */
 @media (max-width: 768px) {
     .container {
@@ -471,57 +358,25 @@ tr.row-yellow-bg {
         font-size: 0.65em;
     }
     
-    /* 隐藏桌面端表格，显示移动端卡片 */
-    .table-wrapper {
-        display: none;
-    }
-    
-    .mobile-servers {
-        display: block;
-    }
-    
-    /* 调整控制区域 */
-    .table-controls {
-        border-radius: 4px;
-        margin-bottom: 8px;
-    }
-    
-    /* 卡片样式优化 */
-    .mobile-server-card {
-        padding: 10px;
-    }
-    
-    .mobile-server-name {
-        font-size: 0.85em;
-    }
-    
-    .mobile-info-row {
-        padding-bottom: 4px;
-        margin-bottom: 4px;
-    }
-    
-    .mobile-info-label {
-        font-size: 0.75em;
-    }
-    
-    .mobile-info-value {
-        font-size: 0.75em;
-    }
-}
-
-/* 桌面端保持原有表格布局 */
-@media (min-width: 769px) {
-    .mobile-servers {
-        display: none;
-    }
-    
-    .table-wrapper {
-        display: block;
-    }
-    
     #serverTable {
-        min-width: 900px;
-        font-size: 0.75rem;
+        min-width: 700px;
+        font-size: 0.7rem; /* 移动端字体更小 */
+    }
+    
+    #serverTable th,
+    #serverTable td { 
+        padding: 1px 2px;
+        font-size: 0.7em; 
+    }
+    
+    #serverTable th {
+        font-size: 0.7em;
+        padding: 2px 2px;
+    }
+    
+    .btn-detail { 
+        padding: 1px 4px; 
+        font-size: 0.65em; 
     }
 }
 /* 在现有CSS末尾添加以下响应式代码 */
