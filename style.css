@@ -1,181 +1,356 @@
-/* ===== 基础样式（核心，你缺失的部分） ===== */
+/* ===== 极简紧凑版本 ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+    background: #1a1a1a;
     color: #e0e0e0;
-    line-height: 1.6;
-    padding: 15px;
+    line-height: 1.3;
     min-height: 100vh;
-}
-.container { max-width: 1200px; margin: 0 auto; }
-.site-header { text-align: center; padding: 25px 0; border-bottom: 2px solid #d4af37; margin-bottom: 25px; }
-.site-header h1 { color: #ffd700; font-size: 2.8rem; margin-bottom: 10px; text-shadow: 0 0 5px rgba(255, 215, 0, 0.5); }
-.site-header .subtitle { color: #aaa; font-size: 1.1rem; }
-.category-filter {
-    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 25px;
-}
-.cat-btn {
-    padding: 10px 25px; background: #333; border: 1px solid #555; color: #ccc;
-    border-radius: 20px; cursor: pointer; transition: all 0.3s; font-weight: bold;
-}
-.cat-btn:hover, .cat-btn.active { background: #d4af37; color: #000; border-color: #ffd700; }
-.table-controls {
-    display: flex; justify-content: space-between; align-items: center;
-    background: #2a2a2a; padding: 15px; border-radius: 8px 8px 0 0; border: 1px solid #444;
-}
-.stats { color: #4CAF50; font-weight: bold; }
-.sort-controls select { padding: 8px 15px; background: #222; color: #fff; border: 1px solid #666; border-radius: 4px; }
-.table-wrapper {
-    overflow-x: auto; border: 1px solid #444; border-top: none; border-radius: 0 0 8px 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-#serverTable {
-    width: 100%; border-collapse: collapse; min-width: 1000px;
-}
-#serverTable thead { background: linear-gradient(to bottom, #3a3a3a, #2a2a2a); }
-#serverTable th {
-    padding: 18px 12px; text-align: left; color: #ffcc00; border-bottom: 2px solid #d4af37;
-    font-weight: bold; white-space: nowrap;
-}
-#serverTable tbody tr {
-    background-color: #2d2d2d; border-bottom: 1px solid #3a3a3a; transition: background-color 0.2s;
-}
-#serverTable tbody tr:nth-child(even) { background-color: #262626; }
-#serverTable tbody tr:hover { background-color: #363636; }
-#serverTable td {
-    padding: 15px 12px; vertical-align: top;
-}
-.server-name { color: #00e5ff; font-weight: bold; font-size: 1.05em; }
-.server-tags { margin-top: 5px; }
-.tag { display: inline-block; padding: 3px 8px; border-radius: 3px; font-size: 0.8em; margin-right: 5px; }
-.tag.new { background: #ff4444; color: white; }
-.tag.hot { background: #ff9900; color: black; }
-.server-feature { color: #ff9999; max-width: 200px; line-height: 1.4; }
-.btn-detail {
-    display: inline-block; padding: 8px 20px; background: linear-gradient(to bottom, #d4af37, #b8941f);
-    color: #000; font-weight: bold; text-decoration: none; border-radius: 4px; border: none; cursor: pointer;
-    transition: all 0.3s;
-}
-.btn-detail:hover { background: linear-gradient(to bottom, #ffd700, #d4af37); transform: scale(1.05); }
-.loading { text-align: center; padding: 40px!important; color: #888; }
-.site-footer {
-    text-align: center; padding: 25px 0; margin-top: 40px; color: #777; border-top: 1px solid #444;
-    font-size: 0.9em;
-}
-/* 视觉增强：角标与状态 */
-.server-name {
-    position: relative;
-    padding-left: 8px;
-}
-.server-name::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3px;
-    height: 70%;
-    background: linear-gradient(to bottom, #ffd700, #d4af37);
-    border-radius: 2px;
-}
-/* 让“火爆”和“新服”标签更醒目 */
-.tag.hot {
-    animation: pulse-hot 2s infinite;
-}
-.tag.new {
-    animation: pulse-new 1.5s infinite;
-}
-@keyframes pulse-hot {
-    0% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0.7); }
-    70% { box-shadow: 0 0 0 5px rgba(255, 153, 0, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 153, 0, 0); }
-}
-@keyframes pulse-new {
-    0% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7); }
-    70% { box-shadow: 0 0 0 4px rgba(255, 68, 68, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 68, 68, 0); }
-}
-/* 表格行悬停高亮 */
-#serverTable tbody tr:hover td {
-    background-color: #3a3a3a !important;
-    border-color: #555;
-}
-#serverTable tbody tr:hover .server-name {
-    color: #00ffff;
-}
-/* 按钮点击反馈 */
-.btn-detail:active {
-    transform: scale(0.98);
-    transition: transform 0.1s;
-}
-/* 移动端响应式优化 */
-@media (max-width: 768px) {
-    .site-header h1 { font-size: 2rem; }
-    .category-filter { gap: 8px; }
-    .cat-btn { padding: 8px 16px; font-size: 0.9em; }
-    .table-controls { flex-direction: column; align-items: flex-start; gap: 10px; }
-    #serverTable th,
-    #serverTable td { padding: 10px 8px; font-size: 0.9em; }
-    .btn-detail { padding: 6px 12px; font-size: 0.85em; }
+    font-size: 12px;
 }
 
-/* ===== 以下是新增的“推荐系统与时段提示样式” ===== */
-/* 时段提示条 */
+/* 主容器 */
+.container { 
+    max-width: 1200px; /* 限制最大宽度 */
+    margin: 0 auto;
+    width: 100%;
+    padding: 5px; /* 添加内边距 */
+}
+
+/* 头部logo区域 - 与表格容器同宽 */
+.site-header { 
+    text-align: center; 
+    padding: 0;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.logo-container {
+    width: 100%;
+    margin-bottom: 5px;
+    overflow: hidden; /* 防止图片溢出 */
+}
+
+.site-logo {
+    width: 100%; /* 与表格同宽 */
+    height: auto;
+    max-height: 50px;
+    object-fit: cover; /* 裁剪图片以适应宽度 */
+    display: block;
+}
+
+.site-title {
+    color: #ffd700; 
+    font-size: 1.2rem;
+    margin: 0;
+    display: none;
+}
+
+/* 分类按钮区域 */
+.category-filter {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 3px;
+    margin-top: 5px;
+}
+
+.cat-btn {
+    padding: 2px 8px;
+    background: #333; 
+    border: none; 
+    color: #ccc;
+    border-radius: 2px; 
+    cursor: pointer; 
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+
+.cat-btn.active { 
+    background: #d4af37; 
+    color: #000; 
+}
+
+/* 时段提示 */
 .period-indicator {
-    padding: 12px 20px;
+    padding: 3px 8px;
     text-align: center;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-radius: 2px;
+    margin-bottom: 6px;
     font-weight: bold;
     display: block;
-    border-left: 5px solid;
+    border-left: 2px solid;
+    font-size: 0.7rem;
 }
+
 .period-indicator.daytime {
-    background-color: rgba(52, 152, 219, 0.15);
+    background-color: rgba(52, 152, 219, 0.1);
     border-left-color: #3498db;
     color: #3498db;
 }
+
 .period-indicator.overnight {
-    background-color: rgba(155, 89, 182, 0.15);
+    background-color: rgba(155, 89, 182, 0.1);
     border-left-color: #9b59b6;
     color: #9b59b6;
 }
-/* 套黄推荐行的背景色 */
+
+/* 表格控制区域 */
+.table-controls {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background: #2a2a2a; 
+    padding: 4px 8px;
+    border-radius: 2px 2px 0 0; 
+    border: 1px solid #444;
+    font-size: 0.7rem;
+}
+
+.stats { 
+    color: #4CAF50; 
+}
+
+.sort-controls select { 
+    padding: 2px 4px;
+    background: #222; 
+    color: #fff; 
+    border: 1px solid #666; 
+    border-radius: 2px; 
+    font-size: 0.7rem;
+}
+
+/* 表格区域 - 与logo同宽 */
+.table-wrapper {
+    overflow-x: auto; 
+    border: 1px solid #444; 
+    border-top: none;
+    width: 100%;
+}
+
+#serverTable {
+    width: 100%; 
+    border-collapse: collapse; 
+    min-width: 900px; /* 6列的最小宽度 */
+    font-size: 0.8rem;
+}
+
+#serverTable thead { 
+    background: #2a2a2a; 
+}
+
+#serverTable th {
+    padding: 4px 4px;
+    text-align: left; 
+    color: #ffcc00; 
+    border-bottom: 1px solid #555;
+    font-weight: bold; 
+    white-space: nowrap;
+}
+
+#serverTable tbody tr {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+#serverTable tbody tr:nth-child(even) { 
+    background-color: #252525; 
+}
+
+#serverTable td {
+    padding: 3px 4px;
+    vertical-align: middle;
+}
+
+/* 表格列宽度分配（6列） */
+#serverTable th:nth-child(1),
+#serverTable td:nth-child(1) {
+    width: 20%; /* 服务器名 */
+}
+
+#serverTable th:nth-child(2),
+#serverTable td:nth-child(2) {
+    width: 15%; /* 服务器IP */
+}
+
+#serverTable th:nth-child(3),
+#serverTable td:nth-child(3) {
+    width: 15%; /* 开放时间 */
+}
+
+#serverTable th:nth-child(4),
+#serverTable td:nth-child(4) {
+    width: 15%; /* 版本介绍 */
+}
+
+#serverTable th:nth-child(5),
+#serverTable td:nth-child(5) {
+    width: 10%; /* 客服QQ */
+}
+
+#serverTable th:nth-child(6),
+#serverTable td:nth-child(6) {
+    width: 15%; /* 特色/备注 */
+}
+
+#serverTable th:nth-child(7),
+#serverTable td:nth-child(7) {
+    width: 10%; /* 操作 */
+}
+
+/* 服务器名样式 */
+.server-name { 
+    color: #00e5ff; 
+    font-weight: bold; 
+    font-size: 0.85em;
+}
+
+.server-tags { 
+    margin-top: 1px; 
+}
+
+.tag { 
+    display: inline-block; 
+    padding: 0 3px;
+    border-radius: 1px; 
+    font-size: 0.65em; 
+    margin-right: 2px; 
+}
+
+.tag.new { 
+    background: #ff4444; 
+    color: white; 
+}
+
+.tag.hot { 
+    background: #ff9900; 
+    color: black; 
+}
+
+/* 特色备注列 */
+.server-feature { 
+    color: #ff9999; 
+    line-height: 1.2;
+    font-size: 0.75em;
+}
+
+/* 按钮样式 */
+.btn-detail {
+    display: inline-block; 
+    padding: 2px 6px;
+    background: #d4af37;
+    color: #000; 
+    font-weight: bold; 
+    text-decoration: none; 
+    border-radius: 1px; 
+    border: none; 
+    cursor: pointer;
+    font-size: 0.7rem;
+}
+
+.btn-detail:hover { 
+    background: #ffd700; 
+}
+
+.loading { 
+    text-align: center; 
+    padding: 15px!important; 
+    color: #888; 
+    font-size: 0.8rem; 
+}
+
+/* 页脚样式 */
+.site-footer {
+    text-align: center; 
+    padding: 8px 0;
+    margin-top: 10px;
+    color: #777; 
+    border-top: 1px solid #444;
+    font-size: 0.7em;
+}
+
+/* 推荐系统样式 */
 tr.row-yellow-bg {
-    background-color: rgba(255, 244, 92, 0.15) !important; /* 更醒目的淡黄色背景 */
-    border-left: 4px solid #f1c40f !important; /* 亮金色左边框 */
+    background-color: rgba(255, 244, 92, 0.1) !important;
+    border-left: 1px solid #f1c40f !important;
 }
-tr.row-yellow-bg:nth-child(even) {
-    background-color: rgba(255, 244, 92, 0.2) !important;
-}
-tr.row-yellow-bg:hover td {
-    background-color: rgba(255, 244, 92, 0.3) !important;
-}
-/* 所有推荐行的强化效果 */
-tr.row-promoted {
-    font-weight: bold;
-}
-tr.row-sticky .server-name::before {
-    content: '📌 ';
-    font-size: 0.9em;
-}
-/* 推荐角标样式 */
+
 .promotion-badge {
     display: inline-block;
-    padding: 3px 10px;
-    margin-left: 8px;
-    font-size: 0.75em;
-    border-radius: 12px;
+    padding: 0 4px;
+    margin-left: 2px;
+    font-size: 0.6em;
+    border-radius: 4px;
     color: white;
     vertical-align: middle;
     white-space: nowrap;
     font-weight: bold;
-    letter-spacing: 0.5px;
 }
+
 .badge-allday {
-    background: linear-gradient(45deg, #3498db, #2ecc71); /* 白天蓝色系 */
+    background: #3498db;
 }
+
 .badge-overnight {
-    background: linear-gradient(45deg, #9b59b6, #e74c3c); /* 通宵紫色/红色系 */
+    background: #9b59b6;
+}
+
+/* 移动端响应式优化 */
+@media (max-width: 768px) {
+    .container {
+        padding: 3px;
+    }
+    
+    .site-header { 
+        margin-bottom: 5px;
+    }
+    
+    .site-logo {
+        max-height: 40px;
+    }
+    
+    .category-filter { 
+        gap: 2px; 
+        margin-top: 3px;
+    }
+    
+    .cat-btn { 
+        padding: 1px 6px; 
+        font-size: 0.65em; 
+    }
+    
+    .period-indicator {
+        padding: 2px 4px;
+        font-size: 0.65rem;
+        margin-bottom: 4px;
+    }
+    
+    .table-controls { 
+        padding: 3px 6px;
+        font-size: 0.65rem;
+    }
+    
+    .sort-controls select {
+        padding: 1px 3px;
+        font-size: 0.65em;
+    }
+    
+    #serverTable {
+        min-width: 700px; /* 移动端最小宽度 */
+    }
+    
+    #serverTable th,
+    #serverTable td { 
+        padding: 2px 3px;
+        font-size: 0.75em; 
+    }
+    
+    #serverTable th {
+        font-size: 0.75em;
+        padding: 3px 3px;
+    }
+    
+    .btn-detail { 
+        padding: 1px 4px; 
+        font-size: 0.65em; 
+    }
 }
