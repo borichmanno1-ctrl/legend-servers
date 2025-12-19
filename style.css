@@ -318,7 +318,120 @@ tr.row-yellow-bg {
     background: #9b59b6;
 }
 
-/* 移动端响应式优化 - 完全显示 */
+/* ===== 移动端卡片式布局 ===== */
+.mobile-servers {
+    display: none;
+}
+
+.mobile-server-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 8px;
+    background: #fff;
+}
+
+.mobile-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+.mobile-server-name {
+    color: #0066cc;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: pointer;
+    flex: 1;
+}
+
+.mobile-server-name:hover {
+    text-decoration: underline;
+}
+
+.mobile-server-tags {
+    margin-top: 2px;
+}
+
+.mobile-tag {
+    display: inline-block;
+    padding: 1px 4px;
+    border-radius: 2px;
+    font-size: 0.6em;
+    margin-right: 2px;
+}
+
+.mobile-tag.new {
+    background: #ff4444;
+    color: white;
+}
+
+.mobile-tag.hot {
+    background: #ff9900;
+    color: black;
+}
+
+.mobile-card-info {
+    font-size: 0.8em;
+    line-height: 1.4;
+}
+
+.mobile-info-row {
+    display: flex;
+    margin-bottom: 3px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 3px;
+}
+
+.mobile-info-label {
+    font-weight: bold;
+    color: #666;
+    width: 70px;
+    flex-shrink: 0;
+}
+
+.mobile-info-value {
+    flex: 1;
+    color: #333;
+}
+
+.mobile-ip-value {
+    color: #0066cc;
+    cursor: pointer;
+}
+
+.mobile-ip-value:hover {
+    text-decoration: underline;
+}
+
+.mobile-card-footer {
+    margin-top: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-promotion-badge {
+    display: inline-block;
+    padding: 1px 4px;
+    font-size: 0.6em;
+    border-radius: 3px;
+    color: white;
+    white-space: nowrap;
+}
+
+.mobile-btn-detail {
+    padding: 3px 8px;
+    background: #d4af37;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 0.7em;
+}
+
+/* 移动端响应式优化 */
 @media (max-width: 768px) {
     .container {
         padding: 3px;
@@ -351,119 +464,63 @@ tr.row-yellow-bg {
     .table-controls { 
         padding: 3px 6px;
         font-size: 0.65rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 3px;
     }
     
     .sort-controls select {
         padding: 1px 3px;
         font-size: 0.65em;
-        width: 100%;
     }
     
-    /* 移动端表格完全显示的关键修改 */
+    /* 隐藏桌面端表格，显示移动端卡片 */
     .table-wrapper {
-        overflow-x: visible;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        width: 100%;
+        display: none;
+    }
+    
+    .mobile-servers {
+        display: block;
+    }
+    
+    /* 调整控制区域 */
+    .table-controls {
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+    
+    /* 卡片样式优化 */
+    .mobile-server-card {
+        padding: 10px;
+    }
+    
+    .mobile-server-name {
+        font-size: 0.85em;
+    }
+    
+    .mobile-info-row {
+        padding-bottom: 4px;
+        margin-bottom: 4px;
+    }
+    
+    .mobile-info-label {
+        font-size: 0.75em;
+    }
+    
+    .mobile-info-value {
+        font-size: 0.75em;
+    }
+}
+
+/* 桌面端保持原有表格布局 */
+@media (min-width: 769px) {
+    .mobile-servers {
+        display: none;
+    }
+    
+    .table-wrapper {
+        display: block;
     }
     
     #serverTable {
-        min-width: 100%;
-        width: 100%;
-        font-size: 0.7rem;
-        display: block;
-    }
-    
-    #serverTable thead {
-        display: none; /* 隐藏表头，改为在内容中显示标签 */
-    }
-    
-    #serverTable tbody {
-        display: block;
-        width: 100%;
-    }
-    
-    #serverTable tbody tr {
-        display: block;
-        width: 100%;
-        margin-bottom: 8px;
-        border: 1px solid #eee;
-        border-radius: 3px;
-        padding: 5px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-    
-    #serverTable tbody tr:last-child {
-        margin-bottom: 0;
-    }
-    
-    #serverTable td {
-        display: block;
-        width: 100% !important;
-        padding: 3px 5px;
-        border: none;
-        position: relative;
-        padding-left: 35%;
-        font-size: 0.7em;
-        min-height: 20px;
-    }
-    
-    #serverTable td:before {
-        content: attr(data-label);
-        position: absolute;
-        left: 5px;
-        width: 30%;
-        font-weight: bold;
-        color: #555;
-        font-size: 0.7em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    /* 为每个表格单元格添加标签 */
-    #serverTable td:nth-child(1):before { content: "服务器名"; }
-    #serverTable td:nth-child(2):before { content: "服务器IP"; }
-    #serverTable td:nth-child(3):before { content: "开放时间"; }
-    #serverTable td:nth-child(4):before { content: "版本介绍"; }
-    #serverTable td:nth-child(5):before { content: "客服QQ"; }
-    #serverTable td:nth-child(6):before { content: "特色/备注"; }
-    #serverTable td:nth-child(7):before { content: "操作"; }
-    
-    /* 特殊处理服务器名列 */
-    #serverTable td:nth-child(1) {
-        background-color: #f9f9f9;
-        border-bottom: 1px solid #eee;
-        padding-top: 4px;
-        padding-bottom: 4px;
-    }
-    
-    .server-name, .server-ip {
-        font-size: 0.75em;
-        display: inline-block;
-        max-width: 100%;
-        white-space: normal;
-        word-break: break-word;
-    }
-    
-    .btn-detail { 
-        padding: 3px 8px; 
-        font-size: 0.7em; 
-        display: inline-block;
-        width: auto;
-    }
-    
-    .server-tags {
-        display: inline-block;
-        margin-left: 5px;
-    }
-    
-    .promotion-badge {
-        font-size: 0.55em;
-        margin-left: 3px;
-        padding: 0 3px;
+        min-width: 900px;
+        font-size: 0.75rem;
     }
 }
