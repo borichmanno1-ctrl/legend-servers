@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const serverTableBody = document.getElementById('serverTableBody');
+    const mobileServersContainer = document.createElement('div');
+    mobileServersContainer.className = 'mobile-servers';
+    const mainContent = document.querySelector('.main-content');
+    
+    // 将移动端容器插入到表格后面
+    if (mainContent && mainContent.querySelector('.table-wrapper')) {
+        mainContent.insertBefore(mobileServersContainer, mainContent.querySelector('.table-wrapper').nextSibling);
+    }
+    
     const categoryFilter = document.getElementById('categoryFilter');
     const sortSelect = document.getElementById('sortSelect');
     const serverCount = document.getElementById('serverCount');
@@ -24,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('加载数据失败:', error);
             serverTableBody.innerHTML = '<tr><td colspan="7" style="color:red;">数据加载失败</td></tr>';
+            mobileServersContainer.innerHTML = '<div class="loading">数据加载失败</div>';
         });
 
     function generateCategoryButtons(categories) {
@@ -139,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         processedServers = processedServers.filter(server => server._promotionData.weight > 0);
         renderTableRows(processedServers);
+        renderMobileCards(processedServers); // 新增：渲染移动端卡片
     }
 
     function renderTableRows(servers) {
@@ -147,8 +158,6 @@ document.addEventListener('DOMContentLoaded', function() {
             serverTableBody.innerHTML = '<tr><td colspan="7" class="loading">当前分类下暂无开服信息。</td></tr>';
             return;
         }
-
-        const isMobile = window.innerWidth <= 768;
 
         servers.forEach(server => {
             const row = document.createElement('tr');
@@ -177,51 +186,100 @@ document.addEventListener('DOMContentLoaded', function() {
                 promotionBadge = `<span class="${badgeClass}">${server.promotion.type}</span>`;
             }
 
-            // 移动端和电脑端使用不同的HTML结构
-            if (isMobile) {
-                // 移动端：使用块级布局，每行显示一个服务器信息
-                row.innerHTML = `
-                    <td data-label="服务器名">
-                        <div>
-                            <span class="server-name" onclick="openServerDetail('${detailUrl}')">${server.name}</span>
-                            ${promotionBadge}
-                        </div>
-                        <div class="server-tags">${tagsHtml}</div>
-                    </td>
-                    <td data-label="服务器IP">
-                        <span class="server-ip" onclick="openServerDetail('${detailUrl}')">${server.ip}</span>
-                    </td>
-                    <td data-label="开放时间">${server.openTime}</td>
-                    <td data-label="版本介绍">${server.version}</td>
-                    <td data-label="客服QQ">${server.qq}</td>
-                    <td data-label="特色/备注" class="server-feature">${server.feature}</td>
-                    <td data-label="操作">
-                        <button class="btn-detail" onclick="openServerDetail('${detailUrl}')">点击查看</button>
-                    </td>
-                `;
-            } else {
-                // 电脑端：保持原来的表格布局
-                row.innerHTML = `
-                    <td>
-                        <div>
-                            <span class="server-name" onclick="openServerDetail('${detailUrl}')">${server.name}</span>
-                            ${promotionBadge}
-                        </div>
-                        <div class="server-tags">${tagsHtml}</div>
-                    </td>
-                    <td><span class="server-ip" onclick="openServerDetail('${detailUrl}')">${server.ip}</span></td>
-                    <td>${server.openTime}</td>
-                    <td>${server.version}</td>
-                    <td>${server.qq}</td>
-                    <td class="server-feature">${server.feature}</td>
-                    <td><button class="btn-detail" onclick="openServerDetail('${detailUrl}')">点击查看</button></td>
-                `;
-            }
-            
+            // 修改这里：将服务器名和服务器IP都改为可点击的链接
+            row.innerHTML = `
+                <td>
+                    <div>
+                        <span class="server-name" onclick="openServerDetail('${detailUrl}')">${server.name}</span>
+                        ${promotionBadge}
+                    </div>
+                    <div class="server-tags">${tagsHtml}</div>
+                </td>
+                <td><span class="server-ip" onclick="openServerDetail('${detailUrl}')">${server.ip}</span></td>
+                <td>${server.openTime}</td>
+                <td>${server.version}</td>
+                <td>${server.qq}</td>
+                <td class="server-feature">${server.feature}</td>
+                <td><button class="btn-detail" onclick="openServerDetail('${detailUrl}')">点击查看</button></td>
+            `;
             serverTableBody.appendChild(row);
         });
 
         serverCount.textContent = servers.length;
+    }
+    
+    // 新增：渲染移动端卡片
+    function renderMobileCards(servers) {
+        mobileServersContainer.innerHTML = '';
+        
+        if (servers.length === 0) {
+            mobileServersContainer.innerHTML = '<div class="loading">当前分类下暂无开服信息。</div>';
+            return;
+        }
+        
+        servers.forEach(server => {
+            const card = document.createElement('div');
+            card.className = 'mobile-server-card';
+            
+            // 添加特殊样式类
+            const promoType = server.promotion?.type || '';
+            if (promoType.includes('套黄')) {
+                card.classList.add('row-yellow-bg');
+            }
+            
+            let tagsHtml = '';
+            if (server.new) tagsHtml += '<span class="mobile-tag new">新服</span>';
+            if (server.hot) tagsHtml += '<span class="mobile-tag hot">火爆</span>';
+            
+            const detailUrl = server.detailUrl || '#';
+            
+            let promotionBadge = '';
+            if (server.promotion) {
+                let badgeClass = 'mobile-promotion-badge';
+                if (promoType.includes('通宵')) badgeClass += ' badge-overnight';
+                if (promoType.includes('全天')) badgeClass += ' badge-allday';
+                promotionBadge = `<span class="${badgeClass}">${server.promotion.type}</span>`;
+            }
+            
+            card.innerHTML = `
+                <div class="mobile-card-header">
+                    <div>
+                        <div class="mobile-server-name" onclick="openServerDetail('${detailUrl}')">${server.name}</div>
+                        <div class="mobile-server-tags">${tagsHtml}</div>
+                    </div>
+                    ${promotionBadge}
+                </div>
+                
+                <div class="mobile-card-info">
+                    <div class="mobile-info-row">
+                        <div class="mobile-info-label">服务器IP:</div>
+                        <div class="mobile-info-value mobile-ip-value" onclick="openServerDetail('${detailUrl}')">${server.ip}</div>
+                    </div>
+                    <div class="mobile-info-row">
+                        <div class="mobile-info-label">开放时间:</div>
+                        <div class="mobile-info-value">${server.openTime}</div>
+                    </div>
+                    <div class="mobile-info-row">
+                        <div class="mobile-info-label">版本介绍:</div>
+                        <div class="mobile-info-value">${server.version}</div>
+                    </div>
+                    <div class="mobile-info-row">
+                        <div class="mobile-info-label">客服QQ:</div>
+                        <div class="mobile-info-value">${server.qq}</div>
+                    </div>
+                    <div class="mobile-info-row">
+                        <div class="mobile-info-label">特色备注:</div>
+                        <div class="mobile-info-value">${server.feature}</div>
+                    </div>
+                </div>
+                
+                <div class="mobile-card-footer">
+                    <button class="mobile-btn-detail" onclick="openServerDetail('${detailUrl}')">点击查看</button>
+                </div>
+            `;
+            
+            mobileServersContainer.appendChild(card);
+        });
     }
 
     // 将openServerDetail函数暴露给全局作用域
@@ -249,11 +307,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         renderTableRows(serversToSort);
-    });
-
-    // 添加窗口大小变化监听，以便在调整窗口大小时重新渲染
-    window.addEventListener('resize', function() {
-        filterAndRenderServers();
+        renderMobileCards(serversToSort); // 同步更新移动端卡片
     });
 
     setInterval(() => {
