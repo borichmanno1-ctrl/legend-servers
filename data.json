@@ -1,10 +1,12 @@
+[file name]: data.json
+[file content begin]
 {
   "categories": ["全部", "单职业", "复古", "合击", "冰雪", "沉默", "火龙", "微变"],
   "servers": [
     {
       "name": "通宵置顶服",
       "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
+      "openTime": "12月20日/02:00",
       "version": "通宵专属",
       "feature": "夜间爆率加成",
       "qq": "夜猫子客服",
@@ -20,7 +22,7 @@
     {
       "name": "全天套黄服",
       "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
+      "openTime": "12月20日/10:00",
       "version": "大极品",
       "feature": "全天候激情",
       "qq": "全天客服",
@@ -34,9 +36,22 @@
       }
     },
     {
+      "name": "当前时段服",
+      "ip": "时段一区",
+      "openTime": "12月20日/22:30",
+      "version": "经典1.76",
+      "feature": "半小时特惠",
+      "qq": "时段客服",
+      "detailUrl": "#",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": null
+    },
+    {
       "name": "普通服",
       "ip": "普通区",
-      "openTime": "12月20日/14点整",
+      "openTime": "12月20日/14:00",
       "version": "经典1.76",
       "feature": "长期稳定",
       "qq": "常规客服",
@@ -47,501 +62,37 @@
       "promotion": null
     },
     {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
+      "name": "通宵套黄服",
+      "ip": "通宵二区",
+      "openTime": "12月20日/03:30",
       "version": "通宵专属",
-      "feature": "夜间爆率加成",
+      "feature": "夜间双倍经验",
       "qq": "夜猫子客服",
       "detailUrl": "#",
       "category": ["单职业"],
       "hot": true,
-      "new": true,
+      "new": false,
       "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
+        "type": "通宵套黄推荐",
+        "order": 2
       }
     },
     {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
+      "name": "全天置顶服",
+      "ip": "全天一区",
+      "openTime": "12月20日/12:00",
       "version": "大极品",
-      "feature": "全天候激情",
+      "feature": "全天爆率加成",
       "qq": "全天客服",
       "detailUrl": "#",
-      "category": ["复古"],
+      "category": ["合击"],
       "hot": true,
       "new": false,
       "promotion": {
-        "type": "全天套黄推荐",
+        "type": "全天置顶推荐",
         "order": 0
       }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "通宵一区",
-      "openTime": "12月20日/02点整",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成",
-      "qq": "夜猫子客服",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "全天套黄服",
-      "ip": "黄金一区",
-      "openTime": "12月20日/10点整",
-      "version": "大极品",
-      "feature": "全天候激情",
-      "qq": "全天客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "普通区",
-      "openTime": "12月20日/14点整",
-      "version": "经典1.76",
-      "feature": "长期稳定",
-      "qq": "常规客服",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
     }
   ]
 }
-
-
+[file content end]
