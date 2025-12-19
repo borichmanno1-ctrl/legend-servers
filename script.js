@@ -6,12 +6,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const lastUpdateTime = document.getElementById('lastUpdateTime');
     const currentYear = document.getElementById('currentYear');
     const periodIndicator = document.getElementById('periodIndicator');
+    const siteLogo = document.querySelector('.site-logo');
 
     let allServers = [];
     let activeCategory = '全部';
 
     currentYear.textContent = new Date().getFullYear();
-    lastUpdateTime.textContent = new Date().toLocaleDateString('zh-CN');
+    lastUpdateTime.textContent = new Date().toLocaleDateString('zh-CN') + ' ' + new Date().toLocaleTimeString('zh-CN', {hour: '2-digit', minute: '2-digit'});
+
+    // 模拟一个logo图片，实际使用时替换为真实的logo.jpg
+    if (siteLogo) {
+        siteLogo.onerror = function() {
+            this.style.display = 'none';
+            const siteTitle = document.querySelector('.site-title');
+            if (siteTitle) {
+                siteTitle.style.display = 'block';
+                siteTitle.textContent = 'JJJ传奇发布网';
+            }
+        };
+        
+        // 如果logo不存在，直接显示标题
+        if (!siteLogo.complete || siteLogo.naturalWidth === 0) {
+            const siteTitle = document.querySelector('.site-title');
+            if (siteTitle) {
+                siteTitle.style.display = 'block';
+                siteTitle.textContent = 'JJJ传奇发布网';
+            }
+        }
+    }
 
     fetch('data.json')
         .then(response => response.json())
@@ -23,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('加载数据失败:', error);
-            serverTableBody.innerHTML = '<tr><td colspan="7" style="color:red;">数据加载失败</td></tr>';
+            serverTableBody.innerHTML = '<tr><td colspan="7" style="color:#ff6666;padding:20px;text-align:center;">数据加载失败，请刷新页面重试</td></tr>';
         });
 
     function generateCategoryButtons(categories) {
@@ -54,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 获取当前半小时区间
     function getCurrentTimeSlot() {
         const beijingTime = getBeijingTime();
-        const hour = beijingTime.getUTCHours(); // 注意：使用getUTCHours因为我们已经加了8小时
+        const hour = beijingTime.getUTCHours();
         const minute = beijingTime.getUTCMinutes();
         
         // 计算当前半小时区间
