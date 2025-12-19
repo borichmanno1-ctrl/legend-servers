@@ -2,46 +2,46 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: #ffffff;
-    color: #333333;
-    line-height: 1.2;
+    background: #ffffff; /* 改为白色背景 */
+    color: #333333; /* 文字改为深色 */
+    line-height: 1.3;
     min-height: 100vh;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 /* 主容器 */
 .container { 
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    padding: 3px;
+    padding: 5px;
 }
 
-/* 头部logo区域 */
+/* 头部logo区域 - 与表格容器同宽 */
 .site-header { 
     text-align: center; 
     padding: 0;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     width: 100%;
 }
 
 .logo-container {
     width: 100%;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
     overflow: hidden;
 }
 
 .site-logo {
-    width: 100%;
+    width: 100%; /* 与表格同宽 */
     height: auto;
-    max-height: 40px;
-    object-fit: contain;
+    max-height: 50px;
+    object-fit: cover;
     display: block;
 }
 
 .site-title {
-    color: #d4af37;
-    font-size: 1rem;
+    color: #d4af37; /* 调整为金色 */
+    font-size: 1.2rem;
     margin: 0;
     display: none;
 }
@@ -51,18 +51,18 @@ body {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
-    gap: 2px;
-    margin-top: 3px;
+    gap: 3px;
+    margin-top: 5px;
 }
 
 .cat-btn {
-    padding: 1px 5px;
-    background: #f0f0f0;
-    border: 1px solid #ddd;
+    padding: 2px 8px;
+    background: #f0f0f0; /* 浅灰色背景 */
+    border: 1px solid #ddd; /* 添加边框 */
     color: #333;
-    border-radius: 1px; 
+    border-radius: 2px; 
     cursor: pointer; 
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     font-weight: normal;
 }
 
@@ -74,14 +74,14 @@ body {
 
 /* 时段提示 */
 .period-indicator {
-    padding: 2px 5px;
+    padding: 3px 8px;
     text-align: center;
-    border-radius: 1px;
-    margin-bottom: 4px;
+    border-radius: 2px;
+    margin-bottom: 6px;
     font-weight: bold;
     display: block;
     border-left: 2px solid;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
 .period-indicator.daytime {
@@ -101,11 +101,11 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    background: #f5f5f5;
-    padding: 3px 5px;
-    border-radius: 1px 1px 0 0; 
-    border: 1px solid #ddd;
-    font-size: 0.6rem;
+    background: #f5f5f5; /* 浅灰色背景 */
+    padding: 4px 8px;
+    border-radius: 2px 2px 0 0; 
+    border: 1px solid #ddd; /* 浅色边框 */
+    font-size: 0.7rem;
 }
 
 .stats { 
@@ -113,15 +113,15 @@ body {
 }
 
 .sort-controls select { 
-    padding: 1px 3px;
-    background: #fff;
+    padding: 2px 4px;
+    background: #fff; /* 白色背景 */
     color: #333; 
     border: 1px solid #ccc; 
-    border-radius: 1px; 
-    font-size: 0.6rem;
+    border-radius: 2px; 
+    font-size: 0.7rem;
 }
 
-/* 表格区域 - 响应式设计 */
+/* 表格区域 - 与logo同宽 */
 .table-wrapper {
     overflow-x: auto; 
     border: 1px solid #ddd; 
@@ -129,107 +129,98 @@ body {
     width: 100%;
 }
 
-/* 桌面端表格样式 */
 #serverTable {
     width: 100%; 
     border-collapse: collapse; 
-    font-size: 0.7rem;
+    min-width: 900px;
+    font-size: 0.75rem; /* 减小字体大小 */
 }
 
 #serverTable thead { 
-    background: #f5f5f5;
+    background: #f5f5f5; /* 浅灰色表头 */
 }
 
 #serverTable th {
-    padding: 2px 3px;
+    padding: 3px 4px; /* 减小内边距 */
     text-align: left; 
-    color: #333;
-    border-bottom: 1px solid #ddd;
+    color: #333; /* 深色文字 */
+    border-bottom: 2px solid #ddd; /* 浅色边框 */
     font-weight: bold; 
     white-space: nowrap;
-    font-size: 0.7rem;
+    font-size: 0.75rem; /* 表头字体也减小 */
 }
 
 #serverTable tbody tr {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee; /* 更浅的边框 */
 }
 
 #serverTable tbody tr:nth-child(even) { 
-    background-color: #fafafa;
+    background-color: #fafafa; /* 浅色交替行 */
 }
 
 #serverTable td {
-    padding: 2px 3px;
+    padding: 2px 4px; /* 减小内边距 */
     vertical-align: middle;
-    font-size: 0.7rem;
+    font-size: 0.75rem; /* 表格内容字体减小 */
 }
 
-/* 桌面端列宽分配 */
+/* 表格列宽度分配（6列） - 保持原有比例 */
 #serverTable th:nth-child(1),
 #serverTable td:nth-child(1) {
-    width: 18%;
-    min-width: 80px;
+    width: 20%;
 }
 
 #serverTable th:nth-child(2),
 #serverTable td:nth-child(2) {
-    width: 14%;
-    min-width: 70px;
+    width: 15%;
 }
 
 #serverTable th:nth-child(3),
 #serverTable td:nth-child(3) {
-    width: 14%;
-    min-width: 70px;
+    width: 15%;
 }
 
 #serverTable th:nth-child(4),
 #serverTable td:nth-child(4) {
-    width: 14%;
-    min-width: 70px;
+    width: 15%;
 }
 
 #serverTable th:nth-child(5),
 #serverTable td:nth-child(5) {
     width: 10%;
-    min-width: 60px;
 }
 
 #serverTable th:nth-child(6),
 #serverTable td:nth-child(6) {
     width: 15%;
-    min-width: 80px;
 }
 
 #serverTable th:nth-child(7),
 #serverTable td:nth-child(7) {
     width: 10%;
-    min-width: 60px;
 }
 
-/* 服务器名样式 */
+/* 服务器名样式 - 改为可点击的链接样式 */
 .server-name { 
-    color: #0066cc;
+    color: #0066cc; /* 链接蓝色 */
     font-weight: bold; 
-    font-size: 0.75em;
+    font-size: 0.8em;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    line-height: 1.1;
 }
 
 .server-name:hover {
     text-decoration: underline;
 }
 
-/* 服务器IP样式 */
+/* 服务器IP样式 - 同样改为可点击链接样式 */
 .server-ip { 
-    color: #0066cc;
+    color: #0066cc; /* 链接蓝色 */
     cursor: pointer;
-    font-size: 0.7em;
+    font-size: 0.75em;
     text-decoration: none;
     display: inline-block;
-    line-height: 1.1;
 }
 
 .server-ip:hover {
@@ -242,12 +233,11 @@ body {
 
 .tag { 
     display: inline-block; 
-    padding: 0 2px;
+    padding: 0 3px;
     border-radius: 1px; 
-    font-size: 0.55em; 
+    font-size: 0.65em; 
     margin-right: 2px; 
     margin-top: 1px;
-    line-height: 1.2;
 }
 
 .tag.new { 
@@ -262,15 +252,15 @@ body {
 
 /* 特色备注列 */
 .server-feature { 
-    color: #666;
-    line-height: 1.1;
-    font-size: 0.65em;
+    color: #666; /* 深灰色 */
+    line-height: 1.2;
+    font-size: 0.7em; /* 减小字体 */
 }
 
 /* 按钮样式 */
 .btn-detail {
     display: inline-block; 
-    padding: 1px 4px;
+    padding: 2px 6px;
     background: #d4af37;
     color: #fff; 
     font-weight: bold; 
@@ -278,8 +268,7 @@ body {
     border-radius: 1px; 
     border: none; 
     cursor: pointer;
-    font-size: 0.65rem;
-    line-height: 1.1;
+    font-size: 0.7rem;
 }
 
 .btn-detail:hover { 
@@ -288,19 +277,19 @@ body {
 
 .loading { 
     text-align: center; 
-    padding: 10px!important; 
+    padding: 15px!important; 
     color: #888; 
-    font-size: 0.7rem; 
+    font-size: 0.8rem; 
 }
 
 /* 页脚样式 */
 .site-footer {
     text-align: center; 
-    padding: 5px 0;
-    margin-top: 8px;
+    padding: 8px 0;
+    margin-top: 10px;
     color: #777; 
-    border-top: 1px solid #ddd;
-    font-size: 0.6em;
+    border-top: 1px solid #ddd; /* 浅色边框 */
+    font-size: 0.7em;
 }
 
 /* 推荐系统样式 */
@@ -311,15 +300,14 @@ tr.row-yellow-bg {
 
 .promotion-badge {
     display: inline-block;
-    padding: 0 2px;
-    margin-left: 1px;
-    font-size: 0.5em;
-    border-radius: 2px;
+    padding: 0 4px;
+    margin-left: 2px;
+    font-size: 0.6em;
+    border-radius: 4px;
     color: white;
     vertical-align: middle;
     white-space: nowrap;
     font-weight: bold;
-    line-height: 1.2;
 }
 
 .badge-allday {
@@ -330,220 +318,152 @@ tr.row-yellow-bg {
     background: #9b59b6;
 }
 
-/* 手机端响应式优化 - 关键修改 */
+/* 移动端响应式优化 - 完全显示 */
 @media (max-width: 768px) {
-    body {
-        font-size: 10px;
-    }
-    
     .container {
-        padding: 2px;
+        padding: 3px;
     }
     
     .site-header { 
-        margin-bottom: 3px;
+        margin-bottom: 5px;
     }
     
     .site-logo {
-        max-height: 30px;
+        max-height: 40px;
     }
     
     .category-filter { 
-        gap: 1px; 
-        margin-top: 2px;
+        gap: 2px; 
+        margin-top: 3px;
     }
     
     .cat-btn { 
-        padding: 1px 3px; 
-        font-size: 0.55em; 
+        padding: 1px 6px; 
+        font-size: 0.65em; 
     }
     
     .period-indicator {
-        padding: 1px 3px;
-        font-size: 0.55rem;
-        margin-bottom: 3px;
+        padding: 2px 4px;
+        font-size: 0.65rem;
+        margin-bottom: 4px;
     }
     
     .table-controls { 
-        padding: 2px 3px;
-        font-size: 0.55rem;
+        padding: 3px 6px;
+        font-size: 0.65rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3px;
     }
     
     .sort-controls select {
-        padding: 1px 2px;
-        font-size: 0.55em;
+        padding: 1px 3px;
+        font-size: 0.65em;
+        width: 100%;
     }
     
-    /* 手机端表格优化 - 确保所有内容在一屏内显示 */
+    /* 移动端表格完全显示的关键修改 */
     .table-wrapper {
-        overflow-x: hidden; /* 取消横向滚动 */
-        -webkit-overflow-scrolling: touch;
+        overflow-x: visible;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        width: 100%;
     }
     
     #serverTable {
-        min-width: 100%; /* 确保表格宽度100% */
-        font-size: 0.65rem;
-        table-layout: fixed; /* 固定表格布局 */
-        word-wrap: break-word; /* 允许长单词换行 */
+        min-width: 100%;
+        width: 100%;
+        font-size: 0.7rem;
+        display: block;
     }
     
-    #serverTable th,
-    #serverTable td { 
-        padding: 1px 2px;
-        font-size: 0.65em; 
+    #serverTable thead {
+        display: none; /* 隐藏表头，改为在内容中显示标签 */
+    }
+    
+    #serverTable tbody {
+        display: block;
+        width: 100%;
+    }
+    
+    #serverTable tbody tr {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+        border: 1px solid #eee;
+        border-radius: 3px;
+        padding: 5px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    
+    #serverTable tbody tr:last-child {
+        margin-bottom: 0;
+    }
+    
+    #serverTable td {
+        display: block;
+        width: 100% !important;
+        padding: 3px 5px;
+        border: none;
+        position: relative;
+        padding-left: 35%;
+        font-size: 0.7em;
+        min-height: 20px;
+    }
+    
+    #serverTable td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 5px;
+        width: 30%;
+        font-weight: bold;
+        color: #555;
+        font-size: 0.7em;
+        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     
-    #serverTable th {
-        font-size: 0.65em;
-        padding: 2px 2px;
-        white-space: normal; /* 允许表头换行 */
-    }
+    /* 为每个表格单元格添加标签 */
+    #serverTable td:nth-child(1):before { content: "服务器名"; }
+    #serverTable td:nth-child(2):before { content: "服务器IP"; }
+    #serverTable td:nth-child(3):before { content: "开放时间"; }
+    #serverTable td:nth-child(4):before { content: "版本介绍"; }
+    #serverTable td:nth-child(5):before { content: "客服QQ"; }
+    #serverTable td:nth-child(6):before { content: "特色/备注"; }
+    #serverTable td:nth-child(7):before { content: "操作"; }
     
-    /* 手机端列宽重新分配 */
-    #serverTable th:nth-child(1),
+    /* 特殊处理服务器名列 */
     #serverTable td:nth-child(1) {
-        width: 20%;
-        min-width: 70px;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #eee;
+        padding-top: 4px;
+        padding-bottom: 4px;
     }
     
-    #serverTable th:nth-child(2),
-    #serverTable td:nth-child(2) {
-        width: 15%;
-        min-width: 60px;
-    }
-    
-    #serverTable th:nth-child(3),
-    #serverTable td:nth-child(3) {
-        width: 15%;
-        min-width: 60px;
-    }
-    
-    #serverTable th:nth-child(4),
-    #serverTable td:nth-child(4) {
-        width: 15%;
-        min-width: 60px;
-    }
-    
-    #serverTable th:nth-child(5),
-    #serverTable td:nth-child(5) {
-        width: 10%;
-        min-width: 50px;
-    }
-    
-    #serverTable th:nth-child(6),
-    #serverTable td:nth-child(6) {
-        width: 15%;
-        min-width: 70px;
-    }
-    
-    #serverTable th:nth-child(7),
-    #serverTable td:nth-child(7) {
-        width: 10%;
-        min-width: 50px;
-    }
-    
-    /* 手机端内容进一步紧凑 */
-    .server-name {
-        font-size: 0.7em;
-    }
-    
-    .server-ip {
-        font-size: 0.65em;
-    }
-    
-    .server-feature {
-        font-size: 0.6em;
-    }
-    
-    .tag {
-        font-size: 0.5em;
-        padding: 0 1px;
-    }
-    
-    .promotion-badge {
-        font-size: 0.45em;
+    .server-name, .server-ip {
+        font-size: 0.75em;
+        display: inline-block;
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-word;
     }
     
     .btn-detail { 
-        padding: 1px 2px; 
-        font-size: 0.6em; 
-    }
-}
-
-/* 超小屏幕手机优化 */
-@media (max-width: 480px) {
-    body {
-        font-size: 9px;
+        padding: 3px 8px; 
+        font-size: 0.7em; 
+        display: inline-block;
+        width: auto;
     }
     
-    #serverTable {
-        font-size: 0.6rem;
-    }
-    
-    #serverTable th,
-    #serverTable td {
-        font-size: 0.6em;
-        padding: 0.5px 1px;
-    }
-    
-    /* 进一步压缩列宽 */
-    #serverTable th:nth-child(1),
-    #serverTable td:nth-child(1) {
-        width: 22%;
-        min-width: 60px;
-    }
-    
-    #serverTable th:nth-child(2),
-    #serverTable td:nth-child(2) {
-        width: 14%;
-        min-width: 50px;
-    }
-    
-    #serverTable th:nth-child(3),
-    #serverTable td:nth-child(3) {
-        width: 14%;
-        min-width: 50px;
-    }
-    
-    #serverTable th:nth-child(4),
-    #serverTable td:nth-child(4) {
-        width: 14%;
-        min-width: 50px;
-    }
-    
-    #serverTable th:nth-child(5),
-    #serverTable td:nth-child(5) {
-        width: 8%;
-        min-width: 40px;
-    }
-    
-    #serverTable th:nth-child(6),
-    #serverTable td:nth-child(6) {
-        width: 18%;
-        min-width: 60px;
-    }
-    
-    #serverTable th:nth-child(7),
-    #serverTable td:nth-child(7) {
-        width: 8%;
-        min-width: 40px;
-    }
-    
-    /* 隐藏部分不重要的文本 */
     .server-tags {
-        display: none; /* 在小屏幕上隐藏标签 */
+        display: inline-block;
+        margin-left: 5px;
     }
     
-    .server-feature {
-        display: none; /* 在小屏幕上隐藏特色列 */
-    }
-    
-    /* 显示简化的特色信息 */
-    .server-feature.short {
-        display: inline;
+    .promotion-badge {
         font-size: 0.55em;
-        color: #666;
+        margin-left: 3px;
+        padding: 0 3px;
     }
 }
