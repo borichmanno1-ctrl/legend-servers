@@ -1,5 +1,3 @@
-[file name]: data.json
-[file content begin]
 {
   "categories": ["全部", "单职业", "复古", "合击", "冰雪", "沉默", "火龙", "微变"],
   "servers": [
@@ -20,7 +18,7 @@
       }
     },
     {
-      "name": "全天置顶服",
+      "name": "全天套黄服",
       "ip": "黄金一区",
       "openTime": "12月20日/10:00",
       "version": "大极品",
@@ -31,72 +29,72 @@
       "hot": true,
       "new": false,
       "promotion": {
-        "type": "全天置顶推荐",
+        "type": "全天套黄推荐",
         "order": 0
       }
     },
     {
-      "name": "全天套黄服",
-      "ip": "套黄一区",
-      "openTime": "12月20日/14:00",
-      "version": "1.76复古",
-      "feature": "特色活动多",
-      "qq": "客服001",
+      "name": "当前时间段服",
+      "ip": "时段一区",
+      "openTime": "12月20日/22:30",
+      "version": "专属时段",
+      "feature": "当前半小时专属",
+      "qq": "时段客服",
       "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
+      "category": ["合击"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天套黄推荐",
-        "order": 2
+        "type": "全天推荐",
+        "order": 5
       }
     },
     {
       "name": "通宵套黄服",
-      "ip": "通宵套黄区",
-      "openTime": "12月20日/03:00",
-      "version": "通宵版本",
-      "feature": "通宵经验加倍",
-      "qq": "夜班客服",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵套黄推荐",
-        "order": 3
-      }
-    },
-    {
-      "name": "通宵推荐服",
-      "ip": "通宵推荐区",
-      "openTime": "12月20日/04:00",
-      "version": "特色版本",
-      "feature": "独特玩法",
-      "qq": "推荐客服",
+      "ip": "通宵二区",
+      "openTime": "12月20日/03:30",
+      "version": "通宵套黄",
+      "feature": "通宵套黄专属",
+      "qq": "通宵客服",
       "detailUrl": "#",
       "category": ["冰雪"],
       "hot": false,
       "new": true,
       "promotion": {
-        "type": "通宵推荐",
-        "order": 4
+        "type": "通宵套黄推荐",
+        "order": 2
       }
     },
     {
-      "name": "当前时间服",
-      "ip": "当前时间区",
-      "openTime": "12月20日/22:30",
-      "version": "当前版本",
-      "feature": "限时开放",
-      "qq": "时间客服",
+      "name": "全天推荐服",
+      "ip": "推荐一区",
+      "openTime": "12月20日/14:30",
+      "version": "经典1.76",
+      "feature": "长期稳定",
+      "qq": "推荐客服",
       "detailUrl": "#",
-      "category": ["合击"],
+      "category": ["复古"],
+      "hot": false,
+      "new": false,
+      "promotion": {
+        "type": "全天推荐",
+        "order": 10
+      }
+    },
+    {
+      "name": "通宵推荐服",
+      "ip": "通宵三区",
+      "openTime": "12月20日/04:45",
+      "version": "通宵推荐",
+      "feature": "通宵玩家首选",
+      "qq": "通宵客服2",
+      "detailUrl": "#",
+      "category": ["沉默"],
       "hot": true,
       "new": false,
       "promotion": {
-        "type": "时间推荐",
-        "order": 5
+        "type": "通宵推荐",
+        "order": 3
       }
     },
     {
@@ -114,4 +112,3 @@
     }
   ]
 }
-[file content end]
