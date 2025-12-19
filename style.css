@@ -270,7 +270,7 @@ body {
 .server-feature { 
     color: #666;
     line-height: 1.2;
-    font-size: 0.7em;
+    font-size: 0.65em; /* 缩小字体大小 */
     white-space: normal; /* 允许换行 */
     word-break: break-word; /* 允许单词内断行 */
 }
@@ -311,10 +311,10 @@ body {
     font-size: 0.7em;
 }
 
-/* 推荐系统样式 */
+/* 推荐系统样式 - 修改套黄颜色加深 */
 tr.row-yellow-bg {
-    background-color: rgba(255, 244, 92, 0.15) !important;
-    border-left: 2px solid #f1c40f !important;
+    background-color: rgba(255, 215, 0, 0.25) !important; /* 加深黄色，提高饱和度 */
+    border-left: 3px solid #ffcc00 !important; /* 加深边框颜色 */
 }
 
 /* 当前时间段服务器高亮样式 */
@@ -344,6 +344,15 @@ tr.current-time-slot {
 
 .badge-overnight {
     background: #9b59b6;
+}
+
+/* 特定列字体缩小：开放时间、版本介绍、客服QQ、特色备注 */
+#serverTable td:nth-child(3),  /* 开放时间 */
+#serverTable td:nth-child(4),  /* 版本介绍 */
+#serverTable td:nth-child(5),  /* 客服QQ */
+#serverTable td:nth-child(6) { /* 特色备注 */
+    font-size: 0.7em; /* 缩小字体 */
+    color: #555; /* 稍微加深颜色，提高可读性 */
 }
 
 /* 移动端响应式优化 */
@@ -457,6 +466,14 @@ tr.current-time-slot {
         width: 10%;
     }
     
+    /* 移动端特定列字体进一步缩小 */
+    #serverTable td:nth-child(3),  /* 开放时间 */
+    #serverTable td:nth-child(4),  /* 版本介绍 */
+    #serverTable td:nth-child(5),  /* 客服QQ */
+    #serverTable td:nth-child(6) { /* 特色备注 */
+        font-size: 0.65em; /* 进一步缩小 */
+    }
+    
     .btn-detail { 
         padding: 1px 4px; 
         font-size: 0.65em; 
@@ -480,6 +497,14 @@ tr.current-time-slot {
     #serverTable td {
         font-size: 0.65em;
         padding: 1px 1px;
+    }
+    
+    /* 超小屏幕特定列字体进一步缩小 */
+    #serverTable td:nth-child(3),  /* 开放时间 */
+    #serverTable td:nth-child(4),  /* 版本介绍 */
+    #serverTable td:nth-child(5),  /* 客服QQ */
+    #serverTable td:nth-child(6) { /* 特色备注 */
+        font-size: 0.6em; /* 进一步缩小 */
     }
     
     .server-name,
