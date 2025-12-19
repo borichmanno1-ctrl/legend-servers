@@ -524,3 +524,188 @@ tr.row-yellow-bg {
         font-size: 0.75rem;
     }
 }
+/* 在现有CSS末尾添加以下响应式代码 */
+
+/* 平板设备适配 */
+@media (max-width: 1024px) {
+    .container {
+        padding: 3px;
+    }
+    
+    #serverTable {
+        min-width: 800px;
+        font-size: 0.7rem;
+    }
+    
+    #serverTable th,
+    #serverTable td {
+        padding: 2px 3px;
+    }
+    
+    .server-name,
+    .server-ip {
+        font-size: 0.75em;
+    }
+}
+
+/* 手机设备适配 - 关键修改：横着显示，无需横向滚动 */
+@media (max-width: 768px) {
+    body {
+        font-size: 11px;
+        -webkit-text-size-adjust: 100%; /* 防止字体自动调整 */
+        overflow-x: hidden; /* 防止水平滚动 */
+    }
+    
+    .container {
+        padding: 2px;
+        max-width: 100%;
+        width: 100%;
+        overflow-x: hidden; /* 关键：防止容器产生滚动 */
+    }
+    
+    .table-wrapper {
+        overflow-x: auto; /* 允许表格横向滚动 */
+        -webkit-overflow-scrolling: touch; /* 移动端平滑滚动 */
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+    
+    #serverTable {
+        min-width: 700px; /* 设置最小宽度确保内容完整 */
+        width: 100%;
+        table-layout: fixed; /* 固定表格布局，防止内容撑开 */
+        font-size: 0.7rem;
+    }
+    
+    /* 调整列宽度，让内容更紧凑 */
+    #serverTable th:nth-child(1),
+    #serverTable td:nth-child(1) { width: 22%; }
+    
+    #serverTable th:nth-child(2),
+    #serverTable td:nth-child(2) { width: 15%; }
+    
+    #serverTable th:nth-child(3),
+    #serverTable td:nth-child(3) { width: 15%; }
+    
+    #serverTable th:nth-child(4),
+    #serverTable td:nth-child(4) { width: 15%; }
+    
+    #serverTable th:nth-child(5),
+    #serverTable td:nth-child(5) { width: 10%; }
+    
+    #serverTable th:nth-child(6),
+    #serverTable td:nth-child(6) { width: 13%; }
+    
+    #serverTable th:nth-child(7),
+    #serverTable td:nth-child(7) { width: 10%; }
+    
+    /* 确保单元格内容不换行 */
+    #serverTable th,
+    #serverTable td {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 2px 3px;
+    }
+    
+    /* 调整特定列的内容显示 */
+    .server-feature {
+        max-width: 100px; /* 限制特色列宽度 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* 调整分类按钮 */
+    .category-filter {
+        flex-wrap: nowrap; /* 确保按钮不换行 */
+        overflow-x: auto; /* 允许分类按钮横向滚动 */
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 3px;
+        margin-bottom: 3px;
+    }
+    
+    .cat-btn {
+        flex-shrink: 0; /* 防止按钮被压缩 */
+        padding: 1px 6px;
+        font-size: 0.65em;
+    }
+    
+    /* 调整控制区域 */
+    .table-controls {
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 3px 5px;
+    }
+    
+    .stats, .sort-controls {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    /* 调整时段提示 */
+    .period-indicator {
+        font-size: 0.65rem;
+        padding: 2px 5px;
+        margin-bottom: 3px;
+    }
+    
+    /* 调整logo大小 */
+    .site-logo {
+        max-height: 40px;
+    }
+    
+    /* 调整按钮 */
+    .btn-detail {
+        padding: 1px 4px;
+        font-size: 0.65em;
+        white-space: nowrap;
+    }
+    
+    /* 调整标签 */
+    .tag {
+        font-size: 0.6em;
+        padding: 0 2px;
+    }
+    
+    /* 调整推广标签 */
+    .promotion-badge {
+        font-size: 0.55em;
+        padding: 0 3px;
+        margin-left: 1px;
+    }
+}
+
+/* 小屏手机优化 */
+@media (max-width: 480px) {
+    #serverTable {
+        min-width: 650px; /* 进一步减小最小宽度 */
+    }
+    
+    #serverTable th:nth-child(1),
+    #serverTable td:nth-child(1) { width: 20%; }
+    
+    #serverTable th:nth-child(2),
+    #serverTable td:nth-child(2) { width: 14%; }
+    
+    #serverTable th:nth-child(3),
+    #serverTable td:nth-child(3) { width: 14%; }
+    
+    #serverTable td {
+        padding: 1px 2px;
+    }
+    
+    .server-name,
+    .server-ip {
+        font-size: 0.7em;
+    }
+    
+    /* 隐藏某些列的部分内容 */
+    .server-feature {
+        max-width: 80px;
+    }
+    
+    .period-indicator {
+        font-size: 0.6rem;
+    }
+}
