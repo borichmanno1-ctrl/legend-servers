@@ -1,9 +1,9 @@
-/* ===== 极简紧凑版本 ===== */
+/* ===== 白色背景紧凑版本 ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: #1a1a1a;
-    color: #e0e0e0;
+    background: #ffffff; /* 改为白色背景 */
+    color: #333333; /* 文字改为深色 */
     line-height: 1.3;
     min-height: 100vh;
     font-size: 12px;
@@ -11,10 +11,10 @@ body {
 
 /* 主容器 */
 .container { 
-    max-width: 1200px; /* 限制最大宽度 */
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    padding: 5px; /* 添加内边距 */
+    padding: 5px;
 }
 
 /* 头部logo区域 - 与表格容器同宽 */
@@ -28,19 +28,19 @@ body {
 .logo-container {
     width: 100%;
     margin-bottom: 5px;
-    overflow: hidden; /* 防止图片溢出 */
+    overflow: hidden;
 }
 
 .site-logo {
     width: 100%; /* 与表格同宽 */
     height: auto;
     max-height: 50px;
-    object-fit: cover; /* 裁剪图片以适应宽度 */
+    object-fit: cover;
     display: block;
 }
 
 .site-title {
-    color: #ffd700; 
+    color: #d4af37; /* 调整为金色 */
     font-size: 1.2rem;
     margin: 0;
     display: none;
@@ -57,9 +57,9 @@ body {
 
 .cat-btn {
     padding: 2px 8px;
-    background: #333; 
-    border: none; 
-    color: #ccc;
+    background: #f0f0f0; /* 浅灰色背景 */
+    border: 1px solid #ddd; /* 添加边框 */
+    color: #333;
     border-radius: 2px; 
     cursor: pointer; 
     font-size: 0.7rem;
@@ -68,7 +68,8 @@ body {
 
 .cat-btn.active { 
     background: #d4af37; 
-    color: #000; 
+    color: #fff; 
+    border-color: #d4af37;
 }
 
 /* 时段提示 */
@@ -100,10 +101,10 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    background: #2a2a2a; 
+    background: #f5f5f5; /* 浅灰色背景 */
     padding: 4px 8px;
     border-radius: 2px 2px 0 0; 
-    border: 1px solid #444;
+    border: 1px solid #ddd; /* 浅色边框 */
     font-size: 0.7rem;
 }
 
@@ -113,9 +114,9 @@ body {
 
 .sort-controls select { 
     padding: 2px 4px;
-    background: #222; 
-    color: #fff; 
-    border: 1px solid #666; 
+    background: #fff; /* 白色背景 */
+    color: #333; 
+    border: 1px solid #ccc; 
     border-radius: 2px; 
     font-size: 0.7rem;
 }
@@ -123,7 +124,7 @@ body {
 /* 表格区域 - 与logo同宽 */
 .table-wrapper {
     overflow-x: auto; 
-    border: 1px solid #444; 
+    border: 1px solid #ddd; 
     border-top: none;
     width: 100%;
 }
@@ -131,77 +132,99 @@ body {
 #serverTable {
     width: 100%; 
     border-collapse: collapse; 
-    min-width: 900px; /* 6列的最小宽度 */
-    font-size: 0.8rem;
+    min-width: 900px;
+    font-size: 0.75rem; /* 减小字体大小 */
 }
 
 #serverTable thead { 
-    background: #2a2a2a; 
+    background: #f5f5f5; /* 浅灰色表头 */
 }
 
 #serverTable th {
-    padding: 4px 4px;
+    padding: 3px 4px; /* 减小内边距 */
     text-align: left; 
-    color: #ffcc00; 
-    border-bottom: 1px solid #555;
+    color: #333; /* 深色文字 */
+    border-bottom: 2px solid #ddd; /* 浅色边框 */
     font-weight: bold; 
     white-space: nowrap;
+    font-size: 0.75rem; /* 表头字体也减小 */
 }
 
 #serverTable tbody tr {
-    border-bottom: 1px solid #3a3a3a;
+    border-bottom: 1px solid #eee; /* 更浅的边框 */
 }
 
 #serverTable tbody tr:nth-child(even) { 
-    background-color: #252525; 
+    background-color: #fafafa; /* 浅色交替行 */
 }
 
 #serverTable td {
-    padding: 3px 4px;
+    padding: 2px 4px; /* 减小内边距 */
     vertical-align: middle;
+    font-size: 0.75rem; /* 表格内容字体减小 */
 }
 
-/* 表格列宽度分配（6列） */
+/* 表格列宽度分配（6列） - 保持原有比例 */
 #serverTable th:nth-child(1),
 #serverTable td:nth-child(1) {
-    width: 20%; /* 服务器名 */
+    width: 20%;
 }
 
 #serverTable th:nth-child(2),
 #serverTable td:nth-child(2) {
-    width: 15%; /* 服务器IP */
+    width: 15%;
 }
 
 #serverTable th:nth-child(3),
 #serverTable td:nth-child(3) {
-    width: 15%; /* 开放时间 */
+    width: 15%;
 }
 
 #serverTable th:nth-child(4),
 #serverTable td:nth-child(4) {
-    width: 15%; /* 版本介绍 */
+    width: 15%;
 }
 
 #serverTable th:nth-child(5),
 #serverTable td:nth-child(5) {
-    width: 10%; /* 客服QQ */
+    width: 10%;
 }
 
 #serverTable th:nth-child(6),
 #serverTable td:nth-child(6) {
-    width: 15%; /* 特色/备注 */
+    width: 15%;
 }
 
 #serverTable th:nth-child(7),
 #serverTable td:nth-child(7) {
-    width: 10%; /* 操作 */
+    width: 10%;
 }
 
-/* 服务器名样式 */
+/* 服务器名样式 - 改为可点击的链接样式 */
 .server-name { 
-    color: #00e5ff; 
+    color: #0066cc; /* 链接蓝色 */
     font-weight: bold; 
-    font-size: 0.85em;
+    font-size: 0.8em;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.server-name:hover {
+    text-decoration: underline;
+}
+
+/* 服务器IP样式 - 同样改为可点击链接样式 */
+.server-ip { 
+    color: #0066cc; /* 链接蓝色 */
+    cursor: pointer;
+    font-size: 0.75em;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.server-ip:hover {
+    text-decoration: underline;
 }
 
 .server-tags { 
@@ -214,6 +237,7 @@ body {
     border-radius: 1px; 
     font-size: 0.65em; 
     margin-right: 2px; 
+    margin-top: 1px;
 }
 
 .tag.new { 
@@ -228,9 +252,9 @@ body {
 
 /* 特色备注列 */
 .server-feature { 
-    color: #ff9999; 
+    color: #666; /* 深灰色 */
     line-height: 1.2;
-    font-size: 0.75em;
+    font-size: 0.7em; /* 减小字体 */
 }
 
 /* 按钮样式 */
@@ -238,7 +262,7 @@ body {
     display: inline-block; 
     padding: 2px 6px;
     background: #d4af37;
-    color: #000; 
+    color: #fff; 
     font-weight: bold; 
     text-decoration: none; 
     border-radius: 1px; 
@@ -248,7 +272,7 @@ body {
 }
 
 .btn-detail:hover { 
-    background: #ffd700; 
+    background: #c19b2e; 
 }
 
 .loading { 
@@ -264,14 +288,14 @@ body {
     padding: 8px 0;
     margin-top: 10px;
     color: #777; 
-    border-top: 1px solid #444;
+    border-top: 1px solid #ddd; /* 浅色边框 */
     font-size: 0.7em;
 }
 
 /* 推荐系统样式 */
 tr.row-yellow-bg {
-    background-color: rgba(255, 244, 92, 0.1) !important;
-    border-left: 1px solid #f1c40f !important;
+    background-color: rgba(255, 244, 92, 0.15) !important;
+    border-left: 2px solid #f1c40f !important;
 }
 
 .promotion-badge {
@@ -335,18 +359,19 @@ tr.row-yellow-bg {
     }
     
     #serverTable {
-        min-width: 700px; /* 移动端最小宽度 */
+        min-width: 700px;
+        font-size: 0.7rem; /* 移动端字体更小 */
     }
     
     #serverTable th,
     #serverTable td { 
-        padding: 2px 3px;
-        font-size: 0.75em; 
+        padding: 1px 2px;
+        font-size: 0.7em; 
     }
     
     #serverTable th {
-        font-size: 0.75em;
-        padding: 3px 3px;
+        font-size: 0.7em;
+        padding: 2px 2px;
     }
     
     .btn-detail { 
