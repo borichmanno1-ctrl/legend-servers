@@ -91,6 +91,13 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
+    // 添加点击跳转函数
+    function openServerDetail(detailUrl) {
+        if (detailUrl && detailUrl !== '#') {
+            window.open(detailUrl, '_blank');
+        }
+    }
+
     function filterAndRenderServers() {
         const isOvernight = isOvernightPeriod();
 
@@ -168,23 +175,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 promotionBadge = `<span class="${badgeClass}">${server.promotion.type}</span>`;
             }
 
+            // 修改这里：将服务器名和服务器IP都改为可点击的链接
             row.innerHTML = `
                 <td>
-                    <div class="server-name">${server.name} ${promotionBadge}</div>
+                    <div>
+                        <span class="server-name" onclick="openServerDetail('${detailUrl}')">${server.name}</span>
+                        ${promotionBadge}
+                    </div>
                     <div class="server-tags">${tagsHtml}</div>
                 </td>
-                <td>${server.ip}</td>
+                <td><span class="server-ip" onclick="openServerDetail('${detailUrl}')">${server.ip}</span></td>
                 <td>${server.openTime}</td>
                 <td>${server.version}</td>
                 <td>${server.qq}</td>
                 <td class="server-feature">${server.feature}</td>
-                <td><button class="btn-detail" onclick="window.open('${detailUrl}', '_blank')">点击查看</button></td>
+                <td><button class="btn-detail" onclick="openServerDetail('${detailUrl}')">点击查看</button></td>
             `;
             serverTableBody.appendChild(row);
         });
 
         serverCount.textContent = servers.length;
     }
+
+    // 将openServerDetail函数暴露给全局作用域
+    window.openServerDetail = openServerDetail;
 
     sortSelect.addEventListener('change', function() {
         const sortValue = this.value;
