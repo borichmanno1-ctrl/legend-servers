@@ -20,13 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
             serverCount.textContent = allServers.length;
             generateCategoryButtons(data.categories);
             filterAndRenderServers();
-            // 添加窗口大小变化监听
-            window.addEventListener('resize', handleResize);
-            handleResize(); // 初始执行一次
         })
         .catch(error => {
             console.error('加载数据失败:', error);
-            serverTableBody.innerHTML = '<tr><td colspan="7" style="color:red;font-size:0.7rem;">数据加载失败</td></tr>';
+            serverTableBody.innerHTML = '<tr><td colspan="7" style="color:red;">数据加载失败</td></tr>';
         });
 
     function generateCategoryButtons(categories) {
@@ -101,31 +98,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // 处理窗口大小变化
-    function handleResize() {
-        const isMobile = window.innerWidth <= 480;
-        const serverNames = document.querySelectorAll('.server-name');
-        
-        if (isMobile) {
-            // 在超小屏幕上截断过长的服务器名
-            serverNames.forEach(name => {
-                const originalText = name.textContent.replace(/[\s\uFEFF\xA0]+/g, ' ').trim();
-                if (originalText.length > 8) {
-                    name.textContent = originalText.substring(0, 6) + '...';
-                }
-            });
-        }
-    }
-
     function filterAndRenderServers() {
         const isOvernight = isOvernightPeriod();
 
         if (periodIndicator) {
             if (isOvernight) {
-                periodIndicator.textContent = '🌙 通宵时段 (0-7点)';
+                periodIndicator.textContent = '🌙 当前为通宵时段 (0:00 - 7:00)';
                 periodIndicator.className = 'period-indicator overnight';
             } else {
-                periodIndicator.textContent = '☀️ 白天时段 (7-24点)';
+                periodIndicator.textContent = '☀️ 当前为白天时段 (7:00 - 24:00)';
                 periodIndicator.className = 'period-indicator daytime';
             }
         }
@@ -167,6 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
+        const isMobile = window.innerWidth <= 768;
+
         servers.forEach(server => {
             const row = document.createElement('tr');
             let tagsHtml = '';
@@ -191,51 +174,54 @@ document.addEventListener('DOMContentLoaded', function() {
                 let badgeClass = 'promotion-badge';
                 if (promoType.includes('通宵')) badgeClass += ' badge-overnight';
                 if (promoType.includes('全天')) badgeClass += ' badge-allday';
-                
-                // 简化推广标签文本
-                let badgeText = promoType;
-                if (window.innerWidth <= 480) {
-                    if (promoType.includes('置顶')) badgeText = '置顶';
-                    else if (promoType.includes('套黄')) badgeText = '套黄';
-                    else if (promoType.includes('通宵')) badgeText = '夜';
-                    else if (promoType.includes('全天')) badgeText = '日';
-                }
-                promotionBadge = `<span class="${badgeClass}">${badgeText}</span>`;
+                promotionBadge = `<span class="${badgeClass}">${server.promotion.type}</span>`;
             }
 
-            // 创建特色信息的简化和完整版本
-            let featureFull = server.feature;
-            let featureShort = server.feature;
-            if (featureFull.length > 8) {
-                featureShort = featureFull.substring(0, 6) + '...';
+            // 移动端和电脑端使用不同的HTML结构
+            if (isMobile) {
+                // 移动端：使用块级布局，每行显示一个服务器信息
+                row.innerHTML = `
+                    <td data-label="服务器名">
+                        <div>
+                            <span class="server-name" onclick="openServerDetail('${detailUrl}')">${server.name}</span>
+                            ${promotionBadge}
+                        </div>
+                        <div class="server-tags">${tagsHtml}</div>
+                    </td>
+                    <td data-label="服务器IP">
+                        <span class="server-ip" onclick="openServerDetail('${detailUrl}')">${server.ip}</span>
+                    </td>
+                    <td data-label="开放时间">${server.openTime}</td>
+                    <td data-label="版本介绍">${server.version}</td>
+                    <td data-label="客服QQ">${server.qq}</td>
+                    <td data-label="特色/备注" class="server-feature">${server.feature}</td>
+                    <td data-label="操作">
+                        <button class="btn-detail" onclick="openServerDetail('${detailUrl}')">点击查看</button>
+                    </td>
+                `;
+            } else {
+                // 电脑端：保持原来的表格布局
+                row.innerHTML = `
+                    <td>
+                        <div>
+                            <span class="server-name" onclick="openServerDetail('${detailUrl}')">${server.name}</span>
+                            ${promotionBadge}
+                        </div>
+                        <div class="server-tags">${tagsHtml}</div>
+                    </td>
+                    <td><span class="server-ip" onclick="openServerDetail('${detailUrl}')">${server.ip}</span></td>
+                    <td>${server.openTime}</td>
+                    <td>${server.version}</td>
+                    <td>${server.qq}</td>
+                    <td class="server-feature">${server.feature}</td>
+                    <td><button class="btn-detail" onclick="openServerDetail('${detailUrl}')">点击查看</button></td>
+                `;
             }
-
-            // 修改这里：将服务器名和服务器IP都改为可点击的链接
-            row.innerHTML = `
-                <td>
-                    <div>
-                        <span class="server-name" onclick="openServerDetail('${detailUrl}')" title="${server.name}">${server.name}</span>
-                        ${promotionBadge}
-                    </div>
-                    <div class="server-tags">${tagsHtml}</div>
-                </td>
-                <td><span class="server-ip" onclick="openServerDetail('${detailUrl}')" title="${server.ip}">${server.ip}</span></td>
-                <td>${server.openTime}</td>
-                <td>${server.version}</td>
-                <td>${server.qq}</td>
-                <td class="server-feature" title="${featureFull}">
-                    ${featureFull}
-                    <span class="server-feature short">${featureShort}</span>
-                </td>
-                <td><button class="btn-detail" onclick="openServerDetail('${detailUrl}')">进入</button></td>
-            `;
+            
             serverTableBody.appendChild(row);
         });
 
         serverCount.textContent = servers.length;
-        
-        // 重新计算并应用响应式样式
-        setTimeout(handleResize, 0);
     }
 
     // 将openServerDetail函数暴露给全局作用域
@@ -263,6 +249,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         renderTableRows(serversToSort);
+    });
+
+    // 添加窗口大小变化监听，以便在调整窗口大小时重新渲染
+    window.addEventListener('resize', function() {
+        filterAndRenderServers();
     });
 
     setInterval(() => {
