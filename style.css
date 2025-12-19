@@ -491,3 +491,41 @@ tr.row-yellow-bg {
         padding: 0 2px;
     }
 }
+
+/* 时间匹配高亮样式 */
+tr.time-match-highlight {
+    background-color: rgba(52, 152, 219, 0.1) !important;
+    border-left: 3px solid #3498db !important;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 5px rgba(52, 152, 219, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0);
+    }
+}
+
+/* 增强时间匹配标志 */
+.promotion-badge.badge-allday.time-match {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    font-weight: bold;
+}
+
+/* 移动端响应式优化 - 时间匹配提示 */
+@media (max-width: 768px) {
+    tr.time-match-highlight {
+        border-left-width: 2px !important;
+    }
+    
+    .promotion-badge {
+        font-size: 0.55em;
+        padding: 0 2px;
+        margin-left: 1px;
+    }
+}
