@@ -1,13 +1,14 @@
-/* ===== 仿jjj.com黑色风格版本 ===== */
+
+/* ===== 白色背景紧凑版本 ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
-    color: #e0e0e0;
+    background: #ffffff;
+    color: #333333;
     line-height: 1.3;
     min-height: 100vh;
     font-size: 12px;
-    overflow-x: hidden;
+    overflow-x: hidden; /* 防止页面出现横向滚动 */
 }
 
 /* 主容器 */
@@ -15,108 +16,86 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
-    padding: 8px;
+    padding: 5px;
 }
 
-/* 头部logo区域 - 仿jjj.com样式 */
+/* 头部logo区域 */
 .site-header { 
     text-align: center; 
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     width: 100%;
-    background: linear-gradient(90deg, #1a1a1a 0%, #2a2a2a 100%);
-    border-radius: 6px;
-    border: 1px solid #333;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .logo-container {
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 5px;
     overflow: hidden;
-    padding: 15px;
-    background: linear-gradient(90deg, #111 0%, #222 100%);
-    border-bottom: 2px solid #d4af37;
 }
 
 .site-logo {
     width: 100%;
     height: auto;
-    max-height: 60px;
-    object-fit: contain;
+    max-height: 50px;
+    object-fit: cover;
     display: block;
 }
 
 .site-title {
     color: #d4af37;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin: 0;
     display: none;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
-/* 分类按钮区域 - 仿jjj.com样式 */
+/* 分类按钮区域 */
 .category-filter {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
-    gap: 5px;
-    padding: 12px 8px;
-    background: #222;
+    gap: 3px;
+    margin-top: 5px;
 }
 
 .cat-btn {
-    padding: 6px 15px;
-    background: linear-gradient(180deg, #333 0%, #2a2a2a 100%);
-    border: 1px solid #444;
-    color: #ddd;
-    border-radius: 4px; 
+    padding: 2px 8px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 2px; 
     cursor: pointer; 
-    font-size: 0.8rem;
-    font-weight: bold;
-    transition: all 0.2s ease;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-}
-
-.cat-btn:hover { 
-    background: linear-gradient(180deg, #444 0%, #333 100%);
-    border-color: #d4af37;
-    color: #fff;
+    font-size: 0.7rem;
+    font-weight: normal;
 }
 
 .cat-btn.active { 
-    background: linear-gradient(180deg, #d4af37 0%, #b89420 100%);
-    color: #000; 
-    border-color: #ffd700;
-    box-shadow: 0 2px 5px rgba(212, 175, 55, 0.3);
+    background: #d4af37; 
+    color: #fff; 
+    border-color: #d4af37;
 }
 
 /* 时段提示 */
 .period-indicator {
-    padding: 10px 15px;
+    padding: 3px 8px;
     text-align: center;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    border-radius: 2px;
+    margin-bottom: 6px;
     font-weight: bold;
     display: block;
-    border: 1px solid;
-    font-size: 0.85rem;
-    background: rgba(0,0,0,0.3);
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    border-left: 2px solid;
+    font-size: 0.7rem;
 }
 
 .period-indicator.daytime {
-    background: linear-gradient(90deg, rgba(52, 152, 219, 0.2) 0%, rgba(41, 128, 185, 0.1) 100%);
-    border-color: #3498db;
-    color: #7ed6ff;
-    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+    background-color: rgba(52, 152, 219, 0.1);
+    border-left-color: #3498db;
+    color: #3498db;
 }
 
 .period-indicator.overnight {
-    background: linear-gradient(90deg, rgba(155, 89, 182, 0.2) 0%, rgba(142, 68, 173, 0.1) 100%);
-    border-color: #9b59b6;
-    color: #d7b2ff;
-    box-shadow: 0 2px 8px rgba(155, 89, 182, 0.2);
+    background-color: rgba(155, 89, 182, 0.1);
+    border-left-color: #9b59b6;
+    color: #9b59b6;
 }
 
 /* 表格控制区域 */
@@ -124,98 +103,80 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    background: linear-gradient(90deg, #222 0%, #2a2a2a 100%);
-    padding: 10px 15px;
-    border-radius: 5px 5px 0 0; 
-    border: 1px solid #444;
-    border-bottom: none;
-    font-size: 0.8rem;
+    background: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 2px 2px 0 0; 
+    border: 1px solid #ddd;
+    font-size: 0.7rem;
 }
 
 .stats { 
     color: #4CAF50; 
-    font-weight: bold;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .sort-controls select { 
-    padding: 6px 12px;
-    background: #333;
-    color: #ddd; 
-    border: 1px solid #555; 
-    border-radius: 4px; 
-    font-size: 0.8rem;
-    font-weight: bold;
+    padding: 2px 4px;
+    background: #fff;
+    color: #333; 
+    border: 1px solid #ccc; 
+    border-radius: 2px; 
+    font-size: 0.7rem;
 }
 
-.sort-controls select option {
-    background: #333;
-    color: #ddd;
-}
-
-/* 表格区域 */
+/* 表格区域 - 修改为自适应宽度 */
 .table-wrapper {
     width: 100%;
-    overflow-x: auto;
-    border: 1px solid #444; 
+    overflow-x: auto; /* 只在必要时显示滚动条 */
+    border: 1px solid #ddd; 
     border-top: none;
-    border-radius: 0 0 5px 5px;
-    background: #1a1a1a;
 }
 
-/* 表格样式 */
+/* 移除最小宽度限制，让表格自适应 */
 #serverTable {
     width: 100%; 
     border-collapse: collapse; 
-    min-width: 0;
-    font-size: 0.8rem;
-    table-layout: fixed;
+    min-width: 0; /* 移除固定最小宽度 */
+    font-size: 0.75rem;
+    table-layout: fixed; /* 使用固定布局，防止单元格宽度不一致 */
 }
 
 #serverTable thead { 
-    background: linear-gradient(180deg, #333 0%, #2a2a2a 100%);
+    background: #f5f5f5;
 }
 
 #serverTable th {
-    padding: 12px 8px;
+    padding: 3px 4px;
     text-align: left; 
-    color: #d4af37;
-    border-bottom: 2px solid #444;
+    color: #333;
+    border-bottom: 2px solid #ddd;
     font-weight: bold; 
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-overflow: ellipsis; /* 文本溢出显示省略号 */
+    font-size: 0.75rem;
 }
 
 #serverTable tbody tr {
-    border-bottom: 1px solid #333;
-    transition: background-color 0.2s ease;
-}
-
-#serverTable tbody tr:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid #eee;
 }
 
 #serverTable tbody tr:nth-child(even) { 
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: #fafafa;
 }
 
 #serverTable td {
-    padding: 10px 8px;
+    padding: 2px 4px;
     vertical-align: middle;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; /* 文本溢出显示省略号 */
     white-space: nowrap;
 }
 
-/* 表格列宽度分配 */
+/* 表格列宽度分配 - 优化为更适合移动端的比例 */
 #serverTable th:nth-child(1),
 #serverTable td:nth-child(1) {
-    width: 22%;
+    width: 22%; /* 服务器名列稍微加宽 */
 }
 
 #serverTable th:nth-child(2),
@@ -250,9 +211,9 @@ body {
 
 /* 服务器名样式 */
 .server-name { 
-    color: #4ea6ff;
+    color: #0066cc;
     font-weight: bold; 
-    font-size: 0.9em;
+    font-size: 0.8em;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
@@ -260,131 +221,114 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .server-name:hover {
-    color: #7dc1ff;
     text-decoration: underline;
 }
 
 /* 服务器IP样式 */
 .server-ip { 
-    color: #ff9966;
+    color: #0066cc;
     cursor: pointer;
-    font-size: 0.8em;
+    font-size: 0.75em;
     text-decoration: none;
     display: inline-block;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-family: 'Consolas', 'Monaco', monospace;
 }
 
 .server-ip:hover {
-    color: #ffcc99;
     text-decoration: underline;
 }
 
 .server-tags { 
-    margin-top: 3px; 
+    margin-top: 1px; 
 }
 
 .tag { 
     display: inline-block; 
-    padding: 2px 6px;
-    border-radius: 3px; 
-    font-size: 0.7em; 
-    margin-right: 4px; 
-    margin-top: 2px;
-    font-weight: bold;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    padding: 0 3px;
+    border-radius: 1px; 
+    font-size: 0.65em; 
+    margin-right: 2px; 
+    margin-top: 1px;
 }
 
 .tag.new { 
-    background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+    background: #ff4444; 
     color: white; 
-    border: 1px solid #ff6666;
 }
 
 .tag.hot { 
-    background: linear-gradient(135deg, #ff9900 0%, #cc6600 100%);
-    color: white; 
-    border: 1px solid #ffcc00;
+    background: #ff9900; 
+    color: black; 
 }
 
 /* 特色备注列 */
 .server-feature { 
-    color: #aaa;
-    line-height: 1.4;
-    font-size: 0.75em;
-    white-space: normal;
-    word-break: break-word;
+    color: #666;
+    line-height: 1.2;
+    font-size: 0.65em; /* 缩小字体大小 */
+    white-space: normal; /* 允许换行 */
+    word-break: break-word; /* 允许单词内断行 */
 }
 
-/* 按钮样式 - 仿jjj.com按钮 */
+/* 按钮样式 */
 .btn-detail {
     display: inline-block; 
-    padding: 6px 15px;
-    background: linear-gradient(180deg, #d4af37 0%, #b89420 100%);
-    color: #000; 
+    padding: 2px 6px;
+    background: #d4af37;
+    color: #fff; 
     font-weight: bold; 
     text-decoration: none; 
-    border-radius: 4px; 
-    border: 1px solid #ffd700; 
+    border-radius: 1px; 
+    border: none; 
     cursor: pointer;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     white-space: nowrap;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.3);
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .btn-detail:hover { 
-    background: linear-gradient(180deg, #ffd700 0%, #d4af37 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(212, 175, 55, 0.4);
+    background: #c19b2e; 
 }
 
 .loading { 
     text-align: center; 
-    padding: 30px!important; 
+    padding: 15px!important; 
     color: #888; 
-    font-size: 0.9rem; 
+    font-size: 0.8rem; 
 }
 
 /* 页脚样式 */
 .site-footer {
     text-align: center; 
-    padding: 15px 0;
-    margin-top: 20px;
-    color: #999; 
-    border-top: 1px solid #333;
-    font-size: 0.8em;
-    background: rgba(0,0,0,0.3);
-    border-radius: 5px;
+    padding: 8px 0;
+    margin-top: 10px;
+    color: #777; 
+    border-top: 1px solid #ddd;
+    font-size: 0.7em;
 }
 
-/* 推荐系统样式 - 套黄颜色显著加深 */
+/* 推荐系统样式 - 修改套黄颜色加深 */
 tr.row-yellow-bg {
-    background: linear-gradient(90deg, rgba(255, 215, 0, 0.4) 0%, rgba(255, 200, 0, 0.35) 100%) !important;
-    border-left: 5px solid #ffcc00 !important;
-    border-right: 1px solid #ffcc00 !important;
-    box-shadow: inset 0 0 15px rgba(255, 204, 0, 0.2);
+    background-color: rgba(255, 215, 0, 0.25) !important; /* 加深黄色，提高饱和度 */
+    border-left: 3px solid #ffcc00 !important; /* 加深边框颜色 */
 }
 
 /* 当前时间段服务器高亮样式 */
 tr.current-time-slot {
-    background-color: rgba(52, 152, 219, 0.15) !important;
-    border-left: 3px solid #3498db !important;
+    background-color: rgba(52, 152, 219, 0.08) !important;
+    border-left: 2px solid #3498db !important;
 }
 
 .promotion-badge {
     display: inline-block;
-    padding: 3px 8px;
-    margin-left: 5px;
-    font-size: 0.7em;
+    padding: 0 4px;
+    margin-left: 2px;
+    font-size: 0.6em;
     border-radius: 4px;
     color: white;
     vertical-align: middle;
@@ -393,103 +337,98 @@ tr.current-time-slot {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .badge-allday {
-    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    background: #3498db;
 }
 
 .badge-overnight {
-    background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+    background: #9b59b6;
 }
 
-/* 特定列字体样式 */
-#serverTable td:nth-child(3),
-#serverTable td:nth-child(4),
-#serverTable td:nth-child(5),
-#serverTable td:nth-child(6) {
-    font-size: 0.75em;
-    color: #ccc;
+/* 特定列字体缩小：开放时间、版本介绍、客服QQ、特色备注 */
+#serverTable td:nth-child(3),  /* 开放时间 */
+#serverTable td:nth-child(4),  /* 版本介绍 */
+#serverTable td:nth-child(5),  /* 客服QQ */
+#serverTable td:nth-child(6) { /* 特色备注 */
+    font-size: 0.7em; /* 缩小字体 */
+    color: #555; /* 稍微加深颜色，提高可读性 */
 }
 
 /* 移动端响应式优化 */
 @media (max-width: 768px) {
     .container {
-        padding: 5px;
+        padding: 3px;
         width: 100%;
         max-width: 100%;
+        overflow-x: hidden;
     }
     
     .site-header { 
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     
     .site-logo {
-        max-height: 45px;
-    }
-    
-    .logo-container {
-        padding: 10px;
+        max-height: 40px;
     }
     
     .category-filter { 
-        gap: 3px; 
-        padding: 8px 5px;
+        gap: 2px; 
+        margin-top: 3px;
         overflow-x: auto;
         justify-content: flex-start;
-        padding-bottom: 8px;
+        padding-bottom: 3px;
     }
     
     .cat-btn { 
-        padding: 5px 10px; 
-        font-size: 0.7em; 
-        flex-shrink: 0;
+        padding: 1px 6px; 
+        font-size: 0.65em; 
+        flex-shrink: 0; /* 防止按钮被压缩 */
     }
     
     .period-indicator {
-        padding: 8px 10px;
-        font-size: 0.7rem;
-        margin-bottom: 8px;
+        padding: 2px 4px;
+        font-size: 0.65rem;
+        margin-bottom: 4px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
     }
     
     .table-controls { 
-        padding: 8px 10px;
-        font-size: 0.7rem;
+        padding: 3px 6px;
+        font-size: 0.65rem;
         flex-wrap: wrap;
     }
     
     .sort-controls select {
-        padding: 5px 8px;
-        font-size: 0.7em;
-        margin-top: 5px;
+        padding: 1px 3px;
+        font-size: 0.65em;
+        margin-top: 2px;
     }
     
     /* 移动端表格优化 */
     .table-wrapper {
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        -webkit-overflow-scrolling: touch; /* 移动端滚动更流畅 */
     }
     
     #serverTable {
         width: 100%;
-        min-width: 0;
-        font-size: 0.75rem;
+        min-width: 0; /* 移除最小宽度限制 */
+        font-size: 0.7rem;
     }
     
     #serverTable th,
     #serverTable td { 
-        padding: 8px 6px;
-        font-size: 0.75em; 
+        padding: 1px 2px;
+        font-size: 0.7em; 
     }
     
     #serverTable th {
-        font-size: 0.75em;
-        padding: 10px 6px;
+        font-size: 0.7em;
+        padding: 2px 2px;
     }
     
     /* 移动端列宽调整 */
@@ -529,56 +468,58 @@ tr.current-time-slot {
     }
     
     /* 移动端特定列字体进一步缩小 */
-    #serverTable td:nth-child(3),
-    #serverTable td:nth-child(4),
-    #serverTable td:nth-child(5),
-    #serverTable td:nth-child(6) {
-        font-size: 0.7em;
+    #serverTable td:nth-child(3),  /* 开放时间 */
+    #serverTable td:nth-child(4),  /* 版本介绍 */
+    #serverTable td:nth-child(5),  /* 客服QQ */
+    #serverTable td:nth-child(6) { /* 特色备注 */
+        font-size: 0.65em; /* 进一步缩小 */
     }
     
     .btn-detail { 
-        padding: 5px 10px; 
-        font-size: 0.7em; 
+        padding: 1px 4px; 
+        font-size: 0.65em; 
     }
     
+    /* 确保服务器名和IP在移动端可点击区域足够大 */
     .server-name,
     .server-ip {
-        min-height: 20px;
-        line-height: 20px;
+        min-height: 16px;
+        line-height: 16px;
     }
 }
 
 /* 超小屏幕优化 */
 @media (max-width: 480px) {
     #serverTable {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
     }
     
     #serverTable th,
     #serverTable td {
-        font-size: 0.7em;
-        padding: 6px 4px;
+        font-size: 0.65em;
+        padding: 1px 1px;
     }
     
-    #serverTable td:nth-child(3),
-    #serverTable td:nth-child(4),
-    #serverTable td:nth-child(5),
-    #serverTable td:nth-child(6) {
-        font-size: 0.65em;
+    /* 超小屏幕特定列字体进一步缩小 */
+    #serverTable td:nth-child(3),  /* 开放时间 */
+    #serverTable td:nth-child(4),  /* 版本介绍 */
+    #serverTable td:nth-child(5),  /* 客服QQ */
+    #serverTable td:nth-child(6) { /* 特色备注 */
+        font-size: 0.6em; /* 进一步缩小 */
     }
     
     .server-name,
     .server-ip {
-        font-size: 0.75em;
+        font-size: 0.7em;
     }
     
     .btn-detail {
-        font-size: 0.65em;
-        padding: 4px 8px;
+        font-size: 0.6em;
+        padding: 1px 3px;
     }
     
     .promotion-badge {
-        font-size: 0.6em;
-        padding: 2px 5px;
+        font-size: 0.55em;
+        padding: 0 2px;
     }
 }
