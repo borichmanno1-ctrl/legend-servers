@@ -1,0 +1,55 @@
+{
+  "siteTitle": "传奇游戏发布网 - 每日新开服表",
+  "siteDescription": "专注传奇游戏发布，分享最新、最全、最靠谱的开服信息。",
+  "categories": ["全部", "单职业", "复古", "合击", "冰雪", "沉默", "火龙", "微变"],
+  "servers": [
+    {
+      "name": "通宵置顶服",
+      "ip": "通宵一区",
+      "openTime": "12月20日/02点整",
+      "line": "多线",
+      "version": "通宵专属",
+      "feature": "夜间爆率加成，福利拉满",
+      "qq": "夜猫子客服",
+      "detailUrl": "https://www.example.com/night1",
+      "category": ["单职业"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "全天套黄服",
+      "ip": "黄金一区",
+      "openTime": "12月20日/10点整",
+      "line": "双线",
+      "version": "大极品",
+      "feature": "全天候激情，沙奖丰厚",
+      "qq": "全天客服",
+      "detailUrl": "https://www.example.com/day1",
+      "category": ["复古"],
+      "hot": true,
+      "new": false,
+      "promotion": {
+        "type": "全天套黄推荐",
+        "order": 0
+      }
+    },
+    {
+      "name": "普通无推荐服",
+      "ip": "普通区",
+      "openTime": "12月20日/14点整",
+      "line": "双线",
+      "version": "经典1.76",
+      "feature": "绿色公平，长期稳定",
+      "qq": "常规客服",
+      "detailUrl": "https://www.example.com/normal",
+      "category": ["复古"],
+      "hot": false,
+      "new": false,
+      "promotion": null
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 新增：确保移动端正确缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>传奇开服表_每日新开传奇服务器发布网_最新传奇私服开区信息</title>
+    <meta name="description" content="权威的传奇游戏开服发布平台，实时更新每日新开传奇私服、单职业、合击、冰雪、沉默等版本开区信息，提供服务器IP、开放时间、版本介绍和客服QQ。">
+    <meta name="keywords" content="传奇开服表,新开传奇私服,传奇发布网,单职业传奇,合击传奇,冰雪传奇,沉默传奇">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google tag (gtag.js) - 请将 G-你的衡量ID 替换为你自己的ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-你的衡量ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-你的衡量ID');
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <h1><i class="fas fa-gamepad"></i> 传奇游戏发布网</h1>
+            <p class="subtitle">每日更新，专注于分享最新、最稳定的传奇开服信息</p>
+            <div class="category-filter" id="categoryFilter"></div>
+        </header>
+	<!-- 时段提示 -->
+        <div id="periodIndicator" class="period-indicator"></div>
+
+        <main class="main-content">
+            <div class="table-controls">
+                <div class="stats">共 <span id="serverCount">0</span> 个开服信息</div>
+                <div class="sort-controls">
+                    <label>排序：</label>
+                    <select id="sortSelect">
+                        <option value="time-asc">开放时间 (正序)</option>
+                        <option value="time-desc">开放时间 (倒序)</option>
+                        <option value="name-asc">服务器名 (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table id="serverTable">
+                    <thead>
+                        <tr>
+                            <th>服务器名</th>
+                            <th>服务器IP</th>
+                            <th>开放时间</th>
+                            <th>地区线路</th>
+                            <th>版本介绍</th>
+                            <th>客服QQ</th>
+                            <th>特色/备注</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="serverTableBody">
+                        <tr><td colspan="8" class="loading">正在加载服务器数据...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>免责声明：本页面仅为信息发布平台，所有游戏资源来自网络，请自行辨别。</p>
+            <p>© <span id="currentYear">2025</span> 传奇发布站. 最后更新: <span id="lastUpdateTime"></span></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
