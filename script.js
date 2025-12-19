@@ -1,3 +1,5 @@
+[file name]: script.js
+[file content begin]
 document.addEventListener('DOMContentLoaded', function() {
     const serverTableBody = document.getElementById('serverTableBody');
     const categoryFilter = document.getElementById('categoryFilter');
@@ -20,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
             serverCount.textContent = allServers.length;
             generateCategoryButtons(data.categories);
             filterAndRenderServers();
-            updatePeriodIndicator();
         })
         .catch(error => {
             console.error('加载数据失败:', error);
@@ -47,227 +48,282 @@ document.addEventListener('DOMContentLoaded', function() {
     // 获取当前北京时间
     function getBeijingTime() {
         const now = new Date();
-        // 北京时间为UTC+8
+        // 北京时间 = UTC + 8
         const beijingOffset = 8 * 60; // 分钟
-        const localOffset = now.getTimezoneOffset(); // 本地时区偏移（分钟）
+        const localOffset = now.getTimezoneOffset();
         const beijingTime = new Date(now.getTime() + (beijingOffset + localOffset) * 60000);
         return beijingTime;
     }
 
-    // 检查是否为通宵时段 (0:00-7:00)
+    // 判断是否通宵时段 (0:00-7:00)
     function isOvernightPeriod() {
         const beijingTime = getBeijingTime();
         const currentHour = beijingTime.getHours();
         return currentHour >= 0 && currentHour < 7;
     }
 
-    // 获取当前半小时区间
-    function getCurrentHalfHourPeriod() {
+    // 获取当前半小时区间 (如 22:30-23:00)
+    function getCurrentHalfHourInterval() {
         const beijingTime = getBeijingTime();
-        const hours = beijingTime.getHours();
-        const minutes = beijingTime.getMinutes();
+        const currentHour = beijingTime.getHours();
+        const currentMinute = beijingTime.getMinutes();
         
-        // 计算当前属于哪个半小时区间
-        let periodHour = hours;
-        let periodMinute = minutes < 30 ? 0 : 30;
+        // 计算当前半小时区间的开始分钟
+        const halfHourStart = currentMinute >= 30 ? 30 : 0;
         
-        // 格式化输出，用于匹配服务器开放时间
-        const month = beijingTime.getMonth() + 1;
-        const date = beijingTime.getDate();
-        const formattedTime = `${month}月${date}日/${periodHour.toString().padStart(2, '0')}:${periodMinute.toString().padStart(2, '0')}`;
+        // 计算区间开始和结束时间
+        const startHour = currentHour;
+        const startMinute = halfHourStart;
+        
+        let endHour = startHour;
+        let endMinute = startMinute + 30;
+        
+        if (endMinute >= 60) {
+            endHour = (endHour + 1) % 24;
+            endMinute = endMinute - 60;
+        }
+        
+        // 格式化时间为两位数
+        const formatTime = (hour, minute) => {
+            return `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
+        };
         
         return {
-            startHour: periodHour,
-            startMinute: periodMinute,
-            formattedTime: formattedTime
+            start: formatTime(startHour, startMinute),
+            end: formatTime(endHour, endMinute)
         };
     }
 
-    // 更新时段指示器
-    function updatePeriodIndicator() {
-        const isOvernight = isOvernightPeriod();
-        const period = getCurrentHalfHourPeriod();
-        
-        if (periodIndicator) {
-            if (isOvernight) {
-                periodIndicator.textContent = `🌙 当前为通宵时段 (0:00 - 7:00) | 当前时间区间: ${period.formattedTime}`;
-                periodIndicator.className = 'period-indicator overnight';
-            } else {
-                periodIndicator.textContent = `☀️ 当前为白天时段 (7:00 - 24:00) | 当前时间区间: ${period.formattedTime}`;
-                periodIndicator.className = 'period-indicator daytime';
-            }
-        }
-    }
-
     // 解析中文日期时间
-    function parseChineseDateTime(dateStr) {
-        // 匹配格式如 "12月20日/22:30" 或 "12月20日/22点30分"
-        const match = dateStr.match(/(\d{1,2})月(\d{1,2})日[\/]?(\d{1,2})[:点](\d{1,2})分?/);
+    function parseChineseDate(dateStr) {
+        const match = dateStr.match(/(\d{1,2})月(\d{1,2})日[\/]?(\d{1,2}):(\d{1,2})/);
         if (!match) return null;
-        
-        const [, month, day, hour, minute] = match.map(Number);
+        const [, month, day, hour = 0, minute = 0] = match.map(Number);
         const currentYear = new Date().getFullYear();
         return new Date(currentYear, month - 1, day, hour, minute);
     }
 
-    // 获取服务器的时间匹配分数
-    function getTimeMatchScore(server, currentPeriod) {
-        const serverTime = parseChineseDateTime(server.openTime);
-        if (!serverTime) return 0;
+    // 检查服务器开放时间是否在当前半小时区间
+    function isInCurrentHalfHourInterval(serverOpenTime) {
+        const interval = getCurrentHalfHourInterval();
+        const openDate = parseChineseDate(serverOpenTime);
+        if (!openDate) return false;
         
-        // 检查服务器时间是否在当前半小时区间内
-        const serverHour = serverTime.getHours();
-        const serverMinute = serverTime.getMinutes();
+        const openHour = openDate.getHours();
+        const openMinute = openDate.getMinutes();
         
-        // 判断是否在同一个半小时区间
-        if (serverHour === currentPeriod.startHour) {
-            const serverHalfHour = serverMinute < 30 ? 0 : 30;
-            if (serverHalfHour === currentPeriod.startMinute) {
-                return 10; // 时间完全匹配当前半小时区间
-            }
-        }
+        // 解析区间开始时间
+        const [startHour, startMinute] = interval.start.split(':').map(Number);
         
-        return 0;
+        // 检查是否匹配当前半小时区间
+        return openHour === startHour && openMinute === startMinute;
     }
 
-    // 获取推广权重
+    // 计算推广权重
     function getPromotionWeight(server, isOvernight) {
         const promo = server.promotion;
         if (!promo) return { weight: 0, order: 999 };
-        
-        const type = promo.type || '';
-        
-        // 通宵时段
-        if (isOvernight) {
-            if (type.includes('通宵置顶推荐')) return { weight: 600, order: promo.order || 999 };
-            if (type.includes('通宵套黄推荐')) return { weight: 500, order: promo.order || 999 };
-            if (type.includes('通宵推荐')) return { weight: 400, order: promo.order || 999 };
-            if (type.includes('全天置顶推荐')) return { weight: 300, order: promo.order || 999 };
-            if (type.includes('全天套黄推荐')) return { weight: 200, order: promo.order || 999 };
-            if (type.includes('全天推荐')) return { weight: 100, order: promo.order || 999 };
-        } 
-        // 白天时段
-        else {
-            if (type.includes('全天置顶推荐')) return { weight: 600, order: promo.order || 999 };
-            if (type.includes('全天套黄推荐')) return { weight: 500, order: promo.order || 999 };
-            if (type.includes('全天推荐')) return { weight: 400, order: promo.order || 999 };
-            if (type.includes('通宵置顶推荐')) return { weight: 50, order: promo.order || 999 };
-            if (type.includes('通宵套黄推荐')) return { weight: 40, order: promo.order || 999 };
-            if (type.includes('通宵推荐')) return { weight: 30, order: promo.order || 999 };
+
+        const type = promo.type;
+        const isInCurrentInterval = isInCurrentHalfHourInterval(server.openTime);
+        const isOvernightType = type.includes('通宵');
+        const isAllDayType = type.includes('全天');
+        const isTimeSpecificType = type.includes('时间推荐');
+
+        // 非通宵时段规则
+        if (!isOvernight) {
+            // 非通宵时段不显示通宵推荐
+            if (isOvernightType) return { weight: 0, order: 999 };
+            
+            let weight = 0;
+            
+            // 全天置顶推荐
+            if (type.includes('全天置顶推荐')) {
+                weight = 1000;
+            }
+            // 全天套黄推荐
+            else if (type.includes('全天套黄推荐')) {
+                weight = 800;
+            }
+            // 当前时间推荐（在半小时区间内）
+            else if (isInCurrentInterval && isTimeSpecificType) {
+                weight = 600;
+            }
+            // 其他全天推荐
+            else if (isAllDayType) {
+                weight = 400;
+            }
+            
+            // 如果是当前半小时区间的服务器，增加权重
+            if (isInCurrentInterval) {
+                weight += 50;
+            }
+            
+            return {
+                weight: weight,
+                order: promo.order || 999
+            };
         }
-        
-        return { weight: 0, order: 999 };
+        // 通宵时段规则
+        else {
+            let weight = 0;
+            
+            // 通宵置顶推荐
+            if (type.includes('通宵置顶推荐')) {
+                weight = 1000;
+            }
+            // 通宵套黄推荐
+            else if (type.includes('通宵套黄推荐')) {
+                weight = 800;
+            }
+            // 通宵推荐
+            else if (type.includes('通宵推荐')) {
+                weight = 600;
+            }
+            // 全天置顶推荐
+            else if (type.includes('全天置顶推荐')) {
+                weight = 400;
+            }
+            // 全天套黄推荐
+            else if (type.includes('全天套黄推荐')) {
+                weight = 200;
+            }
+            // 当前时间推荐（在半小时区间内）
+            else if (isInCurrentInterval && isTimeSpecificType) {
+                weight = 100;
+            }
+            // 其他全天推荐
+            else if (isAllDayType) {
+                weight = 50;
+            }
+            
+            // 如果是当前半小时区间的服务器，增加权重
+            if (isInCurrentInterval) {
+                weight += 50;
+            }
+            
+            return {
+                weight: weight,
+                order: promo.order || 999
+            };
+        }
     }
 
-    // 点击跳转函数
+    // 添加点击跳转函数
     function openServerDetail(detailUrl) {
         if (detailUrl && detailUrl !== '#') {
             window.open(detailUrl, '_blank');
         }
     }
 
-    // 过滤和渲染服务器
     function filterAndRenderServers() {
         const isOvernight = isOvernightPeriod();
-        const currentPeriod = getCurrentHalfHourPeriod();
-        updatePeriodIndicator();
-        
-        // 过滤服务器
+        const interval = getCurrentHalfHourInterval();
+
+        // 更新时段指示器
+        if (periodIndicator) {
+            if (isOvernight) {
+                periodIndicator.textContent = `🌙 当前为通宵时段 (0:00-7:00) | 当前半小时区间: ${interval.start}-${interval.end}`;
+                periodIndicator.className = 'period-indicator overnight';
+            } else {
+                periodIndicator.textContent = `☀️ 当前为白天时段 (7:00-24:00) | 当前半小时区间: ${interval.start}-${interval.end}`;
+                periodIndicator.className = 'period-indicator daytime';
+            }
+        }
+
         let processedServers = allServers.filter(server => {
             const categoryMatch = activeCategory === '全部' || server.category.includes(activeCategory);
             return categoryMatch;
         });
-        
+
         // 计算每个服务器的权重
         processedServers.forEach(server => {
-            const promotionData = getPromotionWeight(server, isOvernight);
-            const timeMatchScore = getTimeMatchScore(server, currentPeriod);
-            
-            // 总权重 = 推广权重 + 时间匹配分数
-            server._totalWeight = promotionData.weight + timeMatchScore;
-            server._promotionOrder = promotionData.order;
-            server._timeMatchScore = timeMatchScore;
+            server._promotionData = getPromotionWeight(server, isOvernight);
+            server._isInCurrentInterval = isInCurrentHalfHourInterval(server.openTime);
         });
-        
-        // 排序逻辑
+
+        // 过滤掉权重为0的服务器（不显示的推广）
+        processedServers = processedServers.filter(server => server._promotionData.weight > 0);
+
+        // 排序规则
         processedServers.sort((a, b) => {
-            // 1. 按总权重降序
-            if (b._totalWeight !== a._totalWeight) {
-                return b._totalWeight - a._totalWeight;
+            const promoA = a._promotionData;
+            const promoB = b._promotionData;
+
+            // 1. 按权重降序
+            if (promoB.weight !== promoA.weight) {
+                return promoB.weight - promoA.weight;
             }
-            
+
             // 2. 权重相同时，按推广顺序升序
-            if (b._totalWeight > 0 && a._totalWeight > 0 && b._totalWeight === a._totalWeight) {
-                return a._promotionOrder - b._promotionOrder;
+            if (promoB.weight > 0 && promoA.weight === promoB.weight) {
+                return promoA.order - promoB.order;
             }
-            
-            // 3. 按时间匹配分数降序
-            if (b._timeMatchScore !== a._timeMatchScore) {
-                return b._timeMatchScore - a._timeMatchScore;
+
+            // 3. 相同推广级别时，当前半小时区间的优先
+            if (a._isInCurrentInterval && !b._isInCurrentInterval) {
+                return -1;
             }
-            
-            // 4. 按开放时间倒序（最新的在前）
-            const timeA = parseChineseDateTime(a.openTime);
-            const timeB = parseChineseDateTime(b.openTime);
+            if (!a._isInCurrentInterval && b._isInCurrentInterval) {
+                return 1;
+            }
+
+            // 4. 最后按开放时间倒序（最新的在前）
+            const timeA = parseChineseDate(a.openTime);
+            const timeB = parseChineseDate(b.openTime);
             return (timeB || 0) - (timeA || 0);
         });
-        
-        // 只显示有推广或时间匹配的服务器
-        processedServers = processedServers.filter(server => server._totalWeight > 0);
+
         renderTableRows(processedServers);
     }
 
     function renderTableRows(servers) {
         serverTableBody.innerHTML = '';
         if (servers.length === 0) {
-            serverTableBody.innerHTML = '<tr><td colspan="7" class="loading">当前分类下暂无开服信息。</td></tr>';
+            serverTableBody.innerHTML = '<tr><td colspan="7" class="loading">当前分类下暂无推荐服务器。</td></tr>';
             return;
         }
-        
+
         servers.forEach(server => {
             const row = document.createElement('tr');
             let tagsHtml = '';
             if (server.new) tagsHtml += '<span class="tag new">新服</span>';
             if (server.hot) tagsHtml += '<span class="tag hot">火爆</span>';
-            
+
             const detailUrl = server.detailUrl || '#';
-            
+
             let rowClass = '';
             const promoType = server.promotion?.type || '';
+            
+            // 套黄推荐的行样式
             if (promoType.includes('套黄')) {
                 rowClass = 'row-yellow-bg';
             }
-            if (promoType && promoType !== '') {
-                rowClass += ' row-promoted';
-            }
             
-            // 如果时间匹配当前半小时区间，添加特殊样式
-            if (server._timeMatchScore > 0) {
-                rowClass += ' time-match-highlight';
+            // 当前半小时区间的行样式（可以添加特殊样式）
+            if (server._isInCurrentInterval) {
+                rowClass += ' current-interval-highlight';
             }
-            
+
             row.className = rowClass;
-            
+
             let promotionBadge = '';
             if (server.promotion) {
                 let badgeClass = 'promotion-badge';
                 if (promoType.includes('通宵')) badgeClass += ' badge-overnight';
                 if (promoType.includes('全天')) badgeClass += ' badge-allday';
+                // 如果是当前半小时区间，添加特殊标记
+                if (server._isInCurrentInterval) {
+                    badgeClass += ' current-interval';
+                }
                 promotionBadge = `<span class="${badgeClass}">${server.promotion.type}</span>`;
             }
-            
-            // 添加时间匹配提示
-            let timeMatchBadge = '';
-            if (server._timeMatchScore > 0) {
-                timeMatchBadge = '<span class="promotion-badge badge-allday">当前时段推荐</span>';
-            }
-            
+
             row.innerHTML = `
                 <td>
                     <div>
                         <span class="server-name" onclick="openServerDetail('${detailUrl}')">${server.name}</span>
                         ${promotionBadge}
-                        ${timeMatchBadge}
                     </div>
                     <div class="server-tags">${tagsHtml}</div>
                 </td>
@@ -280,43 +336,45 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             serverTableBody.appendChild(row);
         });
-        
+
         serverCount.textContent = servers.length;
     }
-    
+
     // 将openServerDetail函数暴露给全局作用域
     window.openServerDetail = openServerDetail;
-    
+
     sortSelect.addEventListener('change', function() {
-        filterAndRenderServers();
-    });
-    
-    // 每半小时更新一次（北京时间）
-    function scheduleNextUpdate() {
-        const now = getBeijingTime();
-        const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
-        
-        // 计算到下一个半小时的时间
-        let minutesToNextHalfHour;
-        if (minutes < 30) {
-            minutesToNextHalfHour = 30 - minutes;
-        } else {
-            minutesToNextHalfHour = 60 - minutes;
+        const sortValue = this.value;
+        let serversToSort = Array.from(serverTableBody.querySelectorAll('tr'))
+            .map(row => {
+                const nameCell = row.querySelector('.server-name');
+                if (!nameCell) return null;
+                const badge = nameCell.querySelector('.promotion-badge');
+                let originalName = nameCell.textContent;
+                if (badge) originalName = originalName.replace(badge.textContent, '').trim();
+                return allServers.find(s => s.name === originalName);
+            })
+            .filter(s => s);
+
+        if (sortValue === 'time-desc') {
+            serversToSort.sort((a, b) => (parseChineseDate(b.openTime) || 0) - (parseChineseDate(a.openTime) || 0));
+        } else if (sortValue === 'time-asc') {
+            serversToSort.sort((a, b) => (parseChineseDate(a.openTime) || 0) - (parseChineseDate(b.openTime) || 0));
+        } else if (sortValue === 'name-asc') {
+            serversToSort.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
         }
-        
-        // 转换为毫秒
-        const millisecondsToNextHalfHour = 
-            (minutesToNextHalfHour * 60 - seconds) * 1000;
-        
-        // 设置定时器
-        setTimeout(() => {
-            filterAndRenderServers();
-            // 设置下一次更新为30分钟后
-            setInterval(filterAndRenderServers, 30 * 60 * 1000);
-        }, millisecondsToNextHalfHour);
-    }
+
+        renderTableRows(serversToSort);
+    });
+
+    // 每5分钟检查一次时间段变化（而不是10分钟）
+    setInterval(() => {
+        filterAndRenderServers();
+    }, 5 * 60 * 1000);
     
-    // 启动定时更新
-    scheduleNextUpdate();
+    // 每半小时触发一次重新排序（针对半小时区间变化）
+    setInterval(() => {
+        filterAndRenderServers();
+    }, 30 * 60 * 1000);
 });
+[file content end]
