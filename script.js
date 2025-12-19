@@ -81,10 +81,11 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
-    // 判断是否是通宵时段（0:00-7:00）
+    // 判断是否是通宵时段（0:00-9:00）
     function isOvernightPeriod() {
         const timeSlot = getCurrentTimeSlot();
-        return timeSlot.hour >= 0 && timeSlot.hour < 7;
+        // 通宵时段：0:00-9:00
+        return timeSlot.hour >= 0 && timeSlot.hour < 9;
     }
 
     function parseChineseDate(dateStr) {
@@ -188,10 +189,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // 更新时段指示器
         if (periodIndicator) {
             if (isOvernight) {
-                periodIndicator.textContent = `🌙 当前为通宵时段 (0:00 - 7:00) | 当前时间段: ${String(timeSlot.startHour).padStart(2, '0')}:${String(timeSlot.startMinute).padStart(2, '0')} - ${String(timeSlot.endHour).padStart(2, '0')}:${String(timeSlot.endMinute).padStart(2, '0')}`;
+                periodIndicator.textContent = `🌙 当前为通宵时段 (0:00 - 9:00) | 当前时间段: ${String(timeSlot.startHour).padStart(2, '0')}:${String(timeSlot.startMinute).padStart(2, '0')} - ${String(timeSlot.endHour).padStart(2, '0')}:${String(timeSlot.endMinute).padStart(2, '0')}`;
                 periodIndicator.className = 'period-indicator overnight';
             } else {
-                periodIndicator.textContent = `☀️ 当前为白天时段 (7:00 - 24:00) | 当前时间段: ${String(timeSlot.startHour).padStart(2, '0')}:${String(timeSlot.startMinute).padStart(2, '0')} - ${String(timeSlot.endHour).padStart(2, '0')}:${String(timeSlot.endMinute).padStart(2, '0')}`;
+                periodIndicator.textContent = `☀️ 当前为白天时段 (9:00 - 24:00) | 当前时间段: ${String(timeSlot.startHour).padStart(2, '0')}:${String(timeSlot.startMinute).padStart(2, '0')} - ${String(timeSlot.endHour).padStart(2, '0')}:${String(timeSlot.endMinute).padStart(2, '0')}`;
                 periodIndicator.className = 'period-indicator daytime';
             }
         }
