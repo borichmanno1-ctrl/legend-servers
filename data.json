@@ -1,13 +1,15 @@
+[file name]: data.json
+[file content begin]
 {
   "categories": ["全部", "单职业", "复古", "合击", "冰雪", "沉默", "火龙", "微变"],
   "servers": [
     {
       "name": "通宵置顶服",
-      "ip": "tszd.qiqu.com",
-      "openTime": "12月20日/22:30",
+      "ip": "通宵一区",
+      "openTime": "12月20日/02:00",
       "version": "通宵专属",
-      "feature": "夜间爆率加成200%，通宵福利",
-      "qq": "888888",
+      "feature": "夜间爆率加成",
+      "qq": "夜猫子客服",
       "detailUrl": "#",
       "category": ["单职业"],
       "hot": true,
@@ -18,94 +20,98 @@
       }
     },
     {
-      "name": "全天套黄服",
-      "ip": "qtth.qiqu.com",
+      "name": "全天置顶服",
+      "ip": "黄金一区",
       "openTime": "12月20日/10:00",
       "version": "大极品",
-      "feature": "全天候激情，稳定不卡",
-      "qq": "999999",
+      "feature": "全天候激情",
+      "qq": "全天客服",
       "detailUrl": "#",
       "category": ["复古"],
       "hot": true,
       "new": false,
       "promotion": {
-        "type": "全天套黄推荐",
+        "type": "全天置顶推荐",
         "order": 0
       }
     },
     {
-      "name": "黄金时段服",
-      "ip": "hjsd.qiqu.com",
-      "openTime": "12月20日/22:30",
-      "version": "1.80合击",
-      "feature": "开区半小时，激情不断",
-      "qq": "777777",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "通宵套黄服",
-      "ip": "tsth.qiqu.com",
-      "openTime": "12月20日/23:00",
-      "version": "冰雪三职业",
-      "feature": "通宵打金，稳定回收",
-      "qq": "666666",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "通宵套黄推荐",
-        "order": 2
-      }
-    },
-    {
-      "name": "全天推荐服",
-      "ip": "qtjj.qiqu.com",
-      "openTime": "12月20日/20:00",
-      "version": "沉默复古",
-      "feature": "经典沉默，长久耐玩",
-      "qq": "555555",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "普通服",
-      "ip": "pt.qiqu.com",
+      "name": "全天套黄服",
+      "ip": "套黄一区",
       "openTime": "12月20日/14:00",
-      "version": "经典1.76",
-      "feature": "长期稳定，老品牌",
-      "qq": "444444",
+      "version": "1.76复古",
+      "feature": "特色活动多",
+      "qq": "客服001",
       "detailUrl": "#",
       "category": ["复古"],
       "hot": false,
       "new": false,
-      "promotion": null
+      "promotion": {
+        "type": "全天套黄推荐",
+        "order": 2
+      }
     },
     {
-      "name": "夜猫子专属",
-      "ip": "ymz.qiqu.com",
-      "openTime": "12月20日/23:30",
-      "version": "火龙复古",
-      "feature": "深夜福利，爆率超高",
-      "qq": "333333",
+      "name": "通宵套黄服",
+      "ip": "通宵套黄区",
+      "openTime": "12月20日/03:00",
+      "version": "通宵版本",
+      "feature": "通宵经验加倍",
+      "qq": "夜班客服",
       "detailUrl": "#",
       "category": ["火龙"],
       "hot": true,
       "new": true,
       "promotion": {
-        "type": "通宵推荐",
+        "type": "通宵套黄推荐",
         "order": 3
       }
+    },
+    {
+      "name": "通宵推荐服",
+      "ip": "通宵推荐区",
+      "openTime": "12月20日/04:00",
+      "version": "特色版本",
+      "feature": "独特玩法",
+      "qq": "推荐客服",
+      "detailUrl": "#",
+      "category": ["冰雪"],
+      "hot": false,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 4
+      }
+    },
+    {
+      "name": "当前时间服",
+      "ip": "当前时间区",
+      "openTime": "12月20日/22:30",
+      "version": "当前版本",
+      "feature": "限时开放",
+      "qq": "时间客服",
+      "detailUrl": "#",
+      "category": ["合击"],
+      "hot": true,
+      "new": false,
+      "promotion": {
+        "type": "时间推荐",
+        "order": 5
+      }
+    },
+    {
+      "name": "普通服",
+      "ip": "普通区",
+      "openTime": "12月20日/14:00",
+      "version": "经典1.76",
+      "feature": "长期稳定",
+      "qq": "常规客服",
+      "detailUrl": "#",
+      "category": ["复古"],
+      "hot": false,
+      "new": false,
+      "promotion": null
     }
   ]
 }
+[file content end]
