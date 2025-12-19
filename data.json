@@ -1,14 +1,62 @@
 {
-  "categories": ["代理客服", "111111", "222222", "333333", "444444", "555555", "666666"],
+  "categories": ["代理客服", "2198027617", "3668827341", "333333", "444444", "555555", "666666"],
   "servers": [
     {
-      "name": "通宵置顶服",
-      "ip": "tx.001.com",
-      "openTime": "12月20日/02:00",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成200%，通宵玩家首选",
-      "qq": "888888",
-      "detailUrl": "#",
+      "name": "万世火龙╋单职业",
+      "ip": "2025.bopuart.com",
+      "openTime": "12月19日/02:00",
+      "version": "１８５单职业",
+      "feature": "免费领充值 火龙神器★沉默专属★冰雪迷失★火龙微变",
+      "qq": "每天千元大米",
+      "detailUrl": "http://2025.bopuart.com",
+      "category": ["单职业", "火龙", "沉默", "冰雪", "微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "⒈７６攻速小钢炮",
+      "ip": "xgpj.mkkpa3258.xyz:32228",
+      "openTime": "12月19日/02:00",
+      "version": "神器复古╱小极品",
+      "feature": "首战·首区 三职业平衡 免费顶级 专属挂机 一切靠打",
+      "qq": "神器公益微变",
+      "detailUrl": "http://xgpj.mkkpa3258.xyz:32228",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "●修真三国●专属",
+      "ip": "www.3q8q.com:2025/10086",
+      "openTime": "12月19日/02:00",
+      "version": "独家梦三国单职业",
+      "feature": "年租服务器 沙奖人均60√微变中变宠物宝宝单职业",
+      "qq": "三国金庸专属",
+      "detailUrl": "https://www.3q8q.com:2025/10086",
+      "category": ["单职业", "微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "免费★雷霆二合一",
+      "ip": "hgjuyhrtgdfv.club:1193",
+      "openTime": "12月19日/02:00",
+      "version": "首区 独家新版",
+      "feature": "单职业无限攻速 10元顶赞 绝无隐藏 爆率全开 充值可打-",
+      "qq": "跪求爸爸点击",
+      "detailUrl": "http://hgjuyhrtgdfv.club:1193",
       "category": ["单职业"],
       "hot": true,
       "new": true,
@@ -18,442 +66,13 @@
       }
     },
     {
-      "name": "全天套黄服",
-      "ip": "qt.001.com",
-      "openTime": "12月20日/10:00",
-      "version": "大极品",
-      "feature": "全天候激情，装备保值",
-      "qq": "999999",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "22:30时段服",
-      "ip": "22.30.com",
-      "openTime": "12月20日/22:30",
-      "version": "专属时段",
-      "feature": "当前半小时专属爆率",
-      "qq": "222222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 5
-      }
-    },
-    {
-      "name": "通宵套黄服",
-      "ip": "tx.002.com",
-      "openTime": "12月20日/03:30",
-      "version": "通宵套黄",
-      "feature": "通宵套黄专属，爆率惊人",
-      "qq": "333333",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": {
-        "type": "通宵套黄推荐",
-        "order": 2
-      }
-    },
-    {
-      "name": "全天推荐服",
-      "ip": "qt.002.com",
-      "openTime": "12月20日/14:30",
-      "version": "经典1.76",
-      "feature": "长期稳定，老品牌",
-      "qq": "444444",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 10
-      }
-    },
-    {
-      "name": "通宵推荐服",
-      "ip": "tx.003.com",
-      "openTime": "12月20日/04:45",
-      "version": "通宵推荐",
-      "feature": "通宵玩家首选，在线送元宝",
-      "qq": "555555",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 3
-      }
-    },
-    {
-      "name": "23:00时段服",
-      "ip": "23.00.com",
-      "openTime": "12月20日/23:00",
-      "version": "1.85",
-      "feature": "23点准时开服，福利多多",
-      "qq": "666666",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 6
-      }
-    },
-    {
-      "name": "复古传奇",
-      "ip": "fg.001.com",
-      "openTime": "12月20日/09:00",
-      "version": "1.76复古",
-      "feature": "原汁原味经典复古",
-      "qq": "777777",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 15
-      }
-    },
-    {
-      "name": "单职业狂暴",
-      "ip": "dz.001.com",
-      "openTime": "12月20日/12:00",
-      "version": "单职业",
-      "feature": "一刀999，装备全靠打",
-      "qq": "888111",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "冰雪皇城",
-      "ip": "bx.001.com",
-      "openTime": "12月20日/15:00",
-      "version": "冰雪三职业",
-      "feature": "冰雪地图，全新玩法",
-      "qq": "999111",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "合击霸主",
-      "ip": "hj.001.com",
-      "openTime": "12月20日/18:00",
-      "version": "1.80合击",
-      "feature": "英雄合击，畅快战斗",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "沉默嘟嘟",
-      "ip": "cm.001.com",
-      "openTime": "12月20日/20:00",
-      "version": "沉默嘟嘟",
-      "feature": "沉默版本，回忆经典",
-      "qq": "222333",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "火龙打金",
-      "ip": "hl.001.com",
-      "openTime": "12月20日/21:30",
-      "version": "火龙三职业",
-      "feature": "打金天堂，日赚300+",
-      "qq": "333444",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "微变传奇",
-      "ip": "wb.001.com",
-      "openTime": "12月20日/11:00",
-      "version": "微变1.85",
-      "feature": "微变版本，耐玩不累",
-      "qq": "444555",
-      "detailUrl": "#",
-      "category": ["微变"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵打金服",
-      "ip": "tx.004.com",
-      "openTime": "12月20日/01:30",
-      "version": "通宵打金",
-      "feature": "通宵打金，收益翻倍",
-      "qq": "555666",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 4
-      }
-    },
-    {
-      "name": "全天激情服",
-      "ip": "qt.003.com",
-      "openTime": "12月20日/13:00",
-      "version": "1.76精品",
-      "feature": "全天激情不断，沙城争霸",
-      "qq": "666777",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 12
-      }
-    },
-    {
-      "name": "22:00时段服",
-      "ip": "22.00.com",
-      "openTime": "12月20日/22:00",
-      "version": "1.85",
-      "feature": "22点开服，福利送不停",
-      "qq": "777888",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 7
-      }
-    },
-    {
-      "name": "复古精品",
-      "ip": "fg.002.com",
-      "openTime": "12月20日/08:30",
-      "version": "1.76复古",
-      "feature": "精品复古，长久稳定",
-      "qq": "888999",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "单职业超变",
-      "ip": "dz.002.com",
-      "openTime": "12月20日/16:00",
-      "version": "单职业超变",
-      "feature": "超变单职业，爽快战斗",
-      "qq": "999000",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "冰雪世界",
-      "ip": "bx.002.com",
-      "openTime": "12月20日/17:30",
-      "version": "冰雪版本",
-      "feature": "全新冰雪地图，爆率超高",
-      "qq": "000111",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "合击王者",
-      "ip": "hj.002.com",
-      "openTime": "12月20日/19:00",
-      "version": "1.80合击",
-      "feature": "王者合击，激情无限",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "沉默复古",
-      "ip": "cm.002.com",
-      "openTime": "12月20日/20:30",
-      "version": "沉默版本",
-      "feature": "复古沉默，经典玩法",
-      "qq": "222333",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "火龙复古",
-      "ip": "hl.002.com",
-      "openTime": "12月20日/21:00",
-      "version": "火龙复古",
-      "feature": "火龙复古，经典再现",
-      "qq": "333444",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "微变精品",
-      "ip": "wb.002.com",
-      "openTime": "12月20日/10:30",
-      "version": "微变1.85",
-      "feature": "精品微变，耐玩有趣",
-      "qq": "444555",
-      "detailUrl": "#",
-      "category": ["微变"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "23:30时段服",
-      "ip": "23.30.com",
-      "openTime": "12月20日/23:30",
-      "version": "1.85",
-      "feature": "23:30开服，夜猫子专属",
-      "qq": "555666",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 8
-      }
-    },
-    {
-      "name": "通宵精品服",
-      "ip": "tx.005.com",
-      "openTime": "12月20日/05:00",
-      "version": "通宵精品",
-      "feature": "通宵精品，爆率全开",
-      "qq": "666777",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 9
-      }
-    },
-    {
-      "name": "全天置顶服",
-      "ip": "qt.004.com",
-      "openTime": "12月20日/11:30",
-      "version": "1.76",
-      "feature": "全天置顶，人气火爆",
-      "qq": "777888",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天置顶推荐",
-        "order": 1
-      }
-    },
-    {
-      "name": "单职业复古",
-      "ip": "dz.003.com",
-      "openTime": "12月20日/14:00",
-      "version": "单职业复古",
-      "feature": "单职业复古，全新体验",
-      "qq": "888999",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "冰雪微变",
-      "ip": "bx.003.com",
-      "openTime": "12月20日/16:30",
-      "version": "冰雪微变",
-      "feature": "冰雪微变，创新玩法",
-      "qq": "999000",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "合击微变",
-      "ip": "hj.003.com",
-      "openTime": "12月20日/18:30",
-      "version": "合击微变",
-      "feature": "合击微变，战斗爽快",
-      "qq": "000111",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "沉默微变",
-      "ip": "cm.003.com",
-      "openTime": "12月20日/19:30",
-      "version": "沉默微变",
-      "feature": "沉默微变，经典创新",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "tx.001.com",
-      "openTime": "12月20日/02:00",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成200%，通宵玩家首选",
-      "qq": "888888",
-      "detailUrl": "#",
+      "name": "白漂神器 单职业",
+      "ip": "110.42.5.43:86",
+      "openTime": "12月19日/02:00",
+      "version": "攻速１区 纯元宝",
+      "feature": "沙奖保底８８８ ０充全满 ０充进图 ０充抢紅包 充值好打",
+      "qq": "免费捡物吸怪",
+      "detailUrl": "http://110.42.5.43:86",
       "category": ["单职业"],
       "hot": true,
       "new": true,
@@ -463,442 +82,29 @@
       }
     },
     {
-      "name": "全天套黄服",
-      "ip": "qt.001.com",
-      "openTime": "12月20日/10:00",
-      "version": "大极品",
-      "feature": "全天候激情，装备保值",
-      "qq": "999999",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "22:30时段服",
-      "ip": "22.30.com",
-      "openTime": "12月20日/22:30",
-      "version": "专属时段",
-      "feature": "当前半小时专属爆率",
-      "qq": "222222",
-      "detailUrl": "#",
-      "category": ["合击"],
+      "name": "８５火龙╋单职业",
+      "ip": "103.88.35.117:1018",
+      "openTime": "12月19日/02:00",
+      "version": "攻速１区╋纯元宝",
+      "feature": "沙奖保底８８８ ０充全满╋０充进图╋０充抢紅包╋充值好打",
+      "qq": "免费捡物吸怪",
+      "detailUrl": "http://103.88.35.117:1018",
+      "category": ["单职业", "火龙"],
       "hot": true,
       "new": true,
       "promotion": {
-        "type": "全天推荐",
-        "order": 5
-      }
-    },
-    {
-      "name": "通宵套黄服",
-      "ip": "tx.002.com",
-      "openTime": "12月20日/03:30",
-      "version": "通宵套黄",
-      "feature": "通宵套黄专属，爆率惊人",
-      "qq": "333333",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": {
-        "type": "通宵套黄推荐",
-        "order": 2
-      }
-    },
-    {
-      "name": "全天推荐服",
-      "ip": "qt.002.com",
-      "openTime": "12月20日/14:30",
-      "version": "经典1.76",
-      "feature": "长期稳定，老品牌",
-      "qq": "444444",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 10
-      }
-    },
-    {
-      "name": "通宵推荐服",
-      "ip": "tx.003.com",
-      "openTime": "12月20日/04:45",
-      "version": "通宵推荐",
-      "feature": "通宵玩家首选，在线送元宝",
-      "qq": "555555",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 3
-      }
-    },
-    {
-      "name": "23:00时段服",
-      "ip": "23.00.com",
-      "openTime": "12月20日/23:00",
-      "version": "1.85",
-      "feature": "23点准时开服，福利多多",
-      "qq": "666666",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 6
-      }
-    },
-    {
-      "name": "复古传奇",
-      "ip": "fg.001.com",
-      "openTime": "12月20日/09:00",
-      "version": "1.76复古",
-      "feature": "原汁原味经典复古",
-      "qq": "777777",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 15
-      }
-    },
-    {
-      "name": "单职业狂暴",
-      "ip": "dz.001.com",
-      "openTime": "12月20日/12:00",
-      "version": "单职业",
-      "feature": "一刀999，装备全靠打",
-      "qq": "888111",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "冰雪皇城",
-      "ip": "bx.001.com",
-      "openTime": "12月20日/15:00",
-      "version": "冰雪三职业",
-      "feature": "冰雪地图，全新玩法",
-      "qq": "999111",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "合击霸主",
-      "ip": "hj.001.com",
-      "openTime": "12月20日/18:00",
-      "version": "1.80合击",
-      "feature": "英雄合击，畅快战斗",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "沉默嘟嘟",
-      "ip": "cm.001.com",
-      "openTime": "12月20日/20:00",
-      "version": "沉默嘟嘟",
-      "feature": "沉默版本，回忆经典",
-      "qq": "222333",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "火龙打金",
-      "ip": "hl.001.com",
-      "openTime": "12月20日/21:30",
-      "version": "火龙三职业",
-      "feature": "打金天堂，日赚300+",
-      "qq": "333444",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "微变传奇",
-      "ip": "wb.001.com",
-      "openTime": "12月20日/11:00",
-      "version": "微变1.85",
-      "feature": "微变版本，耐玩不累",
-      "qq": "444555",
-      "detailUrl": "#",
-      "category": ["微变"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵打金服",
-      "ip": "tx.004.com",
-      "openTime": "12月20日/01:30",
-      "version": "通宵打金",
-      "feature": "通宵打金，收益翻倍",
-      "qq": "555666",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 4
-      }
-    },
-    {
-      "name": "全天激情服",
-      "ip": "qt.003.com",
-      "openTime": "12月20日/13:00",
-      "version": "1.76精品",
-      "feature": "全天激情不断，沙城争霸",
-      "qq": "666777",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 12
-      }
-    },
-    {
-      "name": "22:00时段服",
-      "ip": "22.00.com",
-      "openTime": "12月20日/22:00",
-      "version": "1.85",
-      "feature": "22点开服，福利送不停",
-      "qq": "777888",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 7
-      }
-    },
-    {
-      "name": "复古精品",
-      "ip": "fg.002.com",
-      "openTime": "12月20日/08:30",
-      "version": "1.76复古",
-      "feature": "精品复古，长久稳定",
-      "qq": "888999",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "单职业超变",
-      "ip": "dz.002.com",
-      "openTime": "12月20日/16:00",
-      "version": "单职业超变",
-      "feature": "超变单职业，爽快战斗",
-      "qq": "999000",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "冰雪世界",
-      "ip": "bx.002.com",
-      "openTime": "12月20日/17:30",
-      "version": "冰雪版本",
-      "feature": "全新冰雪地图，爆率超高",
-      "qq": "000111",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "合击王者",
-      "ip": "hj.002.com",
-      "openTime": "12月20日/19:00",
-      "version": "1.80合击",
-      "feature": "王者合击，激情无限",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "沉默复古",
-      "ip": "cm.002.com",
-      "openTime": "12月20日/20:30",
-      "version": "沉默版本",
-      "feature": "复古沉默，经典玩法",
-      "qq": "222333",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "火龙复古",
-      "ip": "hl.002.com",
-      "openTime": "12月20日/21:00",
-      "version": "火龙复古",
-      "feature": "火龙复古，经典再现",
-      "qq": "333444",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "微变精品",
-      "ip": "wb.002.com",
-      "openTime": "12月20日/10:30",
-      "version": "微变1.85",
-      "feature": "精品微变，耐玩有趣",
-      "qq": "444555",
-      "detailUrl": "#",
-      "category": ["微变"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "23:30时段服",
-      "ip": "23.30.com",
-      "openTime": "12月20日/23:30",
-      "version": "1.85",
-      "feature": "23:30开服，夜猫子专属",
-      "qq": "555666",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 8
-      }
-    },
-    {
-      "name": "通宵精品服",
-      "ip": "tx.005.com",
-      "openTime": "12月20日/05:00",
-      "version": "通宵精品",
-      "feature": "通宵精品，爆率全开",
-      "qq": "666777",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 9
-      }
-    },
-    {
-      "name": "全天置顶服",
-      "ip": "qt.004.com",
-      "openTime": "12月20日/11:30",
-      "version": "1.76",
-      "feature": "全天置顶，人气火爆",
-      "qq": "777888",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天置顶推荐",
+        "type": "通宵置顶推荐",
         "order": 1
       }
     },
     {
-      "name": "单职业复古",
-      "ip": "dz.003.com",
-      "openTime": "12月20日/14:00",
-      "version": "单职业复古",
-      "feature": "单职业复古，全新体验",
-      "qq": "888999",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "冰雪微变",
-      "ip": "bx.003.com",
-      "openTime": "12月20日/16:30",
-      "version": "冰雪微变",
-      "feature": "冰雪微变，创新玩法",
-      "qq": "999000",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "合击微变",
-      "ip": "hj.003.com",
-      "openTime": "12月20日/18:30",
-      "version": "合击微变",
-      "feature": "合击微变，战斗爽快",
-      "qq": "000111",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "沉默微变",
-      "ip": "cm.003.com",
-      "openTime": "12月20日/19:30",
-      "version": "沉默微变",
-      "feature": "沉默微变，经典创新",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "tx.001.com",
-      "openTime": "12月20日/02:00",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成200%，通宵玩家首选",
-      "qq": "888888",
-      "detailUrl": "#",
+      "name": "必爆终极╋无敌神斩",
+      "ip": "103.192.209.60:8199",
+      "openTime": "12月19日/02:00",
+      "version": "首战首区刚开１秒╋",
+      "feature": "终极高爆大服 ◢◤◢◤◢◤新玩法第一单职业◥◣◥◣◥◣",
+      "qq": "赏金传奇大服",
+      "detailUrl": "http://103.192.209.60:8199",
       "category": ["单职业"],
       "hot": true,
       "new": true,
@@ -908,442 +114,29 @@
       }
     },
     {
-      "name": "全天套黄服",
-      "ip": "qt.001.com",
-      "openTime": "12月20日/10:00",
-      "version": "大极品",
-      "feature": "全天候激情，装备保值",
-      "qq": "999999",
-      "detailUrl": "#",
+      "name": "玛法之魂",
+      "ip": "103.36.167.132:52031",
+      "openTime": "12月19日/02:00",
+      "version": "复古三职业专属",
+      "feature": "独创版本 三职业群功技能，法师火墙切割，道士群毒。",
+      "qq": "长久稳定",
+      "detailUrl": "http://103.36.167.132:52031",
       "category": ["复古"],
       "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
-      }
-    },
-    {
-      "name": "22:30时段服",
-      "ip": "22.30.com",
-      "openTime": "12月20日/22:30",
-      "version": "专属时段",
-      "feature": "当前半小时专属爆率",
-      "qq": "222222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": true,
       "new": true,
       "promotion": {
-        "type": "全天推荐",
-        "order": 5
-      }
-    },
-    {
-      "name": "通宵套黄服",
-      "ip": "tx.002.com",
-      "openTime": "12月20日/03:30",
-      "version": "通宵套黄",
-      "feature": "通宵套黄专属，爆率惊人",
-      "qq": "333333",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": {
-        "type": "通宵套黄推荐",
-        "order": 2
-      }
-    },
-    {
-      "name": "全天推荐服",
-      "ip": "qt.002.com",
-      "openTime": "12月20日/14:30",
-      "version": "经典1.76",
-      "feature": "长期稳定，老品牌",
-      "qq": "444444",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 10
-      }
-    },
-    {
-      "name": "通宵推荐服",
-      "ip": "tx.003.com",
-      "openTime": "12月20日/04:45",
-      "version": "通宵推荐",
-      "feature": "通宵玩家首选，在线送元宝",
-      "qq": "555555",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 3
-      }
-    },
-    {
-      "name": "23:00时段服",
-      "ip": "23.00.com",
-      "openTime": "12月20日/23:00",
-      "version": "1.85",
-      "feature": "23点准时开服，福利多多",
-      "qq": "666666",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 6
-      }
-    },
-    {
-      "name": "复古传奇",
-      "ip": "fg.001.com",
-      "openTime": "12月20日/09:00",
-      "version": "1.76复古",
-      "feature": "原汁原味经典复古",
-      "qq": "777777",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 15
-      }
-    },
-    {
-      "name": "单职业狂暴",
-      "ip": "dz.001.com",
-      "openTime": "12月20日/12:00",
-      "version": "单职业",
-      "feature": "一刀999，装备全靠打",
-      "qq": "888111",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "冰雪皇城",
-      "ip": "bx.001.com",
-      "openTime": "12月20日/15:00",
-      "version": "冰雪三职业",
-      "feature": "冰雪地图，全新玩法",
-      "qq": "999111",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "合击霸主",
-      "ip": "hj.001.com",
-      "openTime": "12月20日/18:00",
-      "version": "1.80合击",
-      "feature": "英雄合击，畅快战斗",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "沉默嘟嘟",
-      "ip": "cm.001.com",
-      "openTime": "12月20日/20:00",
-      "version": "沉默嘟嘟",
-      "feature": "沉默版本，回忆经典",
-      "qq": "222333",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "火龙打金",
-      "ip": "hl.001.com",
-      "openTime": "12月20日/21:30",
-      "version": "火龙三职业",
-      "feature": "打金天堂，日赚300+",
-      "qq": "333444",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "微变传奇",
-      "ip": "wb.001.com",
-      "openTime": "12月20日/11:00",
-      "version": "微变1.85",
-      "feature": "微变版本，耐玩不累",
-      "qq": "444555",
-      "detailUrl": "#",
-      "category": ["微变"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵打金服",
-      "ip": "tx.004.com",
-      "openTime": "12月20日/01:30",
-      "version": "通宵打金",
-      "feature": "通宵打金，收益翻倍",
-      "qq": "555666",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 4
-      }
-    },
-    {
-      "name": "全天激情服",
-      "ip": "qt.003.com",
-      "openTime": "12月20日/13:00",
-      "version": "1.76精品",
-      "feature": "全天激情不断，沙城争霸",
-      "qq": "666777",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 12
-      }
-    },
-    {
-      "name": "22:00时段服",
-      "ip": "22.00.com",
-      "openTime": "12月20日/22:00",
-      "version": "1.85",
-      "feature": "22点开服，福利送不停",
-      "qq": "777888",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 7
-      }
-    },
-    {
-      "name": "复古精品",
-      "ip": "fg.002.com",
-      "openTime": "12月20日/08:30",
-      "version": "1.76复古",
-      "feature": "精品复古，长久稳定",
-      "qq": "888999",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "单职业超变",
-      "ip": "dz.002.com",
-      "openTime": "12月20日/16:00",
-      "version": "单职业超变",
-      "feature": "超变单职业，爽快战斗",
-      "qq": "999000",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "冰雪世界",
-      "ip": "bx.002.com",
-      "openTime": "12月20日/17:30",
-      "version": "冰雪版本",
-      "feature": "全新冰雪地图，爆率超高",
-      "qq": "000111",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "合击王者",
-      "ip": "hj.002.com",
-      "openTime": "12月20日/19:00",
-      "version": "1.80合击",
-      "feature": "王者合击，激情无限",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "沉默复古",
-      "ip": "cm.002.com",
-      "openTime": "12月20日/20:30",
-      "version": "沉默版本",
-      "feature": "复古沉默，经典玩法",
-      "qq": "222333",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "火龙复古",
-      "ip": "hl.002.com",
-      "openTime": "12月20日/21:00",
-      "version": "火龙复古",
-      "feature": "火龙复古，经典再现",
-      "qq": "333444",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "微变精品",
-      "ip": "wb.002.com",
-      "openTime": "12月20日/10:30",
-      "version": "微变1.85",
-      "feature": "精品微变，耐玩有趣",
-      "qq": "444555",
-      "detailUrl": "#",
-      "category": ["微变"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "23:30时段服",
-      "ip": "23.30.com",
-      "openTime": "12月20日/23:30",
-      "version": "1.85",
-      "feature": "23:30开服，夜猫子专属",
-      "qq": "555666",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 8
-      }
-    },
-    {
-      "name": "通宵精品服",
-      "ip": "tx.005.com",
-      "openTime": "12月20日/05:00",
-      "version": "通宵精品",
-      "feature": "通宵精品，爆率全开",
-      "qq": "666777",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 9
-      }
-    },
-    {
-      "name": "全天置顶服",
-      "ip": "qt.004.com",
-      "openTime": "12月20日/11:30",
-      "version": "1.76",
-      "feature": "全天置顶，人气火爆",
-      "qq": "777888",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天置顶推荐",
+        "type": "通宵置顶推荐",
         "order": 1
       }
     },
     {
-      "name": "单职业复古",
-      "ip": "dz.003.com",
-      "openTime": "12月20日/14:00",
-      "version": "单职业复古",
-      "feature": "单职业复古，全新体验",
-      "qq": "888999",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "冰雪微变",
-      "ip": "bx.003.com",
-      "openTime": "12月20日/16:30",
-      "version": "冰雪微变",
-      "feature": "冰雪微变，创新玩法",
-      "qq": "999000",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "合击微变",
-      "ip": "hj.003.com",
-      "openTime": "12月20日/18:30",
-      "version": "合击微变",
-      "feature": "合击微变，战斗爽快",
-      "qq": "000111",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "沉默微变",
-      "ip": "cm.003.com",
-      "openTime": "12月20日/19:30",
-      "version": "沉默微变",
-      "feature": "沉默微变，经典创新",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵置顶服",
-      "ip": "tx.001.com",
-      "openTime": "12月20日/02:00",
-      "version": "通宵专属",
-      "feature": "夜间爆率加成200%，通宵玩家首选",
-      "qq": "888888",
-      "detailUrl": "#",
+      "name": "斩龍神器●单职业",
+      "ip": "103.7.141.86:89",
+      "openTime": "12月19日/02:00",
+      "version": "独家神器●单职业",
+      "feature": "●地图免费● 无暗坑●无门槛●脸白出一切●人帅爆率高",
+      "qq": "●散人逆袭●",
+      "detailUrl": "http://103.7.141.86:89",
       "category": ["单职业"],
       "hot": true,
       "new": true,
@@ -1353,434 +146,692 @@
       }
     },
     {
-      "name": "全天套黄服",
-      "ip": "qt.001.com",
-      "openTime": "12月20日/10:00",
-      "version": "大极品",
-      "feature": "全天候激情，装备保值",
-      "qq": "999999",
-      "detailUrl": "#",
-      "category": ["复古"],
+      "name": "●终极吾辈●神器",
+      "ip": "www.wmzbcq.com:520",
+      "openTime": "12月19日/02:00",
+      "version": "●十名限时奖励●",
+      "feature": "账号材料保值 ●吾辈●送满会员●吸怪●嘲讽●半月●三天合",
+      "qq": "●无名之辈●",
+      "detailUrl": "https://www.wmzbcq.com:520",
+      "category": [],
       "hot": true,
-      "new": false,
+      "new": true,
       "promotion": {
-        "type": "全天套黄推荐",
-        "order": 0
+        "type": "通宵置顶推荐",
+        "order": 1
       }
     },
     {
-      "name": "22:30时段服",
-      "ip": "22.30.com",
-      "openTime": "12月20日/22:30",
-      "version": "专属时段",
-      "feature": "当前半小时专属爆率",
-      "qq": "222222",
-      "detailUrl": "#",
+      "name": "１．７６变态攻速",
+      "ip": "gytz.mfjf6752ghcx.top:32999",
+      "openTime": "12月19日/02:00",
+      "version": "充值老G是你儿",
+      "feature": "完全免费到终极 〔　　打怪=顶赞＋满级＋终极＋一切　　〕",
+      "qq": "攻速元素微变",
+      "detailUrl": "http://gytz.mfjf6752ghcx.top:32999",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "８０十元合击",
+      "ip": "jhfrgfretgrgred.club:396",
+      "openTime": "12月19日/02:00",
+      "version": "高爆星王+3",
+      "feature": "10元全满沙奖 10顶赞绝无隐藏，撒谎老G是你儿",
+      "qq": "每天8个新区",
+      "detailUrl": "http://jhfrgfretgrgred.club:396",
       "category": ["合击"],
       "hot": true,
       "new": true,
       "promotion": {
-        "type": "全天推荐",
-        "order": 5
+        "type": "通宵置顶推荐",
+        "order": 1
       }
     },
     {
-      "name": "通宵套黄服",
-      "ip": "tx.002.com",
-      "openTime": "12月20日/03:30",
-      "version": "通宵套黄",
-      "feature": "通宵套黄专属，爆率惊人",
-      "qq": "333333",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": {
-        "type": "通宵套黄推荐",
-        "order": 2
-      }
-    },
-    {
-      "name": "全天推荐服",
-      "ip": "qt.002.com",
-      "openTime": "12月20日/14:30",
-      "version": "经典1.76",
-      "feature": "长期稳定，老品牌",
-      "qq": "444444",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 10
-      }
-    },
-    {
-      "name": "通宵推荐服",
-      "ip": "tx.003.com",
-      "openTime": "12月20日/04:45",
-      "version": "通宵推荐",
-      "feature": "通宵玩家首选，在线送元宝",
-      "qq": "555555",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 3
-      }
-    },
-    {
-      "name": "23:00时段服",
-      "ip": "23.00.com",
-      "openTime": "12月20日/23:00",
-      "version": "1.85",
-      "feature": "23点准时开服，福利多多",
-      "qq": "666666",
-      "detailUrl": "#",
-      "category": ["火龙"],
+      "name": "问鼎天下",
+      "ip": "www.hxlt185.com",
+      "openTime": "12月19日/02:00",
+      "version": "首战首区+",
+      "feature": "神器沉默单职业 白漂通关·超低消费*妥妥吃肉*物价稳定",
+      "qq": "专属微变火龙",
+      "detailUrl": "http://www.hxlt185.com",
+      "category": ["单职业", "沉默", "微变", "火龙"],
       "hot": true,
       "new": true,
       "promotion": {
-        "type": "全天推荐",
-        "order": 6
+        "type": "通宵置顶推荐",
+        "order": 1
       }
     },
     {
-      "name": "复古传奇",
-      "ip": "fg.001.com",
-      "openTime": "12月20日/09:00",
-      "version": "1.76复古",
-      "feature": "原汁原味经典复古",
-      "qq": "777777",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 15
-      }
-    },
-    {
-      "name": "单职业狂暴",
-      "ip": "dz.001.com",
-      "openTime": "12月20日/12:00",
-      "version": "单职业",
-      "feature": "一刀999，装备全靠打",
-      "qq": "888111",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "冰雪皇城",
-      "ip": "bx.001.com",
-      "openTime": "12月20日/15:00",
-      "version": "冰雪三职业",
-      "feature": "冰雪地图，全新玩法",
-      "qq": "999111",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "合击霸主",
-      "ip": "hj.001.com",
-      "openTime": "12月20日/18:00",
-      "version": "1.80合击",
-      "feature": "英雄合击，畅快战斗",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "沉默嘟嘟",
-      "ip": "cm.001.com",
-      "openTime": "12月20日/20:00",
-      "version": "沉默嘟嘟",
-      "feature": "沉默版本，回忆经典",
-      "qq": "222333",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "火龙打金",
-      "ip": "hl.001.com",
-      "openTime": "12月20日/21:30",
-      "version": "火龙三职业",
-      "feature": "打金天堂，日赚300+",
-      "qq": "333444",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "微变传奇",
-      "ip": "wb.001.com",
-      "openTime": "12月20日/11:00",
-      "version": "微变1.85",
-      "feature": "微变版本，耐玩不累",
-      "qq": "444555",
-      "detailUrl": "#",
-      "category": ["微变"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "通宵打金服",
-      "ip": "tx.004.com",
-      "openTime": "12月20日/01:30",
-      "version": "通宵打金",
-      "feature": "通宵打金，收益翻倍",
-      "qq": "555666",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 4
-      }
-    },
-    {
-      "name": "全天激情服",
-      "ip": "qt.003.com",
-      "openTime": "12月20日/13:00",
-      "version": "1.76精品",
-      "feature": "全天激情不断，沙城争霸",
-      "qq": "666777",
-      "detailUrl": "#",
+      "name": "１·８０﹌﹌复古",
+      "ip": "www.cq2007.com",
+      "openTime": "12月19日/10:00",
+      "version": "﹌﹌情怀﹌﹌﹌",
+      "feature": "﹌﹌﹌口碑﹌﹌ ﹌﹌人多﹌﹌﹌保值﹌﹌﹌﹌送﹌赞﹌助﹌﹌﹌",
+      "qq": "1036524262群",
+      "detailUrl": "http://www.cq2007.com",
       "category": ["复古"],
       "hot": true,
-      "new": false,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 12
-      }
-    },
-    {
-      "name": "22:00时段服",
-      "ip": "22.00.com",
-      "openTime": "12月20日/22:00",
-      "version": "1.85",
-      "feature": "22点开服，福利送不停",
-      "qq": "777888",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
       "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 7
-      }
-    },
-    {
-      "name": "复古精品",
-      "ip": "fg.002.com",
-      "openTime": "12月20日/08:30",
-      "version": "1.76复古",
-      "feature": "精品复古，长久稳定",
-      "qq": "888999",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "单职业超变",
-      "ip": "dz.002.com",
-      "openTime": "12月20日/16:00",
-      "version": "单职业超变",
-      "feature": "超变单职业，爽快战斗",
-      "qq": "999000",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "冰雪世界",
-      "ip": "bx.002.com",
-      "openTime": "12月20日/17:30",
-      "version": "冰雪版本",
-      "feature": "全新冰雪地图，爆率超高",
-      "qq": "000111",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "合击王者",
-      "ip": "hj.002.com",
-      "openTime": "12月20日/19:00",
-      "version": "1.80合击",
-      "feature": "王者合击，激情无限",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["合击"],
-      "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "沉默复古",
-      "ip": "cm.002.com",
-      "openTime": "12月20日/20:30",
-      "version": "沉默版本",
-      "feature": "复古沉默，经典玩法",
-      "qq": "222333",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "火龙复古",
-      "ip": "hl.002.com",
-      "openTime": "12月20日/21:00",
-      "version": "火龙复古",
-      "feature": "火龙复古，经典再现",
-      "qq": "333444",
-      "detailUrl": "#",
-      "category": ["火龙"],
-      "hot": true,
-      "new": true,
-      "promotion": null
-    },
-    {
-      "name": "微变精品",
-      "ip": "wb.002.com",
-      "openTime": "12月20日/10:30",
-      "version": "微变1.85",
-      "feature": "精品微变，耐玩有趣",
-      "qq": "444555",
-      "detailUrl": "#",
-      "category": ["微变"],
-      "hot": false,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "23:30时段服",
-      "ip": "23.30.com",
-      "openTime": "12月20日/23:30",
-      "version": "1.85",
-      "feature": "23:30开服，夜猫子专属",
-      "qq": "555666",
-      "detailUrl": "#",
-      "category": ["单职业"],
-      "hot": true,
-      "new": true,
-      "promotion": {
-        "type": "全天推荐",
-        "order": 8
-      }
-    },
-    {
-      "name": "通宵精品服",
-      "ip": "tx.005.com",
-      "openTime": "12月20日/05:00",
-      "version": "通宵精品",
-      "feature": "通宵精品，爆率全开",
-      "qq": "666777",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
-      "new": true,
-      "promotion": {
-        "type": "通宵推荐",
-        "order": 9
-      }
-    },
-    {
-      "name": "全天置顶服",
-      "ip": "qt.004.com",
-      "openTime": "12月20日/11:30",
-      "version": "1.76",
-      "feature": "全天置顶，人气火爆",
-      "qq": "777888",
-      "detailUrl": "#",
-      "category": ["复古"],
-      "hot": true,
-      "new": false,
       "promotion": {
         "type": "全天置顶推荐",
         "order": 1
       }
     },
     {
-      "name": "单职业复古",
-      "ip": "dz.003.com",
-      "openTime": "12月20日/14:00",
-      "version": "单职业复古",
-      "feature": "单职业复古，全新体验",
-      "qq": "888999",
-      "detailUrl": "#",
+      "name": "●修真三国●专属",
+      "ip": "www.3q8q.com:2025/10086",
+      "openTime": "12月19日/10:00",
+      "version": "独家梦三国单职业",
+      "feature": "年租服务器 沙奖人均60√微变中变宠物宝宝单职业",
+      "qq": "三国金庸专属",
+      "detailUrl": "https://www.3q8q.com:2025/10086",
+      "category": ["单职业", "微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "１７６怀旧经典",
+      "ip": "www.baidu5567.com:1718",
+      "openTime": "12月19日/10:00",
+      "version": "１丶７６首区",
+      "feature": "７０８０养老 ━━━━━━１丶７６赤月终极━━━━━━",
+      "qq": "进服玩一年",
+      "detailUrl": "http://www.baidu5567.com:1718",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "寓言迷失",
+      "ip": "43.240.73.184:99",
+      "openTime": "12月19日/10:00",
+      "version": "迷失单职业",
+      "feature": "微中变迷失 免费通关",
+      "qq": "760938118",
+      "detailUrl": "http://43.240.73.184:99",
+      "category": ["单职业", "微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "〔　封神榜Ⅱ　〕",
+      "ip": "210.16.173.12:82",
+      "openTime": "12月19日/10:00",
+      "version": "「2026」最新",
+      "feature": "装备保值 《无限刀﹏捐献﹏狂暴﹏顶赞﹏挂机﹏免费》",
+      "qq": "纯货币无强制",
+      "detailUrl": "http://210.16.173.12:82",
+      "category": [],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "戰龙超变▲全屏秒杀",
+      "ip": "fff.24gu.top:8813",
+      "openTime": "12月19日/10:00",
+      "version": "全屏吸怪▲鞭尸秒杀",
+      "feature": "不花一分？ 送+999999亿%〃切割/攻击范围+10000000%",
+      "qq": "无充值入口",
+      "detailUrl": "http://fff.24gu.top:8813",
+      "category": [],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "千年公益◆微变",
+      "ip": "www.gzzzzp.com:44498",
+      "openTime": "12月19日/10:00",
+      "version": "纯元宝◆真①区",
+      "feature": "专属神器迷失沉 沙奖18888◆一切靠打◆白漂通关◆三天合区",
+      "qq": "免费沙捐顶赞",
+      "detailUrl": "https://www.gzzzzp.com:44498",
+      "category": ["微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "1.76复古+6",
+      "ip": "103.192.209.172:15031/yhfg",
+      "openTime": "12月19日/10:00",
+      "version": "充值点可爆",
+      "feature": "可？ 极品？充值点/开天斩/群雷电/裂神符",
+      "qq": "50满赞",
+      "detailUrl": "https://103.192.209.172:15031/yhfg",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "龍腾杀神",
+      "ip": "43.226.56.98:1888",
+      "openTime": "12月19日/10:00",
+      "version": "？拿沙",
+      "feature": "？物价高 宣传领豪礼 ？物价高 充多少送多少",
+      "qq": "宣传领豪礼",
+      "detailUrl": "http://43.226.56.98:1888",
+      "category": [],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "弑仙微变◆单职业",
+      "ip": "www.shixianzhizhanzuihaowan.top:29888",
+      "openTime": "12月19日/10:00",
+      "version": "独创◆首战①区",
+      "feature": "专属神器迷失沉 沙奖8888◆一切靠打◆白漂通关◆三天合区",
+      "qq": "稳定搬砖养老",
+      "detailUrl": "https://www.shixianzhizhanzuihaowan.top:29888",
+      "category": ["单职业", "微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "二八超速高爆冰雪",
+      "ip": "45.120.100.74:1688",
+      "openTime": "12月19日/10:00",
+      "version": "●十元称霸全服●",
+      "feature": "账号装备保底回 永久会首●妖兽爆一切●终极全爆出●爆率拉满",
+      "qq": "产出永不封顶",
+      "detailUrl": "http://45.120.100.74:1688",
+      "category": ["冰雪"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "火龙＂②合①",
+      "ip": "www.ppt21.top:888",
+      "openTime": "12月19日/10:00",
+      "version": "火龙＂二合一",
+      "feature": "火龙＂２合１ 火龙＋１﹏火龙＋２﹏火龙＋３﹏＋终极",
+      "qq": "王者SvipX",
+      "detailUrl": "http://www.ppt21.top:888",
+      "category": ["火龙"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "１８０战神首区",
+      "ip": "www.baidu5567.com:2003",
+      "openTime": "12月19日/10:00",
+      "version": "１丶７６复古开天",
+      "feature": "５０全满 ━━━━━━１丶８０战神终极━━━━━━",
+      "qq": "魔龙教主爆一切",
+      "detailUrl": "http://www.baidu5567.com:2003",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "１丶８５哪吒火龙",
+      "ip": "tze5g4d5as.nvfdjtydaslydkfuclac.top:566",
+      "openTime": "12月19日/10:00",
+      "version": "２０送２０００元",
+      "feature": "沙奖１８８８ ╋╋╋攻速丶元素丶微变、开船去土城？╋╋╋",
+      "qq": "２０２６新版",
+      "detailUrl": "http://tze5g4d5as.nvfdjtydaslydkfuclac.top:566",
+      "category": ["火龙", "微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "９５Ｌ歲月魔宠录",
+      "ip": "www.kjkjjkuiy45455.xyz:51266",
+      "openTime": "12月19日/10:00",
+      "version": "超长期丶独家一区",
+      "feature": "７６专属迷失沉 「公益」·「元宝靠打」·「万种魔宠探秘」",
+      "qq": "微变复古暗黑",
+      "detailUrl": "http://www.kjkjjkuiy45455.xyz:51266",
+      "category": ["微变", "复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "﹌180小极品﹌",
+      "ip": "www.6868.cq.cn",
+      "openTime": "12月19日/10:00",
+      "version": "﹌﹌只有元宝﹌﹌",
+      "feature": "﹌30米当大爷 0　　　充　　　通　　　关",
+      "qq": "﹌绿色复古﹌",
+      "detailUrl": "http://www.6868.cq.cn",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "﹌﹌﹌﹌公益冰雪",
+      "ip": "l1h-1307564774.file.myqcloud.com",
+      "openTime": "12月19日/10:00",
+      "version": "无充值﹌﹌﹌﹌﹌",
+      "feature": "没灵符﹌就元宝 ﹌﹌﹌﹌﹌﹌﹌﹌真公益服﹌﹌﹌﹌﹌﹌﹌﹌",
+      "qq": "会员用元宝买",
+      "detailUrl": "https://l1h-1307564774.file.myqcloud.com",
+      "category": ["冰雪"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "打天下",
+      "ip": "45.248.9.55:52168",
+      "openTime": "12月19日/10:00",
+      "version": "一区[剧情]",
+      "feature": "公益(单职业) BOSS追梦打架超爽-探索神器-独创专属",
+      "qq": "霸业沉默品牌",
+      "detailUrl": "http://45.248.9.55:52168",
+      "category": ["单职业", "沉默"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "2元满赞高爆冰雪",
+      "ip": "43.248.102.62:1233",
+      "openTime": "12月19日/10:00",
+      "version": "◆十元●全满◆",
+      "feature": "◆首战首区◆ 绝无暗坑◆散人天堂◆土豪天下◆装备全靠打★",
+      "qq": "复古ミ可打琻√",
+      "detailUrl": "http://43.248.102.62:1233",
+      "category": ["冰雪", "复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "道士三只白虎王",
+      "ip": "wmtz.asdnnsafmsakwmsahqda.top:9389",
+      "openTime": "12月19日/10:00",
+      "version": "道士称王打全服",
+      "feature": "沙桨１８８８８ 合区要没100╋活人直接来骂我爸爸们",
+      "qq": "攻速丶元素微变",
+      "detailUrl": "http://wmtz.asdnnsafmsakwmsahqda.top:9389",
+      "category": ["微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "﹌﹌好运沉默﹌﹌",
+      "ip": "110.42.56.176:5777",
+      "openTime": "12月19日/10:00",
+      "version": "﹌﹌绝版首区﹌﹌",
+      "feature": "﹌打怪爆一切﹌ ﹌﹌纯散人服＼＼一＼＼切＼＼靠＼＼打﹌﹌",
+      "qq": "一根毛都靠打",
+      "detailUrl": "http://110.42.56.176:5777",
+      "category": ["沉默"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "玄魔微变",
+      "ip": "pl-haosf-1317919383.cos-website.ap-shanghai.myqcloud.com/xmwb/j",
+      "openTime": "12月19日/10:00",
+      "version": "首战首区",
+      "feature": "充值可打 装备一切靠打 材料货币满地爆 超爽单职业",
+      "qq": "三职业微变",
+      "detailUrl": "https://pl-haosf-1317919383.cos-website.ap-shanghai.myqcloud.com/xmwb/j",
+      "category": ["单职业", "微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "╲大圣·归来 ╱",
+      "ip": "szq.dsgllll.top:1888",
+      "openTime": "12月19日/10:00",
+      "version": "８０微变三职业",
+      "feature": "首战丶首区 三职业平衡╱自动捡取╱免费顶级╱极品好爆",
+      "qq": "沙奖１８８８",
+      "detailUrl": "http://szq.dsgllll.top:1888",
+      "category": ["微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "全天置顶推荐",
+        "order": 1
+      }
+    },
+    {
+      "name": "╲﹍嘟嘟传奇﹍╱",
+      "ip": "103.88.35.145:21912",
+      "openTime": "12月19日/22:00",
+      "version": "╲﹍复古沉默﹍╱",
+      "feature": "◥◣﹍首区﹍◢ ◆我本沉默◆原汁原味◆怀旧经典◆回忆2003",
+      "qq": "仙剑迷失微变冰",
+      "detailUrl": "http://103.88.35.145:21912",
+      "category": ["复古", "沉默", "微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "１．９６蓝魔皓月",
+      "ip": "p8001.s3.cn-south-1.jdcloud-oss.com",
+      "openTime": "12月19日/22:00",
+      "version": "●纯元宝复古●",
+      "feature": "纯元宝全靠打 ━纯元宝━复古━全靠打━免费图━全靠爆━",
+      "qq": "无捐献无狂暴",
+      "detailUrl": "https://p8001.s3.cn-south-1.jdcloud-oss.com",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "动漫之王神器专属",
+      "ip": "dmzw.4gg1.top:888",
+      "openTime": "12月19日/22:00",
+      "version": "51大陆动态刷怪",
+      "feature": "专属奇遇神器暗 动漫51大陆◆海贼吃鸡◆快乐龙渊◆神魔迷失",
+      "qq": "上线1000倍爆",
+      "detailUrl": "http://dmzw.4gg1.top:888",
+      "category": [],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "全屏火雨宇宙未央",
+      "ip": "yzwy.zsf06.top:88/9pk",
+      "openTime": "12月19日/22:00",
+      "version": "◆全图无限怪◆",
+      "feature": "白漂送吸怪 ╋全屏火墙╋全屏火雨╋全屏吸怪免费送╋",
+      "qq": "倍攻神器单职业",
+      "detailUrl": "http://yzwy.zsf06.top:88/9pk",
+      "category": [],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "１．８０梦回战神",
+      "ip": "www.xmhzs.top:25925",
+      "openTime": "12月19日/22:00",
+      "version": "１０圆梦篇",
+      "feature": "？通关 好玩不氪 一切可爆 ０元通关 装备保值",
+      "qq": "首战首区",
+      "detailUrl": "http://www.xmhzs.top:25925",
+      "category": [],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "176神通复古",
+      "ip": "103.91.208.185:999",
+      "openTime": "12月19日/22:00",
+      "version": "独家改版",
+      "feature": "装备靠打 血脉神通复古3职业终极可爆顶赞好打",
+      "qq": "爆率全开",
+      "detailUrl": "http://103.91.208.185:999",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "战神公益",
+      "ip": "www.cqq888.com",
+      "openTime": "12月19日/22:00",
+      "version": "免费白漂到顶",
+      "feature": "装备材料老板收 战神极品嫖全满500米简单易懂",
+      "qq": "低消费长期服",
+      "detailUrl": "http://www.cqq888.com",
+      "category": [],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "１·８５元素火龙",
+      "ip": "yshl.4gg6.top:888",
+      "openTime": "12月19日/22:00",
+      "version": "０充高爆ミ无限刀",
+      "feature": "遗忘火龙元素 神器迷失专属沉默终极合击暗黑龙渊",
+      "qq": "送挂机送捡物",
+      "detailUrl": "http://yshl.4gg6.top:888",
+      "category": ["火龙", "沉默", "合击"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "185丶妖火微变",
+      "ip": "www.185yh.com",
+      "openTime": "12月19日/22:00",
+      "version": "装备服 纯靠打",
+      "feature": "免费玩家专属 没有任何NPC属性加成，只靠装备提升",
+      "qq": "三天合区",
+      "detailUrl": "http://www.185yh.com",
+      "category": ["微变"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "≤奇异果迷失≥",
+      "ip": "qygms.4gg2.top:888",
+      "openTime": "12月19日/22:00",
+      "version": "复古无限刀迷失",
+      "feature": "━━长久耐玩 ━无捐献无狂暴无顶榜复古迷失━",
+      "qq": "轻变中变迷失",
+      "detailUrl": "http://qygms.4gg2.top:888",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "龙神传说",
+      "ip": "103.233.255.54",
+      "openTime": "12月19日/22:00",
+      "version": "火龙 神器",
+      "feature": "独家火龙 ●免费顶赞●免费沙捐●金币保值●白漂到顶●",
+      "qq": "账号材料保值",
+      "detailUrl": "http://103.233.255.54",
+      "category": ["火龙"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "我本沉默暗黑修仙",
+      "ip": "103.120.89.173:1242",
+      "openTime": "12月19日/22:00",
+      "version": "首区",
+      "feature": "一区 176特色复古180铭文拾取鉴定185金币",
+      "qq": "群850380625",
+      "detailUrl": "http://103.120.89.173:1242",
+      "category": ["沉默", "复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "新《宠物天花板》",
+      "ip": "hss.4gg2.top:888",
+      "openTime": "12月19日/22:00",
+      "version": "0充『宝宝带飞』",
+      "feature": "幻兽师单职业 宠野外爆大米 超变态宠物单挑BOSS 专属玩法",
+      "qq": "宠野外爆大米",
+      "detailUrl": "http://hss.4gg2.top:888",
       "category": ["单职业"],
       "hot": true,
-      "new": false,
-      "promotion": null
-    },
-    {
-      "name": "冰雪微变",
-      "ip": "bx.003.com",
-      "openTime": "12月20日/16:30",
-      "version": "冰雪微变",
-      "feature": "冰雪微变，创新玩法",
-      "qq": "999000",
-      "detailUrl": "#",
-      "category": ["冰雪"],
-      "hot": false,
       "new": true,
-      "promotion": null
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
     },
     {
-      "name": "合击微变",
-      "ip": "hj.003.com",
-      "openTime": "12月20日/18:30",
-      "version": "合击微变",
-      "feature": "合击微变，战斗爽快",
-      "qq": "000111",
-      "detailUrl": "#",
-      "category": ["合击"],
+      "name": "╲╲新天罡大陆╱╱",
+      "ip": "www.202510xg.top:8181",
+      "openTime": "12月19日/22:00",
+      "version": "╲╲微变单职业╱╱",
+      "feature": "╲打怪爆一切 ＼＼纯散人服＼＼一＼＼切＼＼靠＼＼打＼＼",
+      "qq": "一根毛都靠打",
+      "detailUrl": "http://www.202510xg.top:8181",
+      "category": ["单职业", "微变"],
       "hot": true,
-      "new": false,
-      "promotion": null
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
     },
     {
-      "name": "沉默微变",
-      "ip": "cm.003.com",
-      "openTime": "12月20日/19:30",
-      "version": "沉默微变",
-      "feature": "沉默微变，经典创新",
-      "qq": "111222",
-      "detailUrl": "#",
-      "category": ["沉默"],
-      "hot": false,
-      "new": false,
-      "promotion": null
+      "name": "盟重神器第九季",
+      "ip": "2211gg.mz3888.asia:44444",
+      "openTime": "12月19日/22:00",
+      "version": "攻速大极品首区",
+      "feature": "首沙奖励8888 零充通关※散人必玩※免费挂机※免费？",
+      "qq": "新区刚开一秒",
+      "detailUrl": "http://2211gg.mz3888.asia:44444",
+      "category": [],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
+    },
+    {
+      "name": "2003游子沉默",
+      "ip": "110.42.7.195:5588",
+      "openTime": "12月19日/22:00",
+      "version": "长久耐玩",
+      "feature": "全爆绝不保留 ◆复古沉默◆原汁原味◆经典再现◆回忆2003",
+      "qq": "首战首区",
+      "detailUrl": "https://110.42.7.195:5588",
+      "category": ["沉默", "复古"],
+      "hot": true,
+      "new": true,
+      "promotion": {
+        "type": "通宵推荐",
+        "order": 2
+      }
     }
   ]
 }
-
