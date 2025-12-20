@@ -2,7 +2,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: #fffaf0; /* 改为淡奶黄色背景 */
+    background: #FFF8E7; /* 改为淡奶黄色背景 */
     color: #333333;
     line-height: 1.3;
     min-height: 100vh;
@@ -16,11 +16,7 @@ body {
     margin: 0 auto;
     width: 100%;
     padding: 5px;
-    background: #ffffff; /* 容器保持白色背景 */
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    margin-top: 5px;
-    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.9); /* 添加半透明白色背景，提高可读性 */
 }
 
 /* 头部logo区域 */
@@ -35,9 +31,6 @@ body {
     width: 100%;
     margin-bottom: 5px;
     overflow: hidden;
-    background: #ffffff;
-    border-radius: 5px;
-    padding: 5px;
 }
 
 .site-logo {
@@ -91,7 +84,6 @@ body {
     display: block;
     border-left: 2px solid;
     font-size: 0.7rem;
-    background: #ffffff;
 }
 
 .period-indicator.daytime {
@@ -320,16 +312,15 @@ body {
     font-size: 0.7em;
 }
 
-/* 推荐系统样式 - 修改套黄颜色加深 */
+/* 推荐系统样式 - 修改套黄颜色为橘黄色 */
 tr.row-yellow-bg {
-    background-color: rgba(255, 193, 7, 0.6) !important; /* 大大加深黄色，提高饱和度和不透明度 */
-    border-left: 3px solid #ff9800 !important; /* 改为更深的橙色边框 */
-    font-weight: bold;
+    background-color: rgba(255, 140, 0, 0.3) !important; /* 改为橘黄色，透明度调整为0.3 */
+    border-left: 3px solid #FF8C00 !important; /* 改为橘黄色边框 */
 }
 
 /* 当前时间段服务器高亮样式 */
 tr.current-time-slot {
-    background-color: rgba(52, 152, 219, 0.15) !important;
+    background-color: rgba(52, 152, 219, 0.08) !important;
     border-left: 2px solid #3498db !important;
 }
 
@@ -372,8 +363,7 @@ tr.current-time-slot {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
-        margin-top: 3px;
-        margin-bottom: 3px;
+        background-color: rgba(255, 255, 255, 0.95); /* 移动端背景更白一些，提高可读性 */
     }
     
     .site-header { 
