@@ -1,9 +1,6 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     const serverTableBody = document.getElementById('serverTableBody');
     const categoryFilter = document.getElementById('categoryFilter');
-    const sortSelect = document.getElementById('sortSelect');
-    const serverCount = document.getElementById('serverCount');
     const lastUpdateTime = document.getElementById('lastUpdateTime');
     const currentYear = document.getElementById('currentYear');
     const periodIndicator = document.getElementById('periodIndicator');
@@ -18,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             allServers = data.servers;
-            serverCount.textContent = allServers.length;
+            // 移除服务器数量统计
             generateCategoryButtons(data.categories);
             filterAndRenderServers();
         })
@@ -297,60 +294,13 @@ document.addEventListener('DOMContentLoaded', function() {
             serverTableBody.appendChild(row);
         });
         
-        serverCount.textContent = servers.length;
+        // 移除服务器数量更新
     }
     
     // 将openServerDetail函数暴露给全局作用域
     window.openServerDetail = openServerDetail;
     
-    sortSelect.addEventListener('change', function() {
-        const sortValue = this.value;
-        let serversToSort = Array.from(serverTableBody.querySelectorAll('tr'))
-            .map(row => {
-                const nameCell = row.querySelector('.server-name');
-                if (!nameCell) return null;
-                const badge = nameCell.querySelector('.promotion-badge');
-                let originalName = nameCell.textContent;
-                if (badge) originalName = originalName.replace(badge.textContent, '').trim();
-                return allServers.find(s => s.name === originalName);
-            })
-            .filter(s => s);
-        
-        if (sortValue === 'time-desc') {
-            serversToSort.sort((a, b) => (parseChineseDate(b.openTime) || 0) - (parseChineseDate(a.openTime) || 0));
-        } else if (sortValue === 'time-asc') {
-            serversToSort.sort((a, b) => (parseChineseDate(a.openTime) || 0) - (parseChineseDate(b.openTime) || 0));
-        } else if (sortValue === 'name-asc') {
-            serversToSort.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
-        }
-        
-        // 重新计算权重和排序
-        const isOvernight = isOvernightPeriod();
-        serversToSort.forEach(server => {
-            server._promotionData = getPromotionWeight(server, isOvernight);
-            server._isInCurrentSlot = isInCurrentTimeSlot(server);
-        });
-        
-        // 按照优先级排序
-        serversToSort.sort((a, b) => {
-            const promoA = a._promotionData;
-            const promoB = b._promotionData;
-            
-            if (promoB.weight !== promoA.weight) {
-                return promoB.weight - promoA.weight;
-            }
-            
-            if (promoB.weight > 0 && promoA.weight === promoB.weight) {
-                return promoA.order - promoB.order;
-            }
-            
-            const timeA = parseChineseDate(a.openTime);
-            const timeB = parseChineseDate(b.openTime);
-            return (timeB || 0) - (timeA || 0);
-        });
-        
-        renderTableRows(serversToSort);
-    });
+    // 移除排序事件监听器
     
     // 每30秒检查一次时间，更新显示
     setInterval(() => {
