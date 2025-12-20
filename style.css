@@ -431,7 +431,7 @@ tr.current-time-slot {
     }
     
     .site-logo {
-        max-height: 40px;
+        object-fit: contain;
     }
     
     .category-filter { 
@@ -627,4 +627,5 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
