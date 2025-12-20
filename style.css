@@ -434,17 +434,6 @@ tr.current-time-slot {
         background-color: rgba(255, 248, 231, 0.9); /* 淡黄色背景 */
     }
     
-    .table-controls { 
-        padding: 3px 6px;
-        font-size: 0.65rem;
-        flex-wrap: wrap;
-    }
-    
-    .sort-controls select {
-        padding: 1px 3px;
-        font-size: 0.65em;
-        margin-top: 2px;
-    }
     
     /* 移动端表格优化 */
     .table-wrapper {
@@ -602,6 +591,7 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
 
 
