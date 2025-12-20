@@ -1,7 +1,7 @@
 {
   "categories": ["代理客服", "2198027617", "3668827341", "333333", "444444", "555555", "666666"],
   "servers": [
-      {
+    {
       "name": "１．７６复古传奇",
       "ip": "老百姓的 １７６",
       "openTime": "12月20日/15:00",
@@ -9,8 +9,12 @@
       "feature": "一切靠打╲╱经典小极品╲╱散人天堂",
       "qq": "赤月终极",
       "detailUrl": "https://61.147.96.116:8659",
+      "category": ["复古"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 3
       }
     },
     {
@@ -21,8 +25,12 @@
       "feature": "＼＼纯散人服＼＼一＼＼切＼＼靠＼＼打＼＼",
       "qq": "一根毛都靠打",
       "detailUrl": "http://www.202510xg.top:8181",
+      "category": ["单职业"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 7
       }
     },
     {
@@ -33,8 +41,12 @@
       "feature": "━━独家特色◆万元沙奖◆一切靠打━━",
       "qq": "三天合区",
       "detailUrl": "http://www.nrkgrkgtgt154.xyz:28989",
+      "category": ["沉默"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 12
       }
     },
     {
@@ -45,8 +57,12 @@
       "feature": "梦幻●公益●养老●零氪",
       "qq": "稳定复古",
       "detailUrl": "http://www.xjjm2.com",
+      "category": ["复古"],
+      "hot": false,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 5
       }
     },
     {
@@ -57,8 +73,12 @@
       "feature": "10元顶赞 绝无隐藏 爆率全开 充值可打",
       "qq": "雷霆②合①",
       "detailUrl": "http://www.1auzan.xyz:23537",
+      "category": ["合击"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 1
       }
     },
     {
@@ -69,8 +89,12 @@
       "feature": "上线直接领满▲无限刀１秒９９９９刀▲亿万爆",
       "qq": "★爆一切◆神器",
       "detailUrl": "http://hwk.27ta.top:1256",
+      "category": ["单职业"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 8
       }
     },
     {
@@ -81,8 +105,12 @@
       "feature": "◆复古沉默◆原汁原味◆经典再现◆回忆2003",
       "qq": "首战首区",
       "detailUrl": "https://110.42.7.195:6677",
+      "category": ["沉默"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 14
       }
     },
     {
@@ -93,8 +121,12 @@
       "feature": "◆上线送满◆？无忧◆扛米吃肉◆",
       "qq": "◆保值？◆",
       "detailUrl": "https://gg1-1258160153.cos.ap-nanjing.myqcloud.com/index.htm",
+      "category": ["复古"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 2
       }
     },
     {
@@ -105,8 +137,12 @@
       "feature": "180新版神器 复古攻速 无赞助地图 无排行",
       "qq": "群618015068",
       "detailUrl": "http://www.by299.com",
+      "category": ["微变"],
+      "hot": false,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 9
       }
     },
     {
@@ -117,8 +153,12 @@
       "feature": "＂＂攻速＂爽玩＂激情＂高爆＂追梦＂＂",
       "qq": "瞎爆＂充值",
       "detailUrl": "http://h-jjj.lij522f6.xyz:14733",
+      "category": ["单职业"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 11
       }
     },
     {
@@ -129,8 +169,12 @@
       "feature": "10顶赞绝无隐藏，撒谎老G是你儿",
       "qq": "每天8个新区",
       "detailUrl": "http://jhfrgfretgrgred.club:396",
+      "category": ["合击"],
+      "hot": false,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 4
       }
     },
     {
@@ -141,8 +185,12 @@
       "feature": "灬灬灬老G要人气不要盈利●赶紧来白瞟灬",
       "qq": "切割〃野外〃奇",
       "detailUrl": "http://www.vr6tj46ngnn1.icu:15397/bdgs",
+      "category": ["沉默"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 6
       }
     },
     {
@@ -153,8 +201,12 @@
       "feature": "新版耐玩●光柱满屏●终极必爆●品牌单职业",
       "qq": "７６８０９５",
       "detailUrl": "https://ethr-go0d-xkiz.185ke.com:46209",
+      "category": ["火龙"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 10
       }
     },
     {
@@ -165,8 +217,12 @@
       "feature": "首区",
       "qq": "首区",
       "detailUrl": "http://103.219.179.42:10088",
+      "category": ["复古"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 0
       }
     },
     {
@@ -177,8 +233,12 @@
       "feature": "╲╲╲★一服传三代、人走服还在★╱╱╱",
       "qq": "专属〃首区〃奇",
       "detailUrl": "http://www.vr6tj46ngnn1.icu:15397/ysds",
+      "category": ["沉默"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 13
       }
     },
     {
@@ -189,8 +249,12 @@
       "feature": "▲神力毒素·攻速倍攻·毒素特技·内容丰富耐",
       "qq": "★爆率加满★",
       "detailUrl": "http://bdgs.boqo.top:1268",
+      "category": ["单职业"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 15
       }
     },
     {
@@ -201,8 +265,12 @@
       "feature": "一怪一专属 一图一世界 一个赞助通关",
       "qq": "一切靠打",
       "detailUrl": "http://www.lbmkfbmkmdd.icu:10999",
+      "category": ["单职业"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 2
       }
     },
     {
@@ -213,8 +281,12 @@
       "feature": "ж「白漂」免费жж「全部」免费жж免费жж",
       "qq": "「全部」免费ж",
       "detailUrl": "http://www.bxzs1.top:1601",
+      "category": ["冰雪"],
+      "hot": false,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 8
       }
     },
     {
@@ -225,8 +297,12 @@
       "feature": "自动捡取 自动？ 自动挂机 永久？",
       "qq": "沙奖7680",
       "detailUrl": "https://43.241.17.203:15777/1111",
+      "category": ["复古"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 7
       }
     },
     {
@@ -237,8 +313,12 @@
       "feature": "低消，独家，无强制,后期也能一直玩下去！",
       "qq": "群822353935",
       "detailUrl": "https://99cxdsdasd.qhcmcm.com:56789",
+      "category": ["沉默"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 3
       }
     },
     {
@@ -249,8 +329,12 @@
       "feature": "攻速+99999999亿%切割/攻击范围+1000000",
       "qq": "打的比充得快",
       "detailUrl": "http://jjj.ca291.top:5581",
+      "category": ["单职业"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 12
       }
     },
     {
@@ -261,8 +345,12 @@
       "feature": "独家新版 必爆终极 充值能打",
       "qq": "冰雪火龙神器",
       "detailUrl": "http://115.120.4.17:31950",
+      "category": ["冰雪"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 5
       }
     },
     {
@@ -273,8 +361,12 @@
       "feature": "打怪 充值═打怪 赞助═打怪 终极？══",
       "qq": "赞助可打",
       "detailUrl": "http://www.dsga.top:1188/7sf",
+      "category": ["微变"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 1
       }
     },
     {
@@ -285,8 +377,12 @@
       "feature": "吃肉丶大激情丶充值保值丶你要的我都有",
       "qq": "「全部」靠打",
       "detailUrl": "http://cmm.ca291.top:8586",
+      "category": ["沉默"],
+      "hot": false,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 14
       }
     },
     {
@@ -297,8 +393,12 @@
       "feature": "-千件专属·爆率全开·不花哨·超级耐玩",
       "qq": "◆内置挂机◆",
       "detailUrl": "http://www.lbmkfbmkmdd.icu:12311",
+      "category": ["沉默"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 9
       }
     },
     {
@@ -309,8 +409,12 @@
       "feature": "╋免费挂机★终极全爆★平民消费★保值回収╋",
       "qq": "自己ミ打赞助",
       "detailUrl": "http://www.7s8oi7.xyz:50050/ssgl2",
+      "category": ["单职业"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 0
       }
     },
     {
@@ -321,8 +425,12 @@
       "feature": "道士召８条狗●战士刀刀毒素●法师全屏火雨",
       "qq": "免费全满通关",
       "detailUrl": "http://www.jewelry01.top:23444",
+      "category": ["复古"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 11
       }
     },
     {
@@ -333,8 +441,12 @@
       "feature": "顶赞免费 一切靠打 〇充畅玩 装备保值 免费",
       "qq": "沙奖微信荭苞",
       "detailUrl": "http://www.bvmaksyu26.cn:6788",
+      "category": ["火龙"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 6
       }
     },
     {
@@ -345,8 +457,12 @@
       "feature": "没有任何NPC属性加成，只靠装备提升",
       "qq": "三天合区",
       "detailUrl": "http://www.185yh.com",
+      "category": ["微变"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 4
       }
     },
     {
@@ -357,8 +473,12 @@
       "feature": "メ免费狂暴メ免费捡物メ免费顶赞メ免费捐献メ",
       "qq": "１８５攻速火龙",
       "detailUrl": "http://www.jewelry03.top:24711",
+      "category": ["火龙"],
+      "hot": false,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 13
       }
     },
     {
@@ -369,8 +489,12 @@
       "feature": "免费挂机≡免费自动？≡免费泡点≡免费一键捡",
       "qq": "散人服",
       "detailUrl": "https://103.192.209.219:50033",
+      "category": ["合击"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 10
       }
     },
     {
@@ -381,8 +505,12 @@
       "feature": "会员可打·三天合区·可玩一年·一切靠打",
       "qq": "专属单职业",
       "detailUrl": "http://www.latinamerica339.xyz:12233",
+      "category": ["单职业"],
+      "hot": false,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 2
       }
     },
     {
@@ -393,8 +521,12 @@
       "feature": "◆复古沉默◆原汁原味◆经典重现◆重返2003",
       "qq": "全爆不保留",
       "detailUrl": "http://www.yz2002.com",
+      "category": ["沉默"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 15
       }
     },
     {
@@ -405,8 +537,12 @@
       "feature": "灬白漂首爆灬单挑ＢＯＳＳ灬低消费高体验灬",
       "qq": "灬爆率拉满灬",
       "detailUrl": "http://h-jjj.lij522f6.xyz:12049",
+      "category": ["单职业"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 7
       }
     },
     {
@@ -417,8 +553,12 @@
       "feature": "０充起飞◆上线送满赞◆送切割机◆送刀刀冰冻",
       "qq": "白漂轻松通关",
       "detailUrl": "http://www.jewelry02.top:23944",
+      "category": ["单职业"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 1
       }
     },
     {
@@ -429,8 +569,12 @@
       "feature": "真正会员通关▲人人都是主角",
       "qq": "群:106274765",
       "detailUrl": "http://www.180jhzb.com",
+      "category": ["单职业"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 12
       }
     },
     {
@@ -441,8 +585,12 @@
       "feature": "绝﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌版",
       "qq": "绝→←版",
       "detailUrl": "http://110.42.56.217:11116",
+      "category": ["沉默"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 8
       }
     },
     {
@@ -453,8 +601,12 @@
       "feature": "〔　　打怪=顶赞＋满级＋终极＋一切　　〕",
       "qq": "攻速元素微变",
       "detailUrl": "http://gytz.mfjf6752ghcx.top:32999",
+      "category": ["复古"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 3
       }
     },
     {
@@ -465,8 +617,12 @@
       "feature": "﹌﹌﹌﹌﹌﹌﹌﹌真公益服﹌﹌﹌﹌﹌﹌﹌﹌",
       "qq": "会员用元宝买",
       "detailUrl": "https://l1h-1307564774.file.myqcloud.com",
+      "category": ["冰雪"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 5
       }
     },
     {
@@ -477,8 +633,12 @@
       "feature": "╋╋◆天崩地裂◆惊天动地◆秒杀壹切",
       "qq": "╋散人通关╋",
       "detailUrl": "http://103.192.209.234:899/9pk",
+      "category": ["单职业"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 10
       }
     },
     {
@@ -489,8 +649,12 @@
       "feature": "╋╋◆天崩地裂◆惊天动地◆秒杀壹切",
       "qq": "╋散人通关╋",
       "detailUrl": "http://103.192.209.234:899/9pk",
+      "category": ["单职业"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 4
       }
     },
     {
@@ -501,8 +665,12 @@
       "feature": "●无合成●无隐藏●免费沙捐●一切靠打",
       "qq": "沙奖８５７６",
       "detailUrl": "https://103.192.209.219:60936",
+      "category": ["火龙"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 13
       }
     },
     {
@@ -513,8 +681,12 @@
       "feature": "(　　　　　　首　　发　　　　　　)",
       "qq": "充值可打",
       "detailUrl": "http://110.42.4.150:18002",
+      "category": ["微变"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 9
       }
     },
     {
@@ -525,8 +697,12 @@
       "feature": "《　　　　　　真　１　区　　　　　》",
       "qq": "野外Ｂｏｓｓ",
       "detailUrl": "http://www.sanciyouqihuishou.cn:56133",
+      "category": ["复古"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 0
       }
     },
     {
@@ -537,8 +713,12 @@
       "feature": "●●●●●１.８０复古战神极品＋５●●●●",
       "qq": "７６８０８５",
       "detailUrl": "https://sgzs1129.180sgzs.top:19200",
+      "category": ["复古"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 14
       }
     },
     {
@@ -549,8 +729,12 @@
       "feature": "★﹏50满《新版》1.85小极品+5﹏★",
       "qq": "７６火龙沉默",
       "detailUrl": "https://uq8pr8f8xcbbxee.pk5j.com",
+      "category": ["火龙"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 2
       }
     },
     {
@@ -561,8 +745,12 @@
       "feature": "上线打币メ刀刀过亿メ智能挂机メ光柱满地メ散",
       "qq": "一秒メ９９９",
       "detailUrl": "http://www.tennis98.top:24888",
+      "category": ["单职业"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 11
       }
     },
     {
@@ -573,8 +761,12 @@
       "feature": "●●最牛迷失●一天打1000真茺●０充玩通关",
       "qq": "●０充砍终极●",
       "detailUrl": "http://www.tennis99.top:22222",
+      "category": ["微变"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 6
       }
     },
     {
@@ -585,8 +777,12 @@
       "feature": "简单粗暴 绝不烧脑 砍怪就行",
       "qq": "韩版杀神",
       "detailUrl": "https://61.164.174.128:10872",
+      "category": ["微变"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 15
       }
     },
     {
@@ -597,8 +793,12 @@
       "feature": "╋拒绝垃圾服╋生态白漂╋爆率全开╋无限激情",
       "qq": "无暗藏无沙捐",
       "detailUrl": "http://www.advertising00.top:24555",
+      "category": ["复古"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 1
       }
     },
     {
@@ -609,8 +809,12 @@
       "feature": "０充下全图●一切靠打●宝宝切割●免费到底",
       "qq": "送自动捡物●挂",
       "detailUrl": "http://www.jewelry00.top:23255",
+      "category": ["复古"],
+      "hot": true,
+      "new": false,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 12
       }
     },
     {
@@ -621,8 +825,12 @@
       "feature": "免费会员挂机？ 沙城奖励1888元",
       "qq": "产出永不封顶",
       "detailUrl": "http://43.241.19.20:3337",
+      "category": ["火龙"],
+      "hot": false,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
+        "type": "全天推荐",
+        "order": 5
       }
     },
     {
@@ -633,646 +841,13 @@
       "feature": "●免费顶赞●免费沙捐●金币保值●白漂到顶●",
       "qq": "账号材料保值",
       "detailUrl": "http://103.233.255.54",
+      "category": ["火龙"],
+      "hot": true,
+      "new": true,
       "promotion": {
-        "type": "全天推荐"
-      },
-    {
-      "name": "１．７６复古传奇",
-      "ip": "老百姓的 １７６",
-      "openTime": "12月20日/15:00",
-      "version": "三天合区",
-      "feature": "一切靠打╲╱经典小极品╲╱散人天堂",
-      "qq": "赤月终极",
-      "detailUrl": "https://61.147.96.116:8659",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "╲╲新天罡大陆╱╱",
-      "ip": "╲╲微变单职业╱╱",
-      "openTime": "12月20日/15:00",
-      "version": "╲打怪爆一切",
-      "feature": "＼＼纯散人服＼＼一＼＼切＼＼靠＼＼打＼＼",
-      "qq": "一根毛都靠打",
-      "detailUrl": "http://www.202510xg.top:8181",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "牡丹沉默",
-      "ip": "首战首区",
-      "openTime": "12月20日/15:00",
-      "version": "复古三职业",
-      "feature": "━━独家特色◆万元沙奖◆一切靠打━━",
-      "qq": "三天合区",
-      "detailUrl": "http://www.nrkgrkgtgt154.xyz:28989",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "九州正道录",
-      "ip": "首战首区",
-      "openTime": "12月20日/15:00",
-      "version": "充值可打",
-      "feature": "梦幻●公益●养老●零氪",
-      "qq": "稳定复古",
-      "detailUrl": "http://www.xjjm2.com",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "八五★雷霆二合一",
-      "ip": "首区 独家新版",
-      "openTime": "12月20日/15:00",
-      "version": "●爆率9999",
-      "feature": "10元顶赞 绝无隐藏 爆率全开 充值可打",
-      "qq": "雷霆②合①",
-      "detailUrl": "http://www.1auzan.xyz:23537",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "黑悟空财神﹌无限刀",
-      "ip": "白漂＋秒怪〃单职业",
-      "openTime": "12月20日/15:00",
-      "version": "０茺·单职业",
-      "feature": "上线直接领满▲无限刀１秒９９９９刀▲亿万爆",
-      "qq": "★爆一切◆神器",
-      "detailUrl": "http://hwk.27ta.top:1256",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "新2003游子沉默",
-      "ip": "长久耐玩",
-      "openTime": "12月20日/15:00",
-      "version": "全爆绝不保留",
-      "feature": "◆复古沉默◆原汁原味◆经典再现◆回忆2003",
-      "qq": "首战首区",
-      "detailUrl": "https://110.42.7.195:6677",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "176耐玩",
-      "ip": "◆首区◆",
-      "openTime": "12月20日/15:00",
-      "version": "◆五天合区◆",
-      "feature": "◆上线送满◆？无忧◆扛米吃肉◆",
-      "qq": "◆保值？◆",
-      "detailUrl": "https://gg1-1258160153.cos.ap-nanjing.myqcloud.com/index.htm",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "布衣●西游●",
-      "ip": "布衣●西游●",
-      "openTime": "12月20日/15:00",
-      "version": "布衣神器●新",
-      "feature": "180新版神器 复古攻速 无赞助地图 无排行",
-      "qq": "群618015068",
-      "detailUrl": "http://www.by299.com",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "高爆野外＂＂福利",
-      "ip": "＂不用充值＂通关",
-      "openTime": "12月20日/15:00",
-      "version": "＂专属神器＂",
-      "feature": "＂＂攻速＂爽玩＂激情＂高爆＂追梦＂＂",
-      "qq": "瞎爆＂充值",
-      "detailUrl": "http://h-jjj.lij522f6.xyz:14733",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "８０十元合击",
-      "ip": "高爆星王+3",
-      "openTime": "12月20日/15:00",
-      "version": "10元全满沙奖",
-      "feature": "10顶赞绝无隐藏，撒谎老G是你儿",
-      "qq": "每天8个新区",
-      "detailUrl": "http://jhfrgfretgrgred.club:396",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "霸●刀",
-      "ip": "超牛逼．刀速",
-      "openTime": "12月20日/15:00",
-      "version": "◆专属沉默◆",
-      "feature": "灬灬灬老G要人气不要盈利●赶紧来白瞟灬",
-      "qq": "切割〃野外〃奇",
-      "detailUrl": "http://www.vr6tj46ngnn1.icu:15397/bdgs",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１·８５火龙玉兔",
-      "ip": "微变●专属●复古",
-      "openTime": "12月20日/15:00",
-      "version": "迷失沉默神器",
-      "feature": "新版耐玩●光柱满屏●终极必爆●品牌单职业",
-      "qq": "７６８０９５",
-      "detailUrl": "https://ethr-go0d-xkiz.185ke.com:46209",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "一梦千古",
-      "ip": "首区",
-      "openTime": "12月20日/15:00",
-      "version": "首区",
-      "feature": "首区",
-      "qq": "首区",
-      "detailUrl": "http://103.219.179.42:10088",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "＂原神メ专属",
-      "ip": "专属 扛把子╱",
-      "openTime": "12月20日/15:00",
-      "version": "◆专属沉默◆",
-      "feature": "╲╲╲★一服传三代、人走服还在★╱╱╱",
-      "qq": "专属〃首区〃奇",
-      "detailUrl": "http://www.vr6tj46ngnn1.icu:15397/ysds",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "▲霸刀攻速﹌单职业",
-      "ip": "免．费．充值全靠打",
-      "openTime": "12月20日/15:00",
-      "version": "★刀刀切割★",
-      "feature": "▲神力毒素·攻速倍攻·毒素特技·内容丰富耐",
-      "qq": "★爆率加满★",
-      "detailUrl": "http://bdgs.boqo.top:1268",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "原神大陆",
-      "ip": "独创 首战①区",
-      "openTime": "12月20日/15:00",
-      "version": "专属神器",
-      "feature": "一怪一专属 一图一世界 一个赞助通关",
-      "qq": "一切靠打",
-      "detailUrl": "http://www.lbmkfbmkmdd.icu:10999",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "ж专属ж冰雪」ж",
-      "ip": "ж「白漂」免费ж",
-      "openTime": "12月20日/15:00",
-      "version": "ж「统统」免费",
-      "feature": "ж「白漂」免费жж「全部」免费жж免费жж",
-      "qq": "「全部」免费ж",
-      "detailUrl": "http://www.bxzs1.top:1601",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１·７６乱世精品",
-      "ip": "首站首区",
-      "openTime": "12月20日/15:00",
-      "version": "全图挂机搬砖",
-      "feature": "自动捡取 自动？ 自动挂机 永久？",
-      "qq": "沙奖7680",
-      "detailUrl": "https://43.241.17.203:15777/1111",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "●蓝色庄园●",
-      "ip": "●经典情怀沉默●",
-      "openTime": "12月20日/15:00",
-      "version": "爆一切没合成",
-      "feature": "低消，独家，无强制,后期也能一直玩下去！",
-      "qq": "群822353935",
-      "detailUrl": "https://99cxdsdasd.qhcmcm.com:56789",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "高爆大极品╋无限刀",
-      "ip": "屠龙+２５５５５５",
-      "openTime": "12月20日/15:00",
-      "version": "★８元顶赞★",
-      "feature": "攻速+99999999亿%切割/攻击范围+1000000",
-      "qq": "打的比充得快",
-      "detailUrl": "http://jjj.ca291.top:5581",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "2元 攻速冰雪",
-      "ip": "◣低消费大激情◢",
-      "openTime": "12月20日/15:00",
-      "version": "◆散人无限激情",
-      "feature": "独家新版 必爆终极 充值能打",
-      "qq": "冰雪火龙神器",
-      "detailUrl": "http://115.120.4.17:31950",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "龙帝迷失",
-      "ip": "△全网独家△",
-      "openTime": "12月20日/15:00",
-      "version": "打怪 一切",
-      "feature": "打怪 充值═打怪 赞助═打怪 终极？══",
-      "qq": "赞助可打",
-      "detailUrl": "http://www.dsga.top:1188/7sf",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "▲哪吒沉默▲高爆版",
-      "ip": "纯元宝Ｘ沉默神器",
-      "openTime": "12月20日/15:00",
-      "version": "「轻松」通关",
-      "feature": "吃肉丶大激情丶充值保值丶你要的我都有",
-      "qq": "「全部」靠打",
-      "detailUrl": "http://cmm.ca291.top:8586",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "流星★专属",
-      "ip": "沉默丶真专属",
-      "openTime": "12月20日/15:00",
-      "version": "散人◆长久◆耐",
-      "feature": "-千件专属·爆率全开·不花哨·超级耐玩",
-      "qq": "◆内置挂机◆",
-      "detailUrl": "http://www.lbmkfbmkmdd.icu:12311",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "财神╋必爆倍攻刀",
-      "ip": "你不牛鼻╋谁牛鼻",
-      "openTime": "12月20日/15:00",
-      "version": "卧槽╋杀怪送顶",
-      "feature": "╋免费挂机★终极全爆★平民消费★保值回収╋",
-      "qq": "自己ミ打赞助",
-      "detailUrl": "http://www.7s8oi7.xyz:50050/ssgl2",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１７６攻速丶小极品",
-      "ip": "特色刀刀毒丶猛吸血",
-      "openTime": "12月20日/15:00",
-      "version": "送自动捡物挂机",
-      "feature": "道士召８条狗●战士刀刀毒素●法师全屏火雨",
-      "qq": "免费全满通关",
-      "detailUrl": "http://www.jewelry01.top:23444",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１．８０洪荒火龙",
-      "ip": "首区 独家新版",
-      "openTime": "12月20日/15:00",
-      "version": "三职业平衡",
-      "feature": "顶赞免费 一切靠打 〇充畅玩 装备保值 免费",
-      "qq": "沙奖微信荭苞",
-      "detailUrl": "http://www.bvmaksyu26.cn:6788",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "185丶妖火微变",
-      "ip": "装备服 纯靠打",
-      "openTime": "12月20日/15:00",
-      "version": "免费玩家专属",
-      "feature": "没有任何NPC属性加成，只靠装备提升",
-      "qq": "三天合区",
-      "detailUrl": "http://www.185yh.com",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "メ财神火龙メ无限刀",
-      "ip": "遍地红怪メ刀刀首爆",
-      "openTime": "12月20日/15:00",
-      "version": "火龙·单职业",
-      "feature": "メ免费狂暴メ免费捡物メ免费顶赞メ免费捐献メ",
-      "qq": "１８５攻速火龙",
-      "detailUrl": "http://www.jewelry03.top:24711",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "※星王※合击※",
-      "ip": "散人天下",
-      "openTime": "12月20日/15:00",
-      "version": "长久服",
-      "feature": "免费挂机≡免费自动？≡免费泡点≡免费一键捡",
-      "qq": "散人服",
-      "detailUrl": "https://103.192.209.219:50033",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "新劫邪神器",
-      "ip": "一区",
-      "openTime": "12月20日/15:00",
-      "version": "沙奖18888",
-      "feature": "会员可打·三天合区·可玩一年·一切靠打",
-      "qq": "专属单职业",
-      "detailUrl": "http://www.latinamerica339.xyz:12233",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "[ 03老游子 ]",
-      "ip": "[ 长久耐玩 ]",
-      "openTime": "12月20日/15:00",
-      "version": "首战首区",
-      "feature": "◆复古沉默◆原汁原味◆经典重现◆重返2003",
-      "qq": "全爆不保留",
-      "detailUrl": "http://www.yz2002.com",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "卧槽这刀牛逼真屌",
-      "ip": "我尼玛别跑抢我刀",
-      "openTime": "12月20日/15:00",
-      "version": "１比１爆充值",
-      "feature": "灬白漂首爆灬单挑ＢＯＳＳ灬低消费高体验灬",
-      "qq": "灬爆率拉满灬",
-      "detailUrl": "http://h-jjj.lij522f6.xyz:12049",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "霸刀攻速〔神器〕",
-      "ip": "〔攻速复古单职业〕",
-      "openTime": "12月20日/15:00",
-      "version": "开局无限攻速",
-      "feature": "０充起飞◆上线送满赞◆送切割机◆送刀刀冰冻",
-      "qq": "白漂轻松通关",
-      "detailUrl": "http://www.jewelry02.top:23944",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "●轻变单职业●",
-      "ip": "真实首区一区",
-      "openTime": "12月20日/15:00",
-      "version": "越合区越激情",
-      "feature": "真正会员通关▲人人都是主角",
-      "qq": "群:106274765",
-      "detailUrl": "http://www.180jhzb.com",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "沉﹌﹌﹌﹌﹌﹌默",
-      "ip": "之﹌﹌﹌﹌﹌﹌城",
-      "openTime": "12月20日/15:00",
-      "version": "专属神器沉默版",
-      "feature": "绝﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌版",
-      "qq": "绝→←版",
-      "detailUrl": "http://110.42.56.217:11116",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１．７６变态攻速",
-      "ip": "充值老G是你儿",
-      "openTime": "12月20日/15:00",
-      "version": "完全免费到终极",
-      "feature": "〔　　打怪=顶赞＋满级＋终极＋一切　　〕",
-      "qq": "攻速元素微变",
-      "detailUrl": "http://gytz.mfjf6752ghcx.top:32999",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "﹌﹌﹌﹌公益冰雪",
-      "ip": "无充值﹌﹌﹌﹌﹌",
-      "openTime": "12月20日/15:00",
-      "version": "没灵符﹌就元宝",
-      "feature": "﹌﹌﹌﹌﹌﹌﹌﹌真公益服﹌﹌﹌﹌﹌﹌﹌﹌",
-      "qq": "会员用元宝买",
-      "detailUrl": "https://l1h-1307564774.file.myqcloud.com",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "╋●╋新杀神恶魔",
-      "ip": "风卷残云剑╋●╋",
-      "openTime": "12月20日/15:00",
-      "version": "攻速单职业 b",
-      "feature": "╋╋◆天崩地裂◆惊天动地◆秒杀壹切",
-      "qq": "╋散人通关╋",
-      "detailUrl": "http://103.192.209.234:899/9pk",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "╋●╋新杀神恶魔",
-      "ip": "风卷残云剑╋●╋",
-      "openTime": "12月20日/15:00",
-      "version": "攻速单职业 a",
-      "feature": "╋╋◆天崩地裂◆惊天动地◆秒杀壹切",
-      "qq": "╋散人通关╋",
-      "detailUrl": "http://103.192.209.234:899/9pk",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１．８０流光火龙",
-      "ip": "首区●独家新版",
-      "openTime": "12月20日/15:00",
-      "version": "●独创玩法●",
-      "feature": "●无合成●无隐藏●免费沙捐●一切靠打",
-      "qq": "沙奖８５７６",
-      "detailUrl": "https://103.192.209.219:60936",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "〔　新鲜王　〕",
-      "ip": "一区",
-      "openTime": "12月20日/15:00",
-      "version": "新版",
-      "feature": "(　　　　　　首　　发　　　　　　)",
-      "qq": "充值可打",
-      "detailUrl": "http://110.42.4.150:18002",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "瑶光录",
-      "ip": "《　首　战　》",
-      "openTime": "12月20日/15:00",
-      "version": "首爆奖励几千充",
-      "feature": "《　　　　　　真　１　区　　　　　》",
-      "qq": "野外Ｂｏｓｓ",
-      "detailUrl": "http://www.sanciyouqihuishou.cn:56133",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１．８０时光复古",
-      "ip": "１．７６战神终极",
-      "openTime": "12月20日/15:00",
-      "version": "●●５０全满●",
-      "feature": "●●●●●１.８０复古战神极品＋５●●●●",
-      "qq": "７６８０８５",
-      "detailUrl": "https://sgzs1129.180sgzs.top:19200",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１．８０霸气复古",
-      "ip": "蛇年★新版★首区",
-      "openTime": "12月20日/15:00",
-      "version": "╋战神超好玩╋",
-      "feature": "★﹏50满《新版》1.85小极品+5﹏★",
-      "qq": "７６火龙沉默",
-      "detailUrl": "https://uq8pr8f8xcbbxee.pk5j.com",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "メ社会大哥メ刀枪炮",
-      "ip": "メ当地皮鞋メ无限刀",
-      "openTime": "12月20日/15:00",
-      "version": "半包烟玩一年",
-      "feature": "上线打币メ刀刀过亿メ智能挂机メ光柱满地メ散",
-      "qq": "一秒メ９９９",
-      "detailUrl": "http://www.tennis98.top:24888",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "新ＢＴ迷失分Ｂ不冲",
-      "ip": "上线送９９９真冲值",
-      "openTime": "12月20日/15:00",
-      "version": "●免费白漂全满",
-      "feature": "●●最牛迷失●一天打1000真茺●０充玩通关",
-      "qq": "●０充砍终极●",
-      "detailUrl": "http://www.tennis99.top:22222",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "杀神恶魔",
-      "ip": "０５韩版",
-      "openTime": "12月20日/15:00",
-      "version": "情怀无价",
-      "feature": "简单粗暴 绝不烧脑 砍怪就行",
-      "qq": "韩版杀神",
-      "detailUrl": "https://61.164.174.128:10872",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１．７６╋天魔精品",
-      "ip": "１．７６小极品+5",
-      "openTime": "12月20日/15:00",
-      "version": "╋10元全满╋",
-      "feature": "╋拒绝垃圾服╋生态白漂╋爆率全开╋无限激情",
-      "qq": "无暗藏无沙捐",
-      "detailUrl": "http://www.advertising00.top:24555",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "１７６●福利攻速●",
-      "ip": "无限攻速●麻痹切割",
-      "openTime": "12月20日/15:00",
-      "version": "高爆●小极品",
-      "feature": "０充下全图●一切靠打●宝宝切割●免费到底",
-      "qq": "送自动捡物●挂",
-      "detailUrl": "http://www.jewelry00.top:23255",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "２米独家攻速火龙",
-      "ip": "★十元称霸全服★",
-      "openTime": "12月20日/15:00",
-      "version": "０充顶赞◆可打",
-      "feature": "免费会员挂机？ 沙城奖励1888元",
-      "qq": "产出永不封顶",
-      "detailUrl": "http://43.241.19.20:3337",
-      "promotion": {
-        "type": "全天推荐"
-      }
-    },
-    {
-      "name": "龙神传说",
-      "ip": "火龙 神器",
-      "openTime": "12月20日/15:00",
-      "version": "独家火龙",
-      "feature": "●免费顶赞●免费沙捐●金币保值●白漂到顶●",
-      "qq": "账号材料保值",
-      "detailUrl": "http://103.233.255.54",
-      "promotion": {
-        "type": "全天推荐"
+        "type": "全天套黄推荐",
+        "order": 3
       }
     }
   ]
 }
-
-
