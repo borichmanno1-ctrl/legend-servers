@@ -4,7 +4,7 @@ body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
     background: #FFFACD; /* 柠檬黄背景 */
     color: #333333;
-    line-height: 1.3;
+    line-height: 1.2; /* 减少行高 */
     min-height: 100vh;
     font-size: 12px;
     overflow-x: hidden;
@@ -155,8 +155,14 @@ body {
     background: #f5f5f5;
 }
 
+/* 表格单元格通用边框样式 */
+#serverTable th,
+#serverTable td {
+    border: 1px solid #fff; /* 添加白色边框线 */
+}
+
 #serverTable th {
-    padding: 3px 4px;
+    padding: 2px 4px; /* 减少内边距 */
     text-align: left; 
     color: #333;
     border-bottom: 2px solid #ddd;
@@ -165,10 +171,12 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 0.75rem;
+    height: 24px; /* 固定表头高度 */
 }
 
 #serverTable tbody tr {
     border-bottom: 1px solid #eee;
+    height: 28px; /* 固定行高度 */
 }
 
 #serverTable tbody tr:nth-child(even) { 
@@ -176,12 +184,13 @@ body {
 }
 
 #serverTable td {
-    padding: 2px 4px;
+    padding: 1px 4px; /* 减少内边距 */
     vertical-align: middle;
     font-size: 0.75rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    height: 28px; /* 固定单元格高度 */
 }
 
 /* 表格列宽度分配 */
@@ -224,7 +233,7 @@ body {
 .server-name { 
     color: #0066cc;
     font-weight: bold; 
-    font-size: 0.8em;
+    font-size: 0.75em; /* 稍微缩小 */
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
@@ -232,6 +241,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    line-height: 1.2; /* 减少行高 */
 }
 
 .server-name:hover {
@@ -242,13 +252,14 @@ body {
 .server-ip { 
     color: #0066cc;
     cursor: pointer;
-    font-size: 0.75em;
+    font-size: 0.7em; /* 缩小 */
     text-decoration: none;
     display: inline-block;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    line-height: 1.2; /* 减少行高 */
 }
 
 .server-ip:hover {
@@ -256,16 +267,17 @@ body {
 }
 
 .server-tags { 
-    margin-top: 1px; 
+    margin-top: 0; /* 减少上边距 */
 }
 
 .tag { 
     display: inline-block; 
     padding: 0 3px;
     border-radius: 1px; 
-    font-size: 0.65em; 
+    font-size: 0.6em; /* 缩小 */
     margin-right: 2px; 
-    margin-top: 1px;
+    margin-top: 0; /* 减少上边距 */
+    line-height: 1.2; /* 减少行高 */
 }
 
 .tag.new { 
@@ -281,7 +293,7 @@ body {
 /* 特色备注列 */
 .server-feature { 
     color: #666;
-    line-height: 1.2;
+    line-height: 1.2; /* 减少行高 */
     font-size: 0.65em;
     white-space: normal;
     word-break: break-word;
@@ -290,7 +302,7 @@ body {
 /* 按钮样式 */
 .btn-detail {
     display: inline-block; 
-    padding: 2px 6px;
+    padding: 1px 5px; /* 减少内边距 */
     background: #d4af37;
     color: #fff; 
     font-weight: bold; 
@@ -298,8 +310,10 @@ body {
     border-radius: 1px; 
     border: none; 
     cursor: pointer;
-    font-size: 0.7rem;
+    font-size: 0.65rem; /* 缩小 */
     white-space: nowrap;
+    line-height: 1.2; /* 减少行高 */
+    height: 18px; /* 固定按钮高度 */
 }
 
 .btn-detail:hover { 
@@ -308,16 +322,16 @@ body {
 
 .loading { 
     text-align: center; 
-    padding: 15px!important; 
+    padding: 10px!important; /* 减少内边距 */
     color: #888; 
-    font-size: 0.8rem; 
+    font-size: 0.75rem; 
 }
 
 /* 页脚样式 */
 .site-footer {
     text-align: center; 
-    padding: 8px 0;
-    margin-top: 10px;
+    padding: 6px 0; /* 减少内边距 */
+    margin-top: 8px;
     color: #777; 
     border-top: 1px solid #ddd;
     font-size: 0.7em;
@@ -338,10 +352,10 @@ tr.current-time-slot {
 
 .promotion-badge {
     display: inline-block;
-    padding: 0 4px;
+    padding: 0 3px; /* 减少内边距 */
     margin-left: 2px;
-    font-size: 0.6em;
-    border-radius: 4px;
+    font-size: 0.55em; /* 缩小 */
+    border-radius: 2px; /* 减少圆角 */
     color: white;
     vertical-align: middle;
     white-space: nowrap;
@@ -349,6 +363,7 @@ tr.current-time-slot {
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1.2; /* 减少行高 */
 }
 
 .badge-allday {
@@ -396,7 +411,7 @@ tr.current-time-slot {
     }
     
     .cat-btn { 
-        padding: 1px 6px; 
+        padding: 1px 5px; 
         font-size: 0.6em; /* 移动端进一步缩小字体 */
         flex-shrink: 0;
     }
@@ -439,11 +454,13 @@ tr.current-time-slot {
     #serverTable td { 
         padding: 1px 2px;
         font-size: 0.7em; 
+        height: 22px; /* 移动端更小的高度 */
     }
     
     #serverTable th {
         font-size: 0.7em;
         padding: 2px 2px;
+        height: 20px; /* 移动端更小的表头高度 */
     }
     
     /* 移动端列宽调整 */
@@ -491,19 +508,26 @@ tr.current-time-slot {
     }
     
     .btn-detail { 
-        padding: 1px 4px; 
-        font-size: 0.65em; 
+        padding: 0 3px; 
+        font-size: 0.6em; 
+        height: 16px; /* 移动端更小的按钮高度 */
     }
     
     /* 确保服务器名和IP在移动端可点击区域足够大 */
     .server-name,
     .server-ip {
-        min-height: 16px;
-        line-height: 16px;
+        min-height: 14px;
+        line-height: 14px;
+    }
+    
+    .tag {
+        font-size: 0.55em;
+        padding: 0 2px;
     }
     
     .site-footer {
         background-color: #FFF8E7; /* 淡黄色背景 */
+        padding: 4px 0;
     }
 }
 
@@ -517,6 +541,11 @@ tr.current-time-slot {
     #serverTable td {
         font-size: 0.65em;
         padding: 1px 1px;
+        height: 20px; /* 超小屏幕更小的高度 */
+    }
+    
+    #serverTable th {
+        height: 18px;
     }
     
     /* 超小屏幕特定列字体进一步缩小 */
@@ -529,16 +558,17 @@ tr.current-time-slot {
     
     .server-name,
     .server-ip {
-        font-size: 0.7em;
+        font-size: 0.65em;
     }
     
     .btn-detail {
-        font-size: 0.6em;
-        padding: 1px 3px;
+        font-size: 0.55em;
+        padding: 0 2px;
+        height: 14px;
     }
     
     .promotion-badge {
-        font-size: 0.55em;
+        font-size: 0.5em;
         padding: 0 2px;
     }
     
@@ -546,5 +576,3 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
-
-
