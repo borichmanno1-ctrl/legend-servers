@@ -1,14 +1,13 @@
-
-/* ===== 白色背景紧凑版本 ===== */
+/* ===== 淡奶白色背景紧凑版本 ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: #ffffff;
+    background: #fefdf8; /* 淡奶白色背景 */
     color: #333333;
     line-height: 1.3;
     min-height: 100vh;
     font-size: 12px;
-    overflow-x: hidden; /* 防止页面出现横向滚动 */
+    overflow-x: hidden;
 }
 
 /* 主容器 */
@@ -59,8 +58,8 @@ body {
 
 .cat-btn {
     padding: 2px 8px;
-    background: #f0f0f0;
-    border: 1px solid #ddd;
+    background: #f5f3ed; /* 更淡的背景色 */
+    border: 1px solid #e0d9c3;
     color: #333;
     border-radius: 2px; 
     cursor: pointer; 
@@ -87,13 +86,13 @@ body {
 }
 
 .period-indicator.daytime {
-    background-color: rgba(52, 152, 219, 0.1);
+    background-color: rgba(52, 152, 219, 0.08); /* 更淡的蓝色背景 */
     border-left-color: #3498db;
     color: #3498db;
 }
 
 .period-indicator.overnight {
-    background-color: rgba(155, 89, 182, 0.1);
+    background-color: rgba(155, 89, 182, 0.08); /* 更淡的紫色背景 */
     border-left-color: #9b59b6;
     color: #9b59b6;
 }
@@ -103,10 +102,10 @@ body {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    background: #f5f5f5;
+    background: #f7f5ef; /* 淡奶白色背景 */
     padding: 4px 8px;
     border-radius: 2px 2px 0 0; 
-    border: 1px solid #ddd;
+    border: 1px solid #e0d9c3;
     font-size: 0.7rem;
 }
 
@@ -118,7 +117,7 @@ body {
     padding: 2px 4px;
     background: #fff;
     color: #333; 
-    border: 1px solid #ccc; 
+    border: 1px solid #e0d9c3; 
     border-radius: 2px; 
     font-size: 0.7rem;
 }
@@ -126,42 +125,43 @@ body {
 /* 表格区域 - 修改为自适应宽度 */
 .table-wrapper {
     width: 100%;
-    overflow-x: auto; /* 只在必要时显示滚动条 */
-    border: 1px solid #ddd; 
+    overflow-x: auto;
+    border: 1px solid #e0d9c3; 
     border-top: none;
+    background-color: #fff; /* 表格区域保持白色背景 */
 }
 
 /* 移除最小宽度限制，让表格自适应 */
 #serverTable {
     width: 100%; 
     border-collapse: collapse; 
-    min-width: 0; /* 移除固定最小宽度 */
+    min-width: 0;
     font-size: 0.75rem;
-    table-layout: fixed; /* 使用固定布局，防止单元格宽度不一致 */
+    table-layout: fixed;
 }
 
 #serverTable thead { 
-    background: #f5f5f5;
+    background: #f7f5ef;
 }
 
 #serverTable th {
     padding: 3px 4px;
     text-align: left; 
     color: #333;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 2px solid #e0d9c3;
     font-weight: bold; 
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis; /* 文本溢出显示省略号 */
+    text-overflow: ellipsis;
     font-size: 0.75rem;
 }
 
 #serverTable tbody tr {
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #f0f0f0;
 }
 
 #serverTable tbody tr:nth-child(even) { 
-    background-color: #fafafa;
+    background-color: #faf9f6; /* 更淡的斑马纹背景 */
 }
 
 #serverTable td {
@@ -169,14 +169,14 @@ body {
     vertical-align: middle;
     font-size: 0.75rem;
     overflow: hidden;
-    text-overflow: ellipsis; /* 文本溢出显示省略号 */
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-/* 表格列宽度分配 - 优化为更适合移动端的比例 */
+/* 表格列宽度分配 */
 #serverTable th:nth-child(1),
 #serverTable td:nth-child(1) {
-    width: 22%; /* 服务器名列稍微加宽 */
+    width: 22%;
 }
 
 #serverTable th:nth-child(2),
@@ -271,9 +271,9 @@ body {
 .server-feature { 
     color: #666;
     line-height: 1.2;
-    font-size: 0.65em; /* 缩小字体大小 */
-    white-space: normal; /* 允许换行 */
-    word-break: break-word; /* 允许单词内断行 */
+    font-size: 0.65em;
+    white-space: normal;
+    word-break: break-word;
 }
 
 /* 按钮样式 */
@@ -308,19 +308,19 @@ body {
     padding: 8px 0;
     margin-top: 10px;
     color: #777; 
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #e0d9c3;
     font-size: 0.7em;
 }
 
-/* 推荐系统样式 - 修改套黄颜色加深 */
+/* 推荐系统样式 - 套黄颜色加深 */
 tr.row-yellow-bg {
-    background-color: rgba(255, 215, 0, 0.25) !important; /* 加深黄色，提高饱和度 */
-    border-left: 3px solid #ffcc00 !important; /* 加深边框颜色 */
+    background-color: rgba(255, 193, 7, 0.35) !important; /* 加深的黄色，提高不透明度 */
+    border-left: 3px solid #ff9800 !important; /* 加深边框颜色 */
 }
 
 /* 当前时间段服务器高亮样式 */
 tr.current-time-slot {
-    background-color: rgba(52, 152, 219, 0.08) !important;
+    background-color: rgba(52, 152, 219, 0.1) !important;
     border-left: 2px solid #3498db !important;
 }
 
@@ -347,13 +347,13 @@ tr.current-time-slot {
     background: #9b59b6;
 }
 
-/* 特定列字体缩小：开放时间、版本介绍、客服QQ、特色备注 */
-#serverTable td:nth-child(3),  /* 开放时间 */
-#serverTable td:nth-child(4),  /* 版本介绍 */
-#serverTable td:nth-child(5),  /* 客服QQ */
-#serverTable td:nth-child(6) { /* 特色备注 */
-    font-size: 0.7em; /* 缩小字体 */
-    color: #555; /* 稍微加深颜色，提高可读性 */
+/* 特定列字体缩小 */
+#serverTable td:nth-child(3),
+#serverTable td:nth-child(4),
+#serverTable td:nth-child(5),
+#serverTable td:nth-child(6) {
+    font-size: 0.7em;
+    color: #555;
 }
 
 /* 移动端响应式优化 */
@@ -384,7 +384,7 @@ tr.current-time-slot {
     .cat-btn { 
         padding: 1px 6px; 
         font-size: 0.65em; 
-        flex-shrink: 0; /* 防止按钮被压缩 */
+        flex-shrink: 0;
     }
     
     .period-indicator {
@@ -411,12 +411,12 @@ tr.current-time-slot {
     /* 移动端表格优化 */
     .table-wrapper {
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* 移动端滚动更流畅 */
+        -webkit-overflow-scrolling: touch;
     }
     
     #serverTable {
         width: 100%;
-        min-width: 0; /* 移除最小宽度限制 */
+        min-width: 0;
         font-size: 0.7rem;
     }
     
@@ -468,11 +468,11 @@ tr.current-time-slot {
     }
     
     /* 移动端特定列字体进一步缩小 */
-    #serverTable td:nth-child(3),  /* 开放时间 */
-    #serverTable td:nth-child(4),  /* 版本介绍 */
-    #serverTable td:nth-child(5),  /* 客服QQ */
-    #serverTable td:nth-child(6) { /* 特色备注 */
-        font-size: 0.65em; /* 进一步缩小 */
+    #serverTable td:nth-child(3),
+    #serverTable td:nth-child(4),
+    #serverTable td:nth-child(5),
+    #serverTable td:nth-child(6) {
+        font-size: 0.65em;
     }
     
     .btn-detail { 
@@ -501,11 +501,11 @@ tr.current-time-slot {
     }
     
     /* 超小屏幕特定列字体进一步缩小 */
-    #serverTable td:nth-child(3),  /* 开放时间 */
-    #serverTable td:nth-child(4),  /* 版本介绍 */
-    #serverTable td:nth-child(5),  /* 客服QQ */
-    #serverTable td:nth-child(6) { /* 特色备注 */
-        font-size: 0.6em; /* 进一步缩小 */
+    #serverTable td:nth-child(3),
+    #serverTable td:nth-child(4),
+    #serverTable td:nth-child(5),
+    #serverTable td:nth-child(6) {
+        font-size: 0.6em;
     }
     
     .server-name,
