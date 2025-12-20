@@ -58,7 +58,6 @@ body {
 .site-logo {
     width: 100%;
     height: auto;
-    max-height: 50px;
     object-fit: cover;
     display: block;
 }
@@ -628,3 +627,4 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
