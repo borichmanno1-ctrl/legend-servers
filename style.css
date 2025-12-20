@@ -128,31 +128,6 @@ body {
     color: #9b59b6;
 }
 
-/* 表格控制区域 */
-.table-controls {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    background: #f5f5f5;
-    padding: 4px 8px;
-    border-radius: 2px 2px 0 0; 
-    border: 1px solid #ddd;
-    font-size: 0.7rem;
-}
-
-.stats { 
-    color: #4CAF50; 
-}
-
-.sort-controls select { 
-    padding: 2px 4px;
-    background: #fff;
-    color: #333; 
-    border: 1px solid #ccc; 
-    border-radius: 2px; 
-    font-size: 0.7rem;
-}
-
 /* 表格区域 - 修改为自适应宽度 */
 .table-wrapper {
     width: 100%;
@@ -627,5 +602,6 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
 
