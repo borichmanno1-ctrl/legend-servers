@@ -452,9 +452,9 @@ tr.current-time-slot {
     
     #serverTable th,
     #serverTable td { 
-        padding: 1px 2px;
+        padding: 1px 1px;
         font-size: 0.7em; 
-        height: 20px; /* 移动端更小的高度 */
+        height: 18px; /* 移动端更小的高度 */
     }
     
     #serverTable th {
@@ -584,6 +584,7 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
 
 
