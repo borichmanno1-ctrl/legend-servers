@@ -390,7 +390,7 @@ tr.current-time-slot {
         width: 100%;
         max-width: 100%;
         overflow-x: hidden;
-        background-color: #FFF8E7; /* 保持淡黄色背景 */
+        background-color: #993300; /* 深棕红色背景 */
     }
     
     .site-header { 
@@ -576,6 +576,7 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
 
 
