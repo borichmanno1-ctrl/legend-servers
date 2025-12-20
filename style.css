@@ -56,8 +56,8 @@ body {
     justify-content: center; 
     gap: 3px;
     margin-top: 5px;
-    background-color: #FFF8E7; /* 淡黄色背景 */
-    padding: 5px;
+    background-color: #FF7F50; /* 橙红色背景 */
+    padding: 3px;
     border-radius: 3px;
 }
 
@@ -576,6 +576,7 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
 
 
