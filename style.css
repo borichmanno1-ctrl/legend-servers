@@ -529,10 +529,18 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
         padding: 4px 0;
     }
+    /* 调整移动端高亮边框宽度 */
+    tr.current-time-slot {
+        border-left-width: 1px !important; 
+    }
 }
 
 /* 超小屏幕优化 */
 @media (max-width: 480px) {
+/* 调整移动端高亮边框宽度 */
+    tr.current-time-slot {
+        border-left-width: 1px !important;
+    }
     #serverTable {
         font-size: 0.65rem;
     }
@@ -576,6 +584,7 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
 
 
