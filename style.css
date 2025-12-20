@@ -2,7 +2,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body {
     font-family: 'Microsoft YaHei', Arial, sans-serif;
-    background: #FFFACD; /* 柠檬黄背景 */
+    background: #F5F5F5; /* 白色背景 */
     color: #333333;
     line-height: 1.2; /* 减少行高 */
     min-height: 100vh;
@@ -576,5 +576,6 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
 
