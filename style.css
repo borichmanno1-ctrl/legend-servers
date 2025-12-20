@@ -531,7 +531,7 @@ tr.current-time-slot {
     }
     /* 调整移动端高亮边框宽度 */
     tr.current-time-slot {
-        border-left-width: 1px !important; 
+        border-left-width: 0.2px !important; 
     }
 }
 
@@ -539,7 +539,7 @@ tr.current-time-slot {
 @media (max-width: 480px) {
 /* 调整移动端高亮边框宽度 */
     tr.current-time-slot {
-        border-left-width: 1px !important;
+        border-left-width: 0.2px !important;
     }
     #serverTable {
         font-size: 0.65rem;
@@ -584,6 +584,7 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
 
 
