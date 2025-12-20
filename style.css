@@ -16,7 +16,7 @@ body {
     margin: 0 auto;
     width: 100%;
     padding: 5px;
-    background-color: #FFF8E7; /* 改为淡黄色背景，与body一致 */
+    background-color: #FFFACD; /* 改为淡黄色背景，与body一致 */
 }
 
 /* 头部logo区域 */
@@ -31,7 +31,7 @@ body {
     width: 100%;
     margin-bottom: 5px;
     overflow: hidden;
-    background-color: #FFF8E7; /* 添加淡黄色背景 */
+    background-color: #FFFACD; /* 添加淡黄色背景 */
 }
 
 .site-logo {
@@ -546,4 +546,5 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
 
