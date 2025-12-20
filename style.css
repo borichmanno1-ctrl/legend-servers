@@ -148,7 +148,7 @@ body {
     min-width: 0;
     font-size: 0.75rem;
     table-layout: fixed;
-    background-color: #fff; /* 表格内部保持白色背景 */
+    background-color: #FFFACD; /* 表格内部保持柠檬黄背景 */
 }
 
 #serverTable thead { 
@@ -158,7 +158,7 @@ body {
 /* 表格单元格通用边框样式 */
 #serverTable th,
 #serverTable td {
-    border: 1px solid #fff; /* 添加白色边框线 */
+    border: 1px solid #0000FF; /* 添加蓝边框线 */
 }
 
 #serverTable th {
@@ -576,3 +576,4 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
