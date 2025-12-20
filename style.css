@@ -19,23 +19,6 @@ body {
     background-color: #FFFACD; /* 改为淡黄色背景，与body一致 */
 }
 
-/* 免责声明公告栏 - 新增样式 */
-.notice-bar {
-    display: block;
-    width: 100%;
-    background-color: #993300; /* 深棕红色背景，与category-filter一致 */
-    color: #fff;
-    text-align: center;
-    padding: 3px;
-    border-radius: 3px;
-    margin-bottom: 5px;
-    font-size: 0.65rem; /* 字体大小与category-filter一致 */
-    line-height: 1.2;
-    font-weight: normal;
-    white-space: normal;
-    word-break: break-word;
-}
-
 /* 头部logo区域 */
 .site-header { 
     text-align: center; 
@@ -78,7 +61,327 @@ body {
     border-radius: 3px;
 }
 
-/* ... 其余CSS代码保持不变 ... */
+.cat-btn {
+    padding: 2px 8px;
+    background: #fff; /* 白色按钮背景 */
+    border: 1px solid #e0c989; /* 淡金色边框 */
+    color: #333;
+    border-radius: 2px; 
+    cursor: pointer; 
+    font-size: 0.65rem; /* 缩小字体大小 */
+    font-weight: normal;
+    transition: all 0.2s ease;
+}
+
+.cat-btn:hover {
+    background: #f5f0e1; /* 悬停时稍微变暗 */
+}
+
+.cat-btn.active { 
+    background: #d4af37; 
+    color: #fff; 
+    border-color: #d4af37;
+}
+
+/* 时段提示 */
+.period-indicator {
+    padding: 3px 8px;
+    text-align: center;
+    border-radius: 2px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    display: block;
+    border-left: 2px solid;
+    font-size: 0.7rem;
+    background-color: rgba(255, 248, 231, 0.8); /* 淡黄色背景 */
+}
+
+.period-indicator.daytime {
+    background-color: rgba(52, 152, 219, 0.1);
+    border-left-color: #3498db;
+    color: #3498db;
+}
+
+.period-indicator.overnight {
+    background-color: rgba(155, 89, 182, 0.1);
+    border-left-color: #9b59b6;
+    color: #9b59b6;
+}
+
+/* 表格控制区域 */
+.table-controls {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    background: #f5f5f5;
+    padding: 4px 8px;
+    border-radius: 2px 2px 0 0; 
+    border: 1px solid #ddd;
+    font-size: 0.7rem;
+}
+
+.stats { 
+    color: #4CAF50; 
+}
+
+.sort-controls select { 
+    padding: 2px 4px;
+    background: #fff;
+    color: #333; 
+    border: 1px solid #ccc; 
+    border-radius: 2px; 
+    font-size: 0.7rem;
+}
+
+/* 表格区域 - 修改为自适应宽度 */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #ddd; 
+    border-top: none;
+}
+
+/* 移除最小宽度限制，让表格自适应 */
+#serverTable {
+    width: 100%; 
+    border-collapse: collapse; 
+    min-width: 0;
+    font-size: 0.75rem;
+    table-layout: fixed;
+    background-color: #FFFACD; /* 表格内部保持柠檬黄背景 */
+}
+
+#serverTable thead { 
+    background: #f5f5f5;
+}
+
+/* 表格单元格通用边框样式 */
+#serverTable th,
+#serverTable td {
+    border: 0.5px solid #87CEEB; /* 添加蓝边框线 */
+}
+
+#serverTable th {
+    padding: 1px 1px; /* 减少内边距 */
+    text-align: left; 
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.75rem;
+    height: 24px; /* 固定表头高度 */
+}
+
+#serverTable tbody tr {
+    border-bottom: 1px solid #eee;
+    height: 24px; /* 固定行高度 */
+}
+
+#serverTable tbody tr:nth-child(even) { 
+    background-color: #fafafa;
+}
+
+#serverTable td {
+    padding: 1px 1px; /* 减少内边距 */
+    vertical-align: middle;
+    font-size: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 20px; /* 固定单元格高度 */
+}
+
+/* 表格列宽度分配 */
+#serverTable th:nth-child(1),
+#serverTable td:nth-child(1) {
+    width: 22%;
+}
+
+#serverTable th:nth-child(2),
+#serverTable td:nth-child(2) {
+    width: 15%;
+}
+
+#serverTable th:nth-child(3),
+#serverTable td:nth-child(3) {
+    width: 14%;
+}
+
+#serverTable th:nth-child(4),
+#serverTable td:nth-child(4) {
+    width: 14%;
+}
+
+#serverTable th:nth-child(5),
+#serverTable td:nth-child(5) {
+    width: 10%;
+}
+
+#serverTable th:nth-child(6),
+#serverTable td:nth-child(6) {
+    width: 15%;
+}
+
+#serverTable th:nth-child(7),
+#serverTable td:nth-child(7) {
+    width: 10%;
+}
+
+/* 服务器名样式 */
+.server-name { 
+    color: #0066cc;
+    font-weight: bold; 
+    font-size: 0.75em; /* 稍微缩小 */
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.0; /* 减少行高 */
+}
+
+.server-name:hover {
+    text-decoration: underline;
+}
+
+/* 服务器IP样式 */
+.server-ip { 
+    color: #0066cc;
+    cursor: pointer;
+    font-size: 0.7em; /* 缩小 */
+    text-decoration: none;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.0; /* 减少行高 */
+}
+
+.server-ip:hover {
+    text-decoration: underline;
+}
+
+.server-tags { 
+    margin-top: 0; /* 减少上边距 */
+}
+
+.tag { 
+    display: inline-block; 
+    padding: 0 3px;
+    border-radius: 1px; 
+    font-size: 0.6em; /* 缩小 */
+    margin-right: 2px; 
+    margin-top: 0; /* 减少上边距 */
+    line-height: 1.0; /* 减少行高 */
+}
+
+.tag.new { 
+    background: #ff4444; 
+    color: white; 
+}
+
+.tag.hot { 
+    background: #ff9900; 
+    color: black; 
+}
+
+/* 特色备注列 */
+.server-feature { 
+    color: #666;
+    line-height: 1.0; /* 减少行高 */
+    font-size: 0.65em;
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* 按钮样式 */
+.btn-detail {
+    display: inline-block; 
+    padding: 1px 5px; /* 减少内边距 */
+    background: #d4af37;
+    color: #fff; 
+    font-weight: bold; 
+    text-decoration: none; 
+    border-radius: 1px; 
+    border: none; 
+    cursor: pointer;
+    font-size: 0.65rem; /* 缩小 */
+    white-space: nowrap;
+    line-height: 1.0; /* 减少行高 */
+    height: 18px; /* 固定按钮高度 */
+}
+
+.btn-detail:hover { 
+    background: #c19b2e; 
+}
+
+.loading { 
+    text-align: center; 
+    padding: 10px!important; /* 减少内边距 */
+    color: #888; 
+    font-size: 0.75rem; 
+}
+
+/* 页脚样式 */
+.site-footer {
+    text-align: center; 
+    padding: 6px 0; /* 减少内边距 */
+    margin-top: 8px;
+    color: #777; 
+    border-top: 1px solid #ddd;
+    font-size: 0.7em;
+    background-color: #FFF8E7; /* 淡黄色背景 */
+}
+
+/* 推荐系统样式 */
+tr.row-yellow-bg {
+    background-color: rgba(255, 140, 0, 0.3) !important;
+    border-left: 3px solid #FF8C00 !important;
+}
+
+/* 当前时间段服务器高亮样式 */
+tr.current-time-slot {
+    background-color: rgba(52, 152, 219, 0.08) !important;
+    border-left: 2px solid #3498db !important;
+}
+
+.promotion-badge {
+    display: inline-block;
+    padding: 0 3px; /* 减少内边距 */
+    margin-left: 2px;
+    font-size: 0.55em; /* 缩小 */
+    border-radius: 2px; /* 减少圆角 */
+    color: white;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-weight: bold;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.0; /* 减少行高 */
+}
+
+.badge-allday {
+    background: #3498db;
+}
+
+.badge-overnight {
+    background: #9b59b6;
+}
+
+/* 特定列字体缩小 */
+#serverTable td:nth-child(3),
+#serverTable td:nth-child(4),
+#serverTable td:nth-child(5),
+#serverTable td:nth-child(6) {
+    font-size: 0.7em;
+    color: #555;
+}
 
 /* 移动端响应式优化 */
 @media (max-width: 768px) {
@@ -88,14 +391,6 @@ body {
         max-width: 100%;
         overflow-x: hidden;
         background-color: #993300; /* 深棕红色背景 */
-    }
-    
-    /* 移动端公告栏优化 */
-    .notice-bar {
-        padding: 2px;
-        font-size: 0.6em; /* 移动端字体更小 */
-        margin-bottom: 3px;
-        line-height: 1.1;
     }
     
     .site-header { 
@@ -131,23 +426,121 @@ body {
         background-color: rgba(255, 248, 231, 0.9); /* 淡黄色背景 */
     }
     
-    /* ... 其余移动端CSS代码保持不变 ... */
+    .table-controls { 
+        padding: 3px 6px;
+        font-size: 0.65rem;
+        flex-wrap: wrap;
+    }
+    
+    .sort-controls select {
+        padding: 1px 3px;
+        font-size: 0.65em;
+        margin-top: 2px;
+    }
+    
+    /* 移动端表格优化 */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    #serverTable {
+        width: 100%;
+        min-width: 0;
+        font-size: 0.7rem;
+    }
+    
+    #serverTable th,
+    #serverTable td { 
+        padding: 1px 1px;
+        font-size: 0.7em; 
+        height: 18px; /* 移动端更小的高度 */
+    }
+    
+    #serverTable th {
+        font-size: 0.7em;
+        padding: 2px 2px;
+        height: 20px; /* 移动端更小的表头高度 */
+    }
+    
+    /* 移动端列宽调整 */
+    #serverTable th:nth-child(1),
+    #serverTable td:nth-child(1) {
+        width: 24%;
+    }
+    
+    #serverTable th:nth-child(2),
+    #serverTable td:nth-child(2) {
+        width: 14%;
+    }
+    
+    #serverTable th:nth-child(3),
+    #serverTable td:nth-child(3) {
+        width: 13%;
+    }
+    
+    #serverTable th:nth-child(4),
+    #serverTable td:nth-child(4) {
+        width: 13%;
+    }
+    
+    #serverTable th:nth-child(5),
+    #serverTable td:nth-child(5) {
+        width: 10%;
+    }
+    
+    #serverTable th:nth-child(6),
+    #serverTable td:nth-child(6) {
+        width: 16%;
+    }
+    
+    #serverTable th:nth-child(7),
+    #serverTable td:nth-child(7) {
+        width: 10%;
+    }
+    
+    /* 移动端特定列字体进一步缩小 */
+    #serverTable td:nth-child(3),
+    #serverTable td:nth-child(4),
+    #serverTable td:nth-child(5),
+    #serverTable td:nth-child(6) {
+        font-size: 0.65em;
+    }
+    
+    .btn-detail { 
+        padding: 0 3px; 
+        font-size: 0.6em; 
+        height: 16px; /* 移动端更小的按钮高度 */
+    }
+    
+    /* 确保服务器名和IP在移动端可点击区域足够大 */
+    .server-name,
+    .server-ip {
+        min-height: 14px;
+        line-height: 14px;
+    }
+    
+    .tag {
+        font-size: 0.55em;
+        padding: 0 2px;
+    }
+    
+    .site-footer {
+        background-color: #FFF8E7; /* 淡黄色背景 */
+        padding: 4px 0;
+    }
+    /* 调整移动端高亮边框宽度 */
+    tr.current-time-slot {
+        border-left-width: 0.2px !important; 
+    }
 }
 
 /* 超小屏幕优化 */
 @media (max-width: 480px) {
-    /* 调整移动端高亮边框宽度 */
+/* 调整移动端高亮边框宽度 */
     tr.current-time-slot {
         border-left-width: 0.2px !important;
     }
-    
-    /* 超小屏幕公告栏优化 */
-    .notice-bar {
-        font-size: 0.55em;
-        padding: 1px;
-        line-height: 1.0;
-    }
-    
     #serverTable {
         font-size: 0.65rem;
     }
@@ -191,3 +584,14 @@ body {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
+
+
+
+
+
+
+
+
+
+
+
