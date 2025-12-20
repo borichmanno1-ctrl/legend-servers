@@ -19,6 +19,27 @@ body {
     background-color: #FFFACD; /* 改为淡黄色背景，与body一致 */
 }
 
+/* 免责声明区域 */
+.disclaimer-container {
+    width: 100%;
+    background-color: #993300; /* 深棕红色背景，与category-filter相同 */
+    padding: 3px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.disclaimer-text {
+    color: #fff; /* 白色文字 */
+    font-size: 0.65rem; /* 与cat-btn字体大小相同 */
+    line-height: 1.0;
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+    word-break: break-word;
+    padding: 0 5px;
+}
+
 /* 头部logo区域 */
 .site-header { 
     text-align: center; 
@@ -393,6 +414,19 @@ tr.current-time-slot {
         background-color: #993300; /* 深棕红色背景 */
     }
     
+    /* 移动端免责声明区域 */
+    .disclaimer-container {
+        padding: 2px;
+        margin-bottom: 3px;
+        border-radius: 2px;
+    }
+    
+    .disclaimer-text {
+        font-size: 0.6em; /* 移动端更小的字体 */
+        padding: 0 3px;
+        line-height: 1.2;
+    }
+    
     .site-header { 
         margin-bottom: 5px;
     }
@@ -537,7 +571,17 @@ tr.current-time-slot {
 
 /* 超小屏幕优化 */
 @media (max-width: 480px) {
-/* 调整移动端高亮边框宽度 */
+    /* 超小屏幕免责声明 */
+    .disclaimer-container {
+        padding: 1px 2px;
+    }
+    
+    .disclaimer-text {
+        font-size: 0.55em; /* 超小屏幕更小的字体 */
+        line-height: 1.3;
+    }
+    
+    /* 调整移动端高亮边框宽度 */
     tr.current-time-slot {
         border-left-width: 0.2px !important;
     }
@@ -584,14 +628,3 @@ tr.current-time-slot {
         background-color: #FFF8E7; /* 淡黄色背景 */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
