@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+
+Sitemap: https://www.zhaosf45.com/sitemap.xml
+
+# 国内搜索引擎爬虫
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: 360Spider
+Allow: /
+Crawl-delay: 2
+
+User-agent: Sogou web spider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YisouSpider
+Allow: /
+Crawl-delay: 2
