@@ -14,12 +14,12 @@ function updateSEOTags() {
     }
     
     // 更新页面标题
-    document.title = `${month}月${day}日${periodText}传奇开服表_最新传奇私服开区信息发布网`;
+    document.title = `${month}月${day}日${periodText}游戏资讯分享发布平台_最新游戏资讯开区信息发布网`;
     
     // 更新meta描述
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
-        metaDesc.content = `${month}月${day}日最新${periodText}传奇私服开区信息，权威发布每日新开传奇服务器，实时更新传奇版本介绍、服务器IP地址和在线客服QQ。`;
+        metaDesc.content = `${month}月${day}日最新${periodText}游戏资讯开区信息，权威发布每日新开游戏资讯分享，实时更新版本介绍、服务器IP地址和在线客服QQ。`;
     }
     
     // 更新结构化数据
@@ -30,9 +30,9 @@ function updateStructuredData(month, day, periodText) {
     const schema = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": `${month}月${day}日${periodText}传奇开服表`,
+        "name": `${month}月${day}日${periodText}游戏资讯分享发布平台`,
         "url": window.location.href,
-        "description": `每日最新${periodText}传奇私服开区信息发布平台`,
+        "description": `每日最新${periodText}游戏资讯分享发布平台`,
         "dateModified": new Date().toISOString(),
         "potentialAction": {
             "@type": "SearchAction",
@@ -96,12 +96,12 @@ function addSEOContent() {
     const seoContent = document.createElement('div');
     seoContent.className = 'seo-content';
     seoContent.innerHTML = `
-        <h2>传奇开服表 - 最新传奇私服发布平台</h2>
-        <p>本站是专业的传奇游戏开服信息发布平台，每日实时更新最新传奇私服开区信息，包括1.76复古传奇、1.80战神传奇、1.85传奇版本、传奇合击、传奇微变、传奇中变等多种版本。</p>
+        <h2>游戏资讯分享发布平台 - 最新游戏资讯发布平台</h2>
+        <p>本站是专业的游戏信息发布平台，每日实时更新最新开区信息，包括1.76复古、1.80战神、1.85版本、合击、微变、中变等多种版本。</p>
         
         <h3>主要功能</h3>
         <ul>
-            <li>实时更新每日新开传奇服务器信息</li>
+            <li>实时更新每日新开信息</li>
             <li>提供服务器IP地址和开放时间</li>
             <li>展示传奇版本特色介绍</li>
             <li>提供在线客服QQ联系方式</li>
@@ -110,10 +110,10 @@ function addSEOContent() {
         </ul>
         
         <h3>使用指南</h3>
-        <p>用户可以通过分类筛选功能快速找到特定类型的传奇服务器，如复古传奇、微变传奇、合击传奇等。每个服务器都提供详细的版本介绍和特色说明，方便玩家选择适合自己的游戏服务器。</p>
+        <p>用户可以通过分类筛选功能快速找到特定类型的服务器，如复古、微变、合击等。每个服务器都提供详细的版本介绍和特色说明，方便玩家选择适合自己的游戏服务器。</p>
         
         <h3>关于我们</h3>
-        <p>我们致力于为传奇游戏玩家提供最全面、最及时的传奇私服开服信息，帮助玩家快速找到合适的游戏服务器，享受传奇游戏的乐趣。</p>
+        <p>我们致力于为游戏玩家提供最全面、最及时的信息，帮助玩家快速找到合适的游戏服务器，享受游戏的乐趣。</p>
     `;
     
     // 添加到body末尾
@@ -433,4 +433,5 @@ document.addEventListener('DOMContentLoaded', function() {
         filterAndRenderServers();
     }, 30 * 1000);
 });
+
 
