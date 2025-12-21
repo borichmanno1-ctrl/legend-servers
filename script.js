@@ -1,3 +1,129 @@
+// SEO优化：动态更新页面标题和关键词
+function updateSEOTags() {
+    const now = new Date();
+    const beijingTime = new Date(now.getTime() + (8 * 60 * 60 * 1000));
+    const month = beijingTime.getUTCMonth() + 1;
+    const day = beijingTime.getUTCDate();
+    const hour = beijingTime.getUTCHours();
+    
+    let periodText = '';
+    if (hour >= 9 && hour < 24) {
+        periodText = '白天';
+    } else {
+        periodText = '通宵';
+    }
+    
+    // 更新页面标题
+    document.title = `${month}月${day}日${periodText}传奇开服表_最新传奇私服开区信息发布网`;
+    
+    // 更新meta描述
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+        metaDesc.content = `${month}月${day}日最新${periodText}传奇私服开区信息，权威发布每日新开传奇服务器，实时更新传奇版本介绍、服务器IP地址和在线客服QQ。`;
+    }
+    
+    // 更新结构化数据
+    updateStructuredData(month, day, periodText);
+}
+
+function updateStructuredData(month, day, periodText) {
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": `${month}月${day}日${periodText}传奇开服表`,
+        "url": window.location.href,
+        "description": `每日最新${periodText}传奇私服开区信息发布平台`,
+        "dateModified": new Date().toISOString(),
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": `${window.location.origin}/?q={search_term_string}`,
+            "query-input": "required name=search_term_string"
+        }
+    };
+    
+    // 更新或创建结构化数据
+    let schemaScript = document.querySelector('script[type="application/ld+json"]');
+    if (!schemaScript) {
+        schemaScript = document.createElement('script');
+        schemaScript.type = 'application/ld+json';
+        document.head.appendChild(schemaScript);
+    }
+    schemaScript.textContent = JSON.stringify(schema);
+}
+
+// 在DOM加载完成后调用
+document.addEventListener('DOMContentLoaded', function() {
+    // 调用现有的初始化函数...
+    
+    // 添加SEO优化
+    updateSEOTags();
+    
+    // 每10分钟更新一次SEO标签
+    setInterval(updateSEOTags, 10 * 60 * 1000);
+    
+    // 添加SEO相关内容到页面底部
+    addSEOContent();
+});
+
+// 添加SEO相关内容
+function addSEOContent() {
+    // 创建关键词区域
+    const keywordsFooter = document.createElement('div');
+    keywordsFooter.className = 'keywords-footer';
+    keywordsFooter.innerHTML = `
+        热门搜索：
+        <a href="/">传奇开服表</a> |
+        <a href="/">新开传奇私服</a> |
+        <a href="/">传奇发布网</a> |
+        <a href="/">传奇私服</a> |
+        <a href="/">传奇服务器</a> |
+        <a href="/">传奇开区</a> |
+        <a href="/">传奇版本</a> |
+        <a href="/">传奇游戏</a> |
+        <a href="/">1.76复古传奇</a> |
+        <a href="/">1.80战神传奇</a> |
+        <a href="/">1.85传奇</a> |
+        <a href="/">传奇合击</a> |
+        <a href="/">传奇微变</a> |
+        <a href="/">传奇中变</a>
+    `;
+    
+    // 插入到footer之前
+    const footer = document.querySelector('.site-footer');
+    footer.parentNode.insertBefore(keywordsFooter, footer);
+    
+    // 创建隐藏的SEO内容（搜索引擎可抓取，用户不可见）
+    const seoContent = document.createElement('div');
+    seoContent.className = 'seo-content';
+    seoContent.innerHTML = `
+        <h2>传奇开服表 - 最新传奇私服发布平台</h2>
+        <p>本站是专业的传奇游戏开服信息发布平台，每日实时更新最新传奇私服开区信息，包括1.76复古传奇、1.80战神传奇、1.85传奇版本、传奇合击、传奇微变、传奇中变等多种版本。</p>
+        
+        <h3>主要功能</h3>
+        <ul>
+            <li>实时更新每日新开传奇服务器信息</li>
+            <li>提供服务器IP地址和开放时间</li>
+            <li>展示传奇版本特色介绍</li>
+            <li>提供在线客服QQ联系方式</li>
+            <li>区分白天和通宵开服时段</li>
+            <li>标记新服、火爆服务器</li>
+        </ul>
+        
+        <h3>使用指南</h3>
+        <p>用户可以通过分类筛选功能快速找到特定类型的传奇服务器，如复古传奇、微变传奇、合击传奇等。每个服务器都提供详细的版本介绍和特色说明，方便玩家选择适合自己的游戏服务器。</p>
+        
+        <h3>关于我们</h3>
+        <p>我们致力于为传奇游戏玩家提供最全面、最及时的传奇私服开服信息，帮助玩家快速找到合适的游戏服务器，享受传奇游戏的乐趣。</p>
+    `;
+    
+    // 添加到body末尾
+    document.body.appendChild(seoContent);
+}
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const serverTableBody = document.getElementById('serverTableBody');
     const categoryFilter = document.getElementById('categoryFilter');
@@ -307,3 +433,4 @@ document.addEventListener('DOMContentLoaded', function() {
         filterAndRenderServers();
     }, 30 * 1000);
 });
+
