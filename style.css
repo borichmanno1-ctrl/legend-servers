@@ -592,6 +592,92 @@ tr.current-time-slot {
     }
 }
 
+/* ===== SEO优化相关样式 ===== */
+
+/* 隐藏但可被搜索引擎抓取的内容 */
+.seo-content {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0.001;
+}
+
+.seo-content h2,
+.seo-content h3,
+.seo-content p {
+    color: #333;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.seo-content h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.seo-content h3 {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.seo-content ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.seo-content li {
+    margin-bottom: 3px;
+}
+
+/* 页面底部关键词区域 - 与footer样式一致但可见 */
+.keywords-footer {
+    text-align: center;
+    padding: 8px 10px;
+    margin-top: 10px;
+    color: #777;
+    font-size: 0.65em;
+    background-color: #FFF8E7;
+    border-top: 1px solid #ddd;
+    line-height: 1.4;
+}
+
+.keywords-footer a {
+    color: #0066cc;
+    text-decoration: none;
+    margin: 0 3px;
+}
+
+.keywords-footer a:hover {
+    text-decoration: underline;
+}
+
+/* 面包屑导航（如果将来需要） */
+.breadcrumb {
+    padding: 5px 10px;
+    background-color: #FFF8E7;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.7em;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.breadcrumb a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .separator {
+    margin: 0 5px;
+    color: #999;
+}
 
 
 
