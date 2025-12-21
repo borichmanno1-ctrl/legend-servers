@@ -72,10 +72,10 @@ function addSEOContent() {
     keywordsFooter.className = 'keywords-footer';
     keywordsFooter.innerHTML = `
         热门搜索：
-        <a href="/">传奇开服表</a> |
-        <a href="/">新开传奇私服</a> |
-        <a href="/">传奇发布网</a> |
-        <a href="/">传奇私服</a> |
+        <a href="/">游戏资讯发布</a> |
+        <a href="/">新服开区</a> |
+        <a href="/">游戏发布网</a> |
+        <a href="/">热血传奇</a> |
         <a href="/">传奇服务器</a> |
         <a href="/">传奇开区</a> |
         <a href="/">传奇版本</a> |
@@ -433,5 +433,6 @@ document.addEventListener('DOMContentLoaded', function() {
         filterAndRenderServers();
     }, 30 * 1000);
 });
+
 
 
