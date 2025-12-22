@@ -1,28 +1,96 @@
 {
   "categories": [ "实力广告:2198027617", "玲珑广告:2850915460", "神话广告:155310", "恒越升广告:800180230"],
   "servers": [
-    {
-    "name": "至尊游龙★单职业",
-    "ip": "？顶赞★新首区",
-    "openTime": "12月23日/23:30",
-    "version": "沙奖丶１８８８",
-    "feature": "三天合区●一切靠打●无沙捐●沙奖大？",
-    "qq": "◆必爆终极◆",
-    "detailUrl": "http://103.36.167.185:2026",
+    { "name": "怀旧沉默",
+    "ip": "复古沉默三职业",
+    "openTime": "12月22日通宵推荐",
+    "version": "诅咒亡凤凰飞",
+    "feature": "复古沉默破馆珍剑，独家三职业金币版本",
+    "qq": "2956843542",
+    "detailUrl": "http://www.hjcm2003.com/",
     "category": [
       "复古"
     ],
-    "hot": false,
+    "hot": true,
     "new": false,
     "promotion": {
-      "type": "全天推荐",
-      "order": 1
+      "type": "通宵推荐",
+      "order":1
+    }
+  },
+    { "name": "怀旧沉默",
+    "ip": "复古沉默三职业",
+    "openTime": "12月22日通宵推荐",
+    "version": "诅咒亡凤凰飞",
+    "feature": "复古沉默破馆珍剑，独家三职业金币版本",
+    "qq": "2956843542",
+    "detailUrl": "http://www.hjcm2003.com/",
+    "category": [
+      "复古"
+    ],
+    "hot": true,
+    "new": false,
+    "promotion": {
+      "type": "通宵推荐",
+      "order":1
+    }
+  },
+     {"name": "怀旧沉默",
+    "ip": "复古沉默三职业",
+    "openTime": "12月22日通宵推荐",
+    "version": "诅咒亡凤凰飞",
+    "feature": "复古沉默破馆珍剑，独家三职业金币版本",
+    "qq": "2956843542",
+    "detailUrl": "http://www.hjcm2003.com/",
+    "category": [
+      "复古"
+    ],
+    "hot": true,
+    "new": false,
+    "promotion": {
+      "type": "通宵推荐",
+      "order":1
+    }
+  },
+    { "name": "怀旧沉默",
+    "ip": "复古沉默三职业",
+    "openTime": "12月22日通宵推荐",
+    "version": "诅咒亡凤凰飞",
+    "feature": "复古沉默破馆珍剑，独家三职业金币版本",
+    "qq": "2956843542",
+    "detailUrl": "http://www.hjcm2003.com/",
+    "category": [
+      "复古"
+    ],
+    "hot": true,
+    "new": false,
+    "promotion": {
+      "type": "通宵推荐",
+      "order":1
+    }
+  },
+    {
+    "name": "怀旧沉默",
+    "ip": "复古沉默三职业",
+    "openTime": "12月22日通宵推荐",
+    "version": "诅咒亡凤凰飞",
+    "feature": "复古沉默破馆珍剑，独家三职业金币版本",
+    "qq": "2956843542",
+    "detailUrl": "http://www.hjcm2003.com/",
+    "category": [
+      "复古"
+    ],
+    "hot": true,
+    "new": false,
+    "promotion": {
+      "type": "通宵推荐",
+      "order":1
     }
   },
   {
     "name": "(﹍１·７６﹍)",
     "ip": "(﹍天战复古﹍)",
-    "openTime": "12月23日/23:30",
+    "openTime": "12月22日/23:30",
     "version": "(﹍极品+5﹍)",
     "feature": "(﹍﹍﹍﹍﹍﹍﹍﹍新出炉﹍﹍﹍﹍﹍﹍﹍﹍)",
     "qq": "(三天合区)",
@@ -33,14 +101,14 @@
     "hot": false,
     "new": false,
     "promotion": {
-      "type": "全天推荐",
+      "type": "通宵推荐",
       "order": 1
     }
   },
   {
     "name": "１80新傲世战神",
     "ip": "独家激情服",
-    "openTime": "12月23日/23:30",
+    "openTime": "12月22日/23:30",
     "version": "首站首区",
     "feature": "终极装备保值 真充随便打 一切装备靠爆",
     "qq": "零充也能毕业",
@@ -51,14 +119,14 @@
     "hot": false,
     "new": false,
     "promotion": {
-      "type": "全天推荐",
+      "type": "通宵推荐",
       "order": 1
     }
   },
   {
     "name": "免费★雷霆二合一",
     "ip": "首区 独家新版",
-    "openTime": "12月23日/23:30",
+    "openTime": "12月22日/23:30",
     "version": "单职业无限攻速",
     "feature": "10元顶赞 绝无隐藏 爆率全开 充值可打-",
     "qq": "跪求爸爸点击",
@@ -69,14 +137,14 @@
     "hot": false,
     "new": false,
     "promotion": {
-      "type": "全天推荐",
+      "type": "通宵推荐",
       "order": 1
     }
   },
   {
     "name": "１．７６狂风攻速",
     "ip": "１７６丶复古微变",
-    "openTime": "12月23日/23:30",
+    "openTime": "12月22日/23:30",
     "version": "＜新版〃首区＞",
     "feature": "＜你从未玩过的版本＞★＜充值老Ｇ是你儿＞",
     "qq": "攻速元素极品",
@@ -87,7 +155,7 @@
     "hot": false,
     "new": false,
     "promotion": {
-      "type": "全天推荐",
+      "type": "通宵推荐",
       "order": 1
     }
   },
@@ -7875,6 +7943,7 @@
     }
   ]
 }
+
 
 
 
